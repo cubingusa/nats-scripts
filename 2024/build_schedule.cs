@@ -2,6 +2,7 @@
 #define BLUE "Blue Stage"
 #define GREEN "Green Stage"
 #define ORANGE "Orange Stage"
+#define SIDE "Side Room"
 
 Define("Stages", [RED, BLUE, GREEN, ORANGE])
 Define("FinalsStages", [RED, BLUE])
@@ -100,3 +101,13 @@ Map(FinalsStages(), CreateGroups(_333oh-r3, 1, 2024-07-21T15:00, 2024-07-21T15:2
 Map(FinalsStages(), CreateGroups(_222-r4, 1, 2024-07-21T15:20, 2024-07-21T15:40))
 Map(FinalsStages(), CreateGroups(_333bf-r3, 1, 2024-07-21T15:40, 2024-07-21T16:00))
 Map(FinalsStages(), CreateGroups(_333-r4, 8, 2024-07-21T16:15, 2024-07-21T17:35))
+
+
+# Side Room
+
+CreateGroups(_333mbf-r1-a1, 1, SIDE, 2024-07-18T12:15, 2024-07-18T13:30, useStageName=false)
+CreateGroups(_333mbf-r1-a2, 1, SIDE, 2024-07-19T12:15, 2024-07-19T13:30, useStageName=false)
+CreateGroups(_555bf-r1, 1, SIDE, 2024-07-20T12:15, 2024-07-20T13:30, useStageName=false)
+CreateGroups(_333fm-r1-a1, 1, SIDE, 2024-07-18T14:15, 2024-07-18T15:30, useStageName=false)
+CreateGroups(_333fm-r1-a2, 1, SIDE, 2024-07-19T14:15, 2024-07-19T15:30, useStageName=false)
+CreateGroups(_333fm-r1-a3, 1, SIDE, 2024-07-20T14:15, 2024-07-20T15:30, useStageName=false)
