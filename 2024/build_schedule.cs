@@ -37,17 +37,17 @@ Map(Stages(), CreateGroups(_555-r2, 1, 2024-07-18T18:10, 2024-07-18T18:30))
 Map(Stages(), CreateGroups(_333bf-r1, 2, 2024-07-19T08:20, 2024-07-19T09:00))
 Map(Stages(), CreateGroups(_777-r1, 2, 2024-07-19T09:00, 2024-07-19T09:50))
 Map(Stages(),
-    CreateGroups(_pyram-r1, 11, 2024-07-19T09:50, 2024-07-19T12:30,
+    CreateGroups(_pyram-r1, 10, 2024-07-19T09:50, 2024-07-19T12:15,
       Switch<String, Array<Number>>(
         Tuple(RED, []),
-        Tuple(BLUE, [11]),
-        Tuple(GREEN, [10, 11]),
-        Tuple(ORANGE, [9, 10, 11]))))
+        Tuple(BLUE, []),
+        Tuple(GREEN, [10]),
+        Tuple(ORANGE, [9, 10]))))
 
 Map(Stages(),
     CreateGroups(_333oh-r1, 8, 2024-07-19T12:40, 2024-07-19T14:40,
       Switch<String, Array<Number>>(
-        Tuple(RED, [1, 2, 3]),
+        Tuple(RED, [1, 2]),
         Tuple(BLUE, [1, 2]),
         Tuple(GREEN, [1]),
         Tuple(ORANGE, []))))
@@ -63,16 +63,16 @@ Map(FinalsStages(), CreateGroups(_777-r2, 1, 2024-07-19T18:00, 2024-07-19T18:20)
 
 Map([RED, BLUE, GREEN], CreateGroups(_333bf-r2, 1, 2024-07-20T08:40, 2024-07-20T09:00))
 Map(Stages(),
-    CreateGroups(_333-r1, 13, 2024-07-20T09:00, 2024-07-20T12:15,
+    CreateGroups(_333-r1, 12, 2024-07-20T09:00, 2024-07-20T12:00,
       Switch<String, Array<Number>>(
         Tuple(RED, []),
-        Tuple(BLUE, [13]),
-        Tuple(GREEN, [12, 13]),
-        Tuple(ORANGE, [11, 12, 13]))))
+        Tuple(BLUE, []),
+        Tuple(GREEN, [12]),
+        Tuple(ORANGE, [11, 12]))))
 Map(Stages(),
     CreateGroups(_222-r1, 12, 2024-07-20T12:30, 2024-07-20T15:00,
       Switch<String, Array<Number>>(
-        Tuple(RED, [1, 2, 3]),
+        Tuple(RED, [1, 2]),
         Tuple(BLUE, [1, 2]),
         Tuple(GREEN, [1]),
         Tuple(ORANGE, []))))
