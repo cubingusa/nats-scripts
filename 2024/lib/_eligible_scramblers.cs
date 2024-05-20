@@ -24,7 +24,32 @@ Define("EventNamesInForm",
         Tuple(_minx, "Megaminx"),
         Tuple(_skewb, "Skewb")])
 
+Define("EventsToScramblingEvents",
+       [Tuple(_333, _333),
+        Tuple(_222, _222),
+        Tuple(_444, _444),
+        Tuple(_555, _555),
+        Tuple(_666, _666),
+        Tuple(_777, _777),
+        Tuple(_sq1, _sq1),
+        Tuple(_clock, _clock),
+        Tuple(_pyram, _pyram),
+        Tuple(_minx, _minx),
+        Tuple(_skewb, _skewb),
+        Tuple(_333bf, _333),
+        Tuple(_333oh, _333),
+        Tuple(_333mbf, _333),
+        Tuple(_444bf, _444),
+        Tuple(_555bf, _555)])
+
 Define("CanScramble",
        And(
-         (PersonalBest({1, Event}) < Switch({1, Event}, ScrambleLimits())),
-         In(Switch({1, Event}, EventNamesInForm()), ArrayProperty("puzzles-to-scramble"))))
+         (PersonalBest(
+            Switch({1, Event}, EventsToScramblingEvents())) <
+          Switch(
+            Switch({1, Event}, EventsToScramblingEvents()), ScrambleLimits())),
+          In(
+            Switch(
+              Switch({1, Event}, EventsToScramblingEvents()),
+              EventNamesInForm()),
+            ArrayProperty("puzzles-to-scramble"))))
