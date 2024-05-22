@@ -2,6 +2,7 @@
 #define DATAENTRY "staff-dataentry"
 #define CORE_STAFF "core-staff"
 #define COMMENTATOR "commentator"
+#define STAGE_LEAD "stage-lead"
 
 #define STAFF_TEAM "staff-team"
 

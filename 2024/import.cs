@@ -30,3 +30,7 @@ SetProperty(
         (NumberProperty("attending") > 2)
       )
     ), COMMENTATOR, true)
+
+DeleteProperty(Persons(HasProperty(STAGE_LEAD)), STAGE_LEAD)
+SetProperty([2010AMBR01, 2008YOUN02, 2013DICK01, 2014NIEL03, 2020LONG05, 2017WOFF01, 2015COHE02, 2015ROYC01],
+            STAGE_LEAD, true)
