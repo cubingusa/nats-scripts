@@ -1,13 +1,13 @@
 #include "lib/_constants.cs"
 #include "lib/_eligible_scramblers.cs"
 
-# TODO: limit number of stage leads per group.
 # TODO: balance unavailability.
 # TODO: add person avoidance.
 Define(
     "BasicConstraints",
     [
-      BalanceConstraint("Num Events", Length(RegisteredEvents()), 0.2)
+      BalanceConstraint("Num Events", Length(RegisteredEvents()), 0.2),
+      LimitConstraint("Stage Leads", HasProperty(STAGE_LEAD), 2, 10)
     ])
 
 Define(
@@ -49,10 +49,9 @@ Define(
 
 DeleteProperty(Persons(HasProperty(STAFF_TEAM)), STAFF_TEAM)
 
-# TODO: switch to 4 teams once more people have filled out the form.
 Cluster(
-    STAFF_TEAM, 3, Persons(BooleanProperty(CORE_STAFF)),
-    "",  # TODO: use the preassigned group IDs.
+    STAFF_TEAM, 4, Persons(BooleanProperty(CORE_STAFF)),
+    StringProperty("staff-team-id"),
     Concat(
       BasicConstraints(),
       PreferenceConstraints(),
