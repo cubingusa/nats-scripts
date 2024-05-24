@@ -17,8 +17,8 @@ Map(Stages(),
         Tuple(BLUE, [1, 2]),
         Tuple(GREEN, [1]),
         Tuple(ORANGE, []))))
-Map(Stages(), CreateGroups(_666-r1, 4, 2024-07-18T14:40, 2024-07-18T16:00))
-Map(Stages(), CreateGroups(_clock-r1, 6, 2024-07-18T16:00, 2024-07-18T17:30))
+Map(Stages(), CreateGroups(_clock-r1, 6, 2024-07-18T14:40, 2024-07-18T16:10))
+Map(Stages(), CreateGroups(_666-r1, 4, 2024-07-18T16:10, 2024-07-18T17:30))
 Map(Stages(), CreateGroups(_minx-r2, 1, 2024-07-18T17:30, 2024-07-18T17:50))
 Map(Stages(), CreateGroups(_sq1-r2, 1, 2024-07-18T17:50, 2024-07-18T18:10))
 Map(Stages(), CreateGroups(_555-r2, 1, 2024-07-18T18:10, 2024-07-18T18:30))
