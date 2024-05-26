@@ -5,6 +5,7 @@
 #define STAGE_LEAD "stage-lead"
 
 #define STAFF_TEAM "staff-team"
+#define LONG_ROOM_TEAM "long-room-team"
 
 # Stages
 #define RED "Red Stage"
