@@ -1,4 +1,4 @@
-#include "lib/_constants.cs"
+#include "../lib/_constants.cs"
 
 ReadSpreadsheet("1-KNvZD5o6A4oeqwypppvSwgMnpLMjElo6B-kPvr4dco", offset=1, sheetTitle="Preferences")
 

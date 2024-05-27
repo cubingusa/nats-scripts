@@ -1,5 +1,5 @@
-#include "lib/_constants.cs"
-#include "lib/_eligible_scramblers.cs"
+#include "../lib/_constants.cs"
+#include "../lib/_eligible_scramblers.cs"
 
 #define LONG_ROOM_PREFERENCE "long-room-preference"
 #define LONG_ROOM_YES "Yes please! As much as possible"
