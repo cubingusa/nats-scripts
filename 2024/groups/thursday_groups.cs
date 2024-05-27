@@ -1,6 +1,7 @@
 #include "lib/_assignment_sets.cs"
 #include "lib/_group_scorers.cs"
-#include "lib/_long_room_staff.cs"
+
+#include "../lib/_long_room_staff.cs"
 
 Define("MultiOverlap", And((EndTime() > 2024-07-18T11:40), (StartTime() < 2024-07-18T13:30)))
 Define("FMCOverlap", And((EndTime() > 2024-07-18T14:00), (StartTime() < 2024-07-18T16:00)))

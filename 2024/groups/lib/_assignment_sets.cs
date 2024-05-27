@@ -1,6 +1,6 @@
-#include "_assigned_stage.cs"
-#include "_eligible_scramblers.cs"
-#include "_constants.cs"
+#include "../../lib/_assigned_stage.cs"
+#include "../../lib/_eligible_scramblers.cs"
+#include "../../lib/_constants.cs"
 
 # Args:
 # 1: Event

@@ -1,5 +1,5 @@
-#include "_assigned_stage.cs"
-#include "_constants.cs"
+#include "../../lib/_assigned_stage.cs"
+#include "../../lib/_constants.cs"
 
 # Arg 1: date
 Define("DefaultScorers",
