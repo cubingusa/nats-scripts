@@ -16,3 +16,7 @@
 
 Define("Stages", [RED, BLUE, GREEN, ORANGE])
 Define("FinalsStages", [RED, BLUE])
+
+# Other roles
+#define WCA_BOARD "wca-board"
+#define WCA_BOOTH "wca-booth"

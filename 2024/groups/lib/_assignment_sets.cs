@@ -15,7 +15,8 @@ Define(
 Define(
   "EarlyAssignmentSets",
   [AssignmentSet("data", HasRole(DATAENTRY), (Stage() == BLUE)),
-   AssignmentSet("commentators", BooleanProperty(COMMENTATOR), (Stage() == RED))])
+   AssignmentSet("commentators", BooleanProperty(COMMENTATOR), (Stage() == RED)),
+   AssignmentSet("wca-booth", BooleanProperty(WCA_BOOTH), (Stage() == RED))])
 
 # Args:
 # 1: Event

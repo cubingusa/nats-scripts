@@ -34,3 +34,9 @@ SetProperty(
 DeleteProperty(Persons(HasProperty(STAGE_LEAD)), STAGE_LEAD)
 SetProperty([2010AMBR01, 2008YOUN02, 2013DICK01, 2014NIEL03, 2020LONG05, 2017WOFF01, 2015COHE02, 2015ROYC01],
             STAGE_LEAD, true)
+
+DeleteProperty(Persons(HasProperty(WCA_BOARD)), WCA_BOARD)
+SetProperty(Filter([2014PRID01, 2010THOM03, 2019JARM01, 2016CHAI03], Not(IsNull(Arg<Person>()))), WCA_BOARD, true)
+
+DeleteProperty(Persons(HasProperty(WCA_BOOTH)), WCA_BOOTH)
+SetProperty([2008CLEM01, 2013KLEM01], WCA_BOOTH, true)
