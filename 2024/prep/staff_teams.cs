@@ -17,7 +17,6 @@ Define("IsLongRoomMaybe",
            Not(HasProperty(STAGE_LEAD))))
 
 # TODO: balance unavailability.
-# TODO: add person avoidance.
 Define(
     "BasicConstraints",
     [
@@ -25,6 +24,8 @@ Define(
       LimitConstraint("Stage Leads", HasProperty(STAGE_LEAD), 2, 10),
       LimitConstraint("Long Room yes", IsLongRoomYes(), 2, 10),
       LimitConstraint("Long Room maybe", IsLongRoomMaybe(), 3, 10)
+      LimitConstraint("x1", HasProperty("x1"), 1, 20)
+      LimitConstraint("x2", HasProperty("x2"), 1, 20)
     ])
 
 Define(
