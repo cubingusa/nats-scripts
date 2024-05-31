@@ -16,16 +16,16 @@ Define("IsLongRoomMaybe",
            Not(CompetingIn(_555bf)),
            Not(HasProperty(STAGE_LEAD))))
 
-# TODO: balance unavailability.
 Define(
     "BasicConstraints",
     [
       BalanceConstraint("Num Events", Length(RegisteredEvents()), 0.2),
       LimitConstraint("Stage Leads", HasProperty(STAGE_LEAD), 2, 10),
       LimitConstraint("Long Room yes", IsLongRoomYes(), 2, 10),
-      LimitConstraint("Long Room maybe", IsLongRoomMaybe(), 3, 10)
-      LimitConstraint("x1", HasProperty("x1"), 1, 20)
-      LimitConstraint("x2", HasProperty("x2"), 1, 20)
+      LimitConstraint("Long Room maybe", IsLongRoomMaybe(), 3, 10),
+      LimitConstraint("x1", HasProperty("x1"), 1, 20),
+      LimitConstraint("x2", HasProperty("x2"), 1, 20),
+      BalanceConstraint("unavail", HasProperty(UNAVAILABLE), 5)
     ])
 
 Define(

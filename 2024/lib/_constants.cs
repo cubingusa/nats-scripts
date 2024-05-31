@@ -6,6 +6,7 @@
 
 #define STAFF_TEAM "staff-team"
 #define LONG_ROOM_TEAM "long-room-team"
+#define UNAVAILABLE "unavailable"
 
 # Stages
 #define RED "Red Stage"
