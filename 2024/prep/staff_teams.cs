@@ -23,9 +23,10 @@ Define(
       LimitConstraint("Stage Leads", HasProperty(STAGE_LEAD), 2, 10),
       LimitConstraint("Long Room yes", IsLongRoomYes(), 2, 10),
       LimitConstraint("Long Room maybe", IsLongRoomMaybe(), 3, 10),
-      LimitConstraint("x1", HasProperty("x1"), 1, 20),
-      LimitConstraint("x2", HasProperty("x2"), 1, 20),
-      BalanceConstraint("unavail", HasProperty(UNAVAILABLE), 5)
+      BalanceConstraint("x1", If(BooleanProperty("x1"), 1, 0), 20),
+      BalanceConstraint("x2", If(BooleanProperty("x2"), 1, 0), 20),
+      BalanceConstraint("x3", If(BooleanProperty("x3"), 1, 0), 20),
+      BalanceConstraint("unavail", NumberProperty(UNAVAILABLE), 5)
     ])
 
 Define(
