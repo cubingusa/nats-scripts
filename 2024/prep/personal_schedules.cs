@@ -9,9 +9,6 @@ Define("MainStageCompetingTimes",
                       Not(In(Round(), [_333fm-r1, _333mbf-r1, _555bf-r1])))),
            StartTime()))
 
-# Nick Silvestri
-SetStaffUnavailable([2016SILV08], [UnavailableBetween(2024-07-21T15:30, 2024-07-21T23:59)])
-
 # Brock Burgi
 SetStaffUnavailable([2015BURG02], [UnavailableBetween(2024-07-21T00:00, 2024-07-21T11:00)])
 SetProperty([2015BURG02], UNAVAILABLE, 1)
@@ -34,7 +31,7 @@ SetStaffUnavailable([2016MURP05], [UnavailableBetween(2024-07-21T00:00, 2024-07-
 
 # Kristin Knowles
 SetStaffUnavailable([2016WILE01], [UnavailableBetween(2024-07-18T08:00, 2024-07-18T16:30)])
-SetProperty([2016WILE02], UNAVAILABLE, 2)
+SetProperty([2016WILE01], UNAVAILABLE, 2)
 
 # Stephen Griggs
 SetStaffUnavailable([2014GRIG01], [UnavailableBetween(2024-07-21T00:00, 2024-07-21T23:59)])
