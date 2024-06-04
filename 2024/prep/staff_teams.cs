@@ -26,7 +26,7 @@ Define(
       BalanceConstraint("x1", If(BooleanProperty("x1"), 1, 0), 20),
       BalanceConstraint("x2", If(BooleanProperty("x2"), 1, 0), 20),
       BalanceConstraint("x3", If(BooleanProperty("x3"), 1, 0), 20),
-      BalanceConstraint("unavail", NumberProperty(UNAVAILABLE), 5)
+      BalanceConstraint("unavail", NumberProperty("unavailable"), 5)
     ])
 
 Define(
