@@ -16,15 +16,13 @@ AssignGroups(_sq1-r1,
              RoundOneAssignmentSets(_sq1, 2024-07-18),
              Concat(DefaultScorers(2024-07-18),
                     [ByFilters(Or(CompetingIn(_333mbf),
-                                  StaffingThursdayMulti(Arg<Person>()),
-                                  BooleanProperty(STAGE_LEAD)), MultiOverlap(Arg<Group>()), -20)]))
+                                  StaffingThursdayMulti(Arg<Person>())), MultiOverlap(Arg<Group>()), -20)]))
 
 AssignGroups(_555-r1,
              RoundOneAssignmentSets(_555, 2024-07-18),
              Concat(DefaultScorers(2024-07-18),
                     [ByFilters(Or(CompetingIn(_333mbf),
-                                  StaffingThursdayMulti(Arg<Person>()),
-                                  BooleanProperty(STAGE_LEAD)), MultiOverlap(Arg<Group>()), -20),
+                                  StaffingThursdayMulti(Arg<Person>())), MultiOverlap(Arg<Group>()), -20),
                      ByFilters(Or(CompetingIn(_333fm),
                                   StaffingThursdayFMC(Arg<Person>()),
                                   BooleanProperty(STAGE_LEAD)), FMCOverlap(Arg<Group>()), -20)]))
