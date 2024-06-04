@@ -12,7 +12,8 @@ AssignGroups(_333-r1,
              Concat(DefaultScorers(2024-07-20),
                     [ByFilters(Or(CompetingIn(_555bf),
                                   StaffingSaturday5BLD(Arg<Person>()),
-                                  BooleanProperty(STAGE_LEAD)), FiveBlindOverlap(Arg<Group>()), -20)]))
+                                  BooleanProperty(STAGE_LEAD)), FiveBlindOverlap(Arg<Group>()), -20),
+                     ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 1), 10)]))
 
 AssignGroups(_222-r1,
              RoundOneAssignmentSets(_222, 2024-07-20),
@@ -22,11 +23,13 @@ AssignGroups(_222-r1,
                                   BooleanProperty(STAGE_LEAD)), FiveBlindOverlap(Arg<Group>()), -20),
                      ByFilters(Or(CompetingIn(_333fm),
                                   StaffingSaturdayFMC(Arg<Person>()),
-                                  BooleanProperty(STAGE_LEAD)), FMCOverlap(Arg<Group>()), -20)]))
+                                  BooleanProperty(STAGE_LEAD)), FMCOverlap(Arg<Group>()), -20),
+                     ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 12), 10)]))
 
 AssignGroups(_skewb-r1,
              RoundOneAssignmentSets(_skewb, 2024-07-20),
              Concat(DefaultScorers(2024-07-20),
                     [ByFilters(Or(CompetingIn(_333fm),
                                   StaffingSaturdayFMC(Arg<Person>()),
-                                  BooleanProperty(STAGE_LEAD)), FMCOverlap(Arg<Group>()), -20)]))
+                                  BooleanProperty(STAGE_LEAD)), FMCOverlap(Arg<Group>()), -20),
+                     ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 1), 10)]))

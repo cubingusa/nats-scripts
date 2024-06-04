@@ -9,7 +9,8 @@ Define("FMCOverlap", And((EndTime() > 2024-07-19T14:00), (StartTime() < 2024-07-
 
 AssignGroups(_333bf-r1,
              RoundOneAssignmentSets(_333bf, 2024-07-19),
-             DefaultScorers(2024-07-19))
+             Concat(DefaultScorers(2024-07-19),
+                    [ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 1), 10)]))
 
 AssignGroups(_777-r1,
              RoundOneAssignmentSets(_777, 2024-07-19),
@@ -28,11 +29,13 @@ AssignGroups(_333oh-r1,
                                   StaffingFridayMulti(Arg<Person>())), MultiOverlap(Arg<Group>()), -20),
                      ByFilters(Or(CompetingIn(_333fm),
                                   StaffingFridayFMC(Arg<Person>()),
-                                  BooleanProperty(STAGE_LEAD)), FMCOverlap(Arg<Group>()), -20)]))
+                                  BooleanProperty(STAGE_LEAD)), FMCOverlap(Arg<Group>()), -20),
+                     ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 1), 10)]))
 
 AssignGroups(_444-r1,
              RoundOneAssignmentSets(_444, 2024-07-19),
              Concat(DefaultScorers(2024-07-19),
                     [ByFilters(Or(CompetingIn(_333fm),
                                   StaffingFridayFMC(Arg<Person>()),
-                                  BooleanProperty(STAGE_LEAD)), FMCOverlap(Arg<Group>()), -20)]))
+                                  BooleanProperty(STAGE_LEAD)), FMCOverlap(Arg<Group>()), -20),
+                     ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 7), 10)]))
