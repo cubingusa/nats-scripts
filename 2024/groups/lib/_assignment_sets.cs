@@ -26,7 +26,7 @@ Define(
   Flatten(Map(
     Stages(),
     [AssignmentSet(("stage-leads-" + Arg<String>()),
-                   And(HasRole("delegate"),
+                   And(BooleanProperty(STAGE_LEAD),
                        (AssignedStage(Arg<Person>(), {2, Date}) == Arg<String>())),
                    (Stage() == Arg<String>())),
      AssignmentSet(("scramblers-" + Arg<String>()),
