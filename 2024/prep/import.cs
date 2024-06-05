@@ -35,6 +35,9 @@ SetProperty(Persons(BooleanProperty(COMMENTATOR)), "percent-Commentator", 100)
 DeleteProperty(Persons(HasProperty(STAGE_LEAD)), STAGE_LEAD)
 SetProperty([2010AMBR01, 2008YOUN02, 2013DICK01, 2014NIEL03, 2020LONG05, 2017WOFF01, 2015COHE02, 2015ROYC01],
             STAGE_LEAD, true)
+SetProperty(Persons(BooleanProperty(STAGE_LEAD)), "percent-judge", 5)
+SetProperty(Persons(BooleanProperty(STAGE_LEAD)), "percent-scrambler", 5)
+SetProperty(Persons(BooleanProperty(STAGE_LEAD)), "percent-runner", 5)
 SetProperty(Persons(BooleanProperty(STAGE_LEAD)), "percent-Delegate", 100)
 
 DeleteProperty(Persons(HasProperty(WCA_BOARD)), WCA_BOARD)
