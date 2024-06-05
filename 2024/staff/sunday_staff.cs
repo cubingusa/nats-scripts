@@ -4,4 +4,4 @@
 
 DoStaffAssignments(_444bf-r1, 2024-07-21,
                    [Judges(), Scramblers(2, _444bf), Runners(2, _444bf), Delegate()],
-                   StaffScorers(_444bf))
+                   StaffScorers(_444bf, 2024-07-21))

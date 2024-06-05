@@ -4,16 +4,16 @@
 
 DoStaffAssignments(_minx-r1, 2024-07-18,
                    [Judges(), Scramblers(4, _minx), Runners(3, _minx), Delegate()],
-                   StaffScorers(_minx))
+                   StaffScorers(_minx, 2024-07-18))
 DoStaffAssignments(_sq1-r1, 2024-07-18,
                    [Judges(), Scramblers(3, _sq1), Runners(4, _sq1), Delegate()],
-                   StaffScorers(_sq1))
+                   StaffScorers(_sq1, 2024-07-18))
 DoStaffAssignments(_555-r1, 2024-07-18,
                    [Judges(), Scramblers(4, _555), Runners(3, _555), Delegate()],
-                   StaffScorers(_555))
+                   StaffScorers(_555, 2024-07-18))
 DoStaffAssignments(_clock-r1, 2024-07-18,
                    [Judges(), Scramblers(4, _clock), Runners(4, _clock), Delegate()],
-                   StaffScorers(_clock))
+                   StaffScorers(_clock, 2024-07-18))
 DoStaffAssignments(_666-r1, 2024-07-18,
                    [Judges(), Scramblers(4, _666), Runners(3, _666), Delegate()],
-                   StaffScorers(_666))
+                   StaffScorers(_666, 2024-07-18))
