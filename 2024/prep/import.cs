@@ -1,6 +1,6 @@
 #include "../lib/_constants.cs"
 
-ReadSpreadsheet("1-KNvZD5o6A4oeqwypppvSwgMnpLMjElo6B-kPvr4dco", offset=1, sheetTitle="percents")
+ReadSpreadsheet("1-KNvZD5o6A4oeqwypppvSwgMnpLMjElo6B-kPvr4dco", offset=1, sheetTitle="Preferences")
 
 # Set some derived properties.
 DeleteRole(Persons(HasRole(DATAENTRY)), DATAENTRY)
