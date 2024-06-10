@@ -13,7 +13,10 @@ AssignGroups(_333-r1,
                     [ByFilters(Or(CompetingIn(_555bf),
                                   StaffingSaturday5BLD(Arg<Person>()),
                                   BooleanProperty(STAGE_LEAD)), FiveBlindOverlap(Arg<Group>()), -20),
-                     ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 1), 10)]))
+                     ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 1), 10),
+                     ByFilters((Arg<Person>() == 2020LONG05), (GroupNumber() == 1), 10),
+                     ByFilters((Arg<Person>() == 2010AMBR01), (GroupNumber() == 2), 10),
+                     ByFilters((Arg<Person>() == 2018AMSB02), (GroupNumber() < 7), 10)]))
 
 AssignGroups(_222-r1,
              RoundOneAssignmentSets(_222, 2024-07-20),

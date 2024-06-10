@@ -11,13 +11,16 @@ AssignGroups(_minx-r1,
              RoundOneAssignmentSets(_minx, 2024-07-18),
              Concat(DefaultScorers(2024-07-18),
                     [ByFilters(StaffingThursdayMulti(Arg<Person>()), (GroupNumber() < 3), 10),
-                     ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 1), 10)]))
+                     ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 1), 10),
+                     ByFilters((Arg<Person>() == 2015KUCA01), (GroupNumber() == 1), 10)]))
 
 AssignGroups(_sq1-r1,
              RoundOneAssignmentSets(_sq1, 2024-07-18),
              Concat(DefaultScorers(2024-07-18),
                     [ByFilters(Or(CompetingIn(_333mbf),
-                                  StaffingThursdayMulti(Arg<Person>())), MultiOverlap(Arg<Group>()), -20)]))
+                                  StaffingThursdayMulti(Arg<Person>())), MultiOverlap(Arg<Group>()), -20),
+                     ByFilters(In(Arg<Person>(), [2005REYN01, 2007BARR01, 2011WELC01, 2004CHAN04, 2009HILD01]),
+                               (GroupNumber() < 4), 10))]))
 
 AssignGroups(_555-r1,
              RoundOneAssignmentSets(_555, 2024-07-18),
@@ -27,7 +30,9 @@ AssignGroups(_555-r1,
                      ByFilters(Or(CompetingIn(_333fm),
                                   StaffingThursdayFMC(Arg<Person>()),
                                   BooleanProperty(STAGE_LEAD)), FMCOverlap(Arg<Group>()), -20),
-                     ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 1), 10)]))
+                     ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 2), 10),
+                     ByFilters(In(Arg<Person>(), [2005REYN01, 2007BARR01, 2011WELC01, 2004CHAN04, 2009HILD01]),
+                               (GroupNumber() > 2), 10)]))
 
 AssignGroups(_clock-r1,
              RoundOneAssignmentSets(_clock, 2024-07-18),
