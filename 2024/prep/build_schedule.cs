@@ -28,10 +28,10 @@ Map(Stages(), CreateGroups(_555-r2, 1, 2024-07-18T18:10, 2024-07-18T18:30))
 
 # Friday
 
-Map(Stages(), CreateGroups(_333bf-r1, 2, 2024-07-19T08:20, 2024-07-19T09:00))
-Map(Stages(), CreateGroups(_777-r1, 2, 2024-07-19T09:00, 2024-07-19T09:50))
+Map(Stages(), CreateGroups(_333bf-r1, 2, 2024-07-19T08:20, 2024-07-19T08:50))
+Map(Stages(), CreateGroups(_777-r1, 3, 2024-07-19T08:50, 2024-07-19T10:05))
 Map(Stages(),
-    CreateGroups(_pyram-r1, 10, 2024-07-19T09:50, 2024-07-19T12:15,
+    CreateGroups(_pyram-r1, 10, 2024-07-19T10:05, 2024-07-19T12:30,
       Switch(
         Arg<String>(),
         [Tuple(RED, []),
@@ -40,7 +40,7 @@ Map(Stages(),
          Tuple(ORANGE, [9, 10])])))
 
 Map(Stages(),
-    CreateGroups(_333oh-r1, 8, 2024-07-19T12:40, 2024-07-19T14:40,
+    CreateGroups(_333oh-r1, 8, 2024-07-19T12:55, 2024-07-19T14:55,
       Switch(
         Arg<String>(),
         [Tuple(RED, [1, 2]),
@@ -48,11 +48,11 @@ Map(Stages(),
          Tuple(GREEN, [1]),
          Tuple(ORANGE, [])])))
 
-Map(Stages(), CreateGroups(_444-r1, 7, 2024-07-19T14:40, 2024-07-19T17:00))
-Map(FinalsStages(), CreateGroups(_666-r2, 1, 2024-07-19T17:00, 2024-07-19T17:20))
-Map(FinalsStages(), CreateGroups(_minx-r3, 1, 2024-07-19T17:20, 2024-07-19T17:40))
-Map(FinalsStages(), CreateGroups(_sq1-r3, 1, 2024-07-19T17:40, 2024-07-19T18:00))
-Map(FinalsStages(), CreateGroups(_777-r2, 1, 2024-07-19T18:00, 2024-07-19T18:20))
+Map(Stages(), CreateGroups(_444-r1, 7, 2024-07-19T14:55, 2024-07-19T17:15))
+Map(FinalsStages(), CreateGroups(_666-r2, 1, 2024-07-19T17:15, 2024-07-19T17:35))
+Map(FinalsStages(), CreateGroups(_minx-r3, 1, 2024-07-19T17:35, 2024-07-19T17:55))
+Map(FinalsStages(), CreateGroups(_sq1-r3, 1, 2024-07-19T17:55, 2024-07-19T18:15))
+Map(FinalsStages(), CreateGroups(_777-r2, 1, 2024-07-19T18:15, 2024-07-19T18:35))
 
 
 # Saturday
