@@ -1,5 +1,6 @@
 #include "../lib/_constants.cs"
 #include "../lib/_eligible_scramblers.cs"
+#include "../lib/_is_delegate.cs"
 
 #define LONG_ROOM_PREFERENCE "long-room-preference"
 #define LONG_ROOM_YES "Yes please! As much as possible"
@@ -28,7 +29,8 @@ Define(
       BalanceConstraint("x1", If(BooleanProperty("x1"), 1, 0), 20),
       BalanceConstraint("x2", If(BooleanProperty("x2"), 1, 0), 20),
       BalanceConstraint("x3", If(BooleanProperty("x3"), 1, 0), 20),
-      BalanceConstraint("unavail", NumberProperty("unavailable"), 5)
+      BalanceConstraint("unavail", NumberProperty("unavailable"), 5),
+      BalanceConstraint("delegate", IsDelegate(), 1)
     ])
 
 Define(
@@ -47,7 +49,7 @@ Define(
         [_555, _minx, _sq1, _clock],
         LimitConstraint((EventId() + " semi scramblers"), And(CanScramble(Arg<Event>()),
                                                               (PsychSheetPosition() > 150),
-                                                              Not(HasRole("delegate"))), 4, 5))))
+                                                              Not(HasRole("delegate"))), 5, 10))))
 
 Define(
     "RoundOneConstraints",
@@ -67,7 +69,7 @@ Define(
 Define(
     "SemiConstraints",
     Map([_333, _222, _444, _555, _666, _777, _333bf, _333oh, _clock, _pyram, _skewb, _sq1, _minx],
-      BalanceConstraint((EventId() + "-semi"), (PsychSheetPosition() < 125), 0.2)))
+      BalanceConstraint((EventId() + "-semi"), (PsychSheetPosition() < 125), 2)))
 
 DeleteProperty(Persons(HasProperty(STAFF_TEAM)), STAFF_TEAM)
 
