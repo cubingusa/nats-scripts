@@ -5,6 +5,3 @@ AddPerson(385123) # Wendy Nieuwland
 AddPerson(40580) # Peter Still
 AddPerson(282837) # Megan Fedders
 # TODO: Connie Workman needs a WCA account.
-
-# The following staff are expected to compete, but have not registered yet.
-AddPerson(125561) # Cade Beck
