@@ -20,7 +20,7 @@ Define("ScrambleSpeedWeight",
 
 Define("StaffScorers",
        [
-         PriorAssignmentScorer(-4, -1, Midnight({2, Date})),
+         PriorAssignmentScorer(-5, -1, Midnight({2, Date})),
          PreferenceScorer(weight=5, prefix="percent-", prior=15, allJobs=["judge", "scrambler", "runner", "Delegate"]),
          SameJobScorer(60, -5, 4),
          ConsecutiveJobScorer(90, -3, 0),
