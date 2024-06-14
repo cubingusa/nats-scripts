@@ -20,7 +20,7 @@ AssignGroups(_sq1-r1,
                     [ByFilters(Or(CompetingIn(_333mbf),
                                   StaffingThursdayMulti(Arg<Person>())), MultiOverlap(Arg<Group>()), -20),
                      ByFilters(In(Arg<Person>(), [2005REYN01, 2007BARR01, 2011WELC01, 2004CHAN04, 2009HILD01]),
-                               (GroupNumber() < 4), 10))]))
+                               (GroupNumber() < 4), 10)]))
 
 AssignGroups(_555-r1,
              RoundOneAssignmentSets(_555, 2024-07-18),
