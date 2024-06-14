@@ -7,12 +7,14 @@
 
 Define("IsLongRoomYes",
        And((StringProperty(LONG_ROOM_PREFERENCE) == LONG_ROOM_YES),
-           Not(CompetingIn(_333fm)),
-           Not(CompetingIn(_333mbf)),
+           HasProperty(CORE_STAFF),
+           Not((PsychSheetPosition(_333fm) <= 30)),
+           Not((PsychSheetPosition(_333mbf) <= 20)),
            Not(CompetingIn(_555bf)),
            Not(HasProperty(STAGE_LEAD))))
 Define("IsLongRoomMaybe",
        And(In(StringProperty(LONG_ROOM_PREFERENCE), [LONG_ROOM_YES, LONG_ROOM_MAYBE]),
+           HasProperty(CORE_STAFF),
            Not(CompetingIn(_555bf)),
            Not(HasProperty(STAGE_LEAD))))
 
@@ -53,8 +55,9 @@ Define(
                BalanceConstraint(EventId(), CompetingIn(), 0.05)),
            Map([_555, _666, _777, _333bf, _clock, _sq1, _minx, _444bf],
                BalanceConstraint(EventId(), CompetingIn(), 0.1)),
-           Map([_333mbf, _333fm, _555bf],
-               BalanceConstraint(EventId(), CompetingIn(), 1))))
+           [BalanceConstraint("555bf", CompetingIn(_555bf), 3),
+            BalanceConstraint("333fm", (PsychSheetPosition(_333fm) <= 30), 3),
+            BalanceConstraint("333mbf", (PsychSheetPosition(_333mbf) <= 20), 3)]))
 
 Define(
     "RoundTwoConstraints",
@@ -89,11 +92,13 @@ Map([1, 2, 3, 4],
 
 Map([1, 2, 3, 4],
     SetProperty([RandomChoice(Persons(And(Not(HasProperty(LONG_ROOM_TEAM)),
+                                          (NumberProperty(STAFF_TEAM) == Arg<Number>()),
                                           IsLongRoomYes())))],
                 LONG_ROOM_TEAM, 2))
 
 Map([1, 2, 3, 4],
     SetProperty([RandomChoice(Persons(And(Not(HasProperty(LONG_ROOM_TEAM)),
+                                          (NumberProperty(STAFF_TEAM) == Arg<Number>()),
                                           IsLongRoomMaybe())))],
                 LONG_ROOM_TEAM, 3))
 "Long room teams"
