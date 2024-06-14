@@ -16,6 +16,11 @@
 
 Define("Stages", [RED, BLUE, GREEN, ORANGE])
 Define("FinalsStages", [RED, BLUE])
+Define("IsStaff", Or(BooleanProperty(DATAENTRY),
+                     BooleanProperty(CORE_STAFF),
+                     BooleanProperty(COMMENTATOR),
+                     BooleanProperty(STAGE_LEAD),
+                     HasRole("organizer")))
 
 # Other roles
 #define WCA_BOARD "wca-board"
