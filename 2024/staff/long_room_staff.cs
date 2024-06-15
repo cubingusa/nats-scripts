@@ -15,6 +15,14 @@ AssignStaff(
       GroupScorer(And((Date() == 2024-07-20), StaffingSaturdayFMC(Arg<Person>())), 1)
     ], unavailable=[])
 
+CreateCompetitionGroupsAssignments(
+    Persons(StaffingThursdayMulti(Arg<Person>())),
+    "Scramble Multi Blind", 2024-07-18T10:00, 2024-07-18T12:00)
+
+CreateCompetitionGroupsAssignments(
+    Persons(StaffingFridayMulti(Arg<Person>())),
+    "Scramble Multi Blind", 2024-07-19T10:00, 2024-07-19T12:00)
+
 AssignStaff(
     _333mbf-r1, true, Persons(Or(StaffingThursdayMulti(Arg<Person>()),
                                  StaffingFridayMulti(Arg<Person>()))),
