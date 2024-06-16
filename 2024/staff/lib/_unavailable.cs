@@ -38,13 +38,13 @@ Define("Unavailable",
                                 UnavailableBetween(2024-07-19T13:00, 2024-07-19T15:00)]),  # Draco Tong
              Tuple(2015KUCA01, [UnavailableBetween(2024-07-18T09:30, 2024-07-18T10:15)]),  # Carter Kucala
              Tuple(2019KUCA01, [UnavailableBetween(2024-07-18T10:30, 2024-07-18T11:00)]),  # Lisa Kucala
-             Tuple(2014GROV01, [UnavailalbeBetween(2024-07-18T16:15, 2024-07-18T17:00)]),  # Saransh Grover
+             Tuple(2014GROV01, [UnavailableBetween(2024-07-18T16:15, 2024-07-18T17:00)]),  # Saransh Grover
              Tuple(2014GOSL01, [UnavailableBetween(2024-07-19T09:30, 2024-07-19T10:30)]),  # Raymond Goslow
              Tuple(2013DICK01, [UnavailableBetween(2024-07-19T11:00, 2024-07-19T11:45)]),  # Matthew Dickman
              Tuple(2015MACK06, [UnavailableBetween(2024-07-19T15:45, 2024-07-19T16:30)]),  # Zeke Mackay
              Tuple(2020LONG05, [UnavailableBetween(2024-07-20T10:00, 2024-07-20T11:30)]),  # Shain Longbehn
              Tuple(2018AMSB02, [UnavailableBetween(2024-07-20T11:00, 2024-07-20T12:00)]),  # Stone Amsbaugh
-             Tuple(2013ESPA01, [UnavailableBetween(2024-07-20T16:00, 2024-07-20T16:30)])]  # Jonathan Esparaz
+             Tuple(2013ESPA01, [UnavailableBetween(2024-07-20T16:00, 2024-07-20T16:30)])],  # Jonathan Esparaz
            defaultValue=[]),
          If(StaffingThursdayFMC(Arg<Person>()),
             [UnavailableBetween(2024-07-18T14:00, 2024-07-18T14:15),
