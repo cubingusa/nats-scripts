@@ -15,7 +15,7 @@ AssignGroups(_333bf-r1,
 AssignGroups(_777-r1,
              RoundOneAssignmentSets(_777, 2024-07-19),
              Concat(DefaultScorers(2024-07-19),
-                    [ByFilters((Arg<Person>() == 2014GOSL01), (GroupNumber() == 1), 10)])
+                    [ByFilters((Arg<Person>() == 2014GOSL01), (GroupNumber() == 1), 10)]))
 
 AssignGroups(_pyram-r1,
              RoundOneAssignmentSets(_pyram, 2024-07-19),
@@ -33,7 +33,8 @@ AssignGroups(_333oh-r1,
                      ByFilters(Or(CompetingIn(_333fm),
                                   StaffingFridayFMC(Arg<Person>()),
                                   BooleanProperty(STAGE_LEAD)), FMCOverlap(Arg<Group>()), -20),
-                     ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 1), 10)]))
+                     ByFilters(BooleanProperty(WCA_BOARD), (GroupNumber() == 1), 10),
+                     ByFilters(In(Arg<Person>(), [2018KHAN26, 2018KHAN27, 2018KHAN28]), (GroupNumber() == 8), 10)]))
 
 AssignGroups(_444-r1,
              RoundOneAssignmentSets(_444, 2024-07-19),
