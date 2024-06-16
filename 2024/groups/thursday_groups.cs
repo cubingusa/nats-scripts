@@ -5,7 +5,7 @@
 #include "../lib/_long_room_staff.cs"
 
 Define("MultiOverlap", And((EndTime() > 2024-07-18T11:40), (StartTime() < 2024-07-18T13:30)))
-Define("FMCOverlap", And((EndTime() > 2024-07-18T14:00), (StartTime() < 2024-07-18T15:45)))
+Define("FMCOverlap", And((EndTime() > 2024-07-18T14:00), (StartTime() < 2024-07-18T15:40)))
 
 AssignGroups(_minx-r1,
              RoundOneAssignmentSets(_minx, 2024-07-18),
