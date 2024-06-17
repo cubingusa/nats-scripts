@@ -26,5 +26,5 @@ AssignStaff(
 
 AssignStaff(
     _555bf-r1, true, Persons(StaffingSaturday5BLD(Arg<Person>())),
-    [Job("judge", 10), Job("scrambler", 2)],
+    [Job("judge", 13), Job("scrambler", 3)],
     StaffScorers(_555bf, 2024-07-20))

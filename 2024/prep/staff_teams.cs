@@ -103,5 +103,10 @@ Map([1, 2, 3, 4],
                                           (NumberProperty(STAFF_TEAM) == Arg<Number>()),
                                           IsLongRoomMaybe())))],
                 LONG_ROOM_TEAM, 3))
+Map([1, 2, 3, 4],
+    SetProperty([RandomChoice(Persons(And(Not(HasProperty(LONG_ROOM_TEAM)),
+                                          (NumberProperty(STAFF_TEAM) == Arg<Number>()),
+                                          IsLongRoomMaybe())))],
+                LONG_ROOM_TEAM, 3))
 "Long room teams"
 Map([1, 2, 3], All(Arg<Number>(), Persons((NumberProperty(LONG_ROOM_TEAM) == Arg<Number>()))))
