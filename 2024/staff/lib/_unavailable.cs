@@ -64,5 +64,9 @@ Define("Unavailable",
              UnavailableBetween(2024-07-19T13:30, 2024-07-19T14:00)], []),
          If(StaffingSaturday5BLD(Arg<Person>()),
             [UnavailableBetween(2024-07-20T11:00, 2024-07-20T12:15),
-             UnavailableBetween(2024-07-20T13:30, 2024-07-20T14:00)], [])))
-# TODO: long room competitors are unavailable starting ~11:30 so they can get lunch.
+             UnavailableBetween(2024-07-20T13:30, 2024-07-20T14:00)], []),
+         If(CompetingIn(_333mbf),
+            [UnavailableBetween(2024-07-18T11:30, 2024-07-18T12:15),
+             UnavailableBetween(2024-07-19T11:30, 2024-07-19T12:15)], []),
+         If(CompetingIn(_555bf),
+            [UnavailableBetween(2024-07-20T11:30, 2024-07-20T12:15)], [])))
