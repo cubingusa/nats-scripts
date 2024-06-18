@@ -14,6 +14,6 @@ Define("DoStaffAssignments",
              {1, Round},
              (Stage() == Arg<String>()),
              Persons((AssignedStage(Arg<Person>(), {2, Date}) == Arg<String>())),
-             Concat({3, Array<AssignmentJob>}, If((Arg<String>() == RED), [Commentator()], [])),
+             {3, Array<AssignmentJob>},
              {4, Array<AssignmentScorer>},
              unavailable=Unavailable(Arg<Person>()))))

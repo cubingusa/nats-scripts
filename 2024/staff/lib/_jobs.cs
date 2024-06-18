@@ -18,4 +18,3 @@ Define("Runners", Job("runner", {1, Number},
                                       Not(HasProperty(STAGE_LEAD)),
                                       BooleanProperty(CORE_STAFF))))
 Define("Delegate", Job("Delegate", 1, eligibility=BooleanProperty(STAGE_LEAD)))
-Define("Commentator", Job("Commentator", 2, eligibility=BooleanProperty(COMMENTATOR)))
