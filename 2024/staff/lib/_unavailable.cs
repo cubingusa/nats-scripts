@@ -39,7 +39,7 @@ Define("Unavailable",
              Tuple(2019BEZZ01, [UnavailableBetween(2024-07-21T00:00, 2024-07-21T12:00)]),  # Nico Bezzerides
              Tuple(2020TONG02, [UnavailableBetween(2024-07-18T13:00, 2024-07-18T15:00),
                                 UnavailableBetween(2024-07-19T13:00, 2024-07-19T15:00)]),  # Draco Tong
-             Tuple(2022KOTO01, [UnavailableBetween(2024-07-18T00:00, 2024-07-21T14:30)]),  # Rex Kotovich
+             Tuple(2022KOTO01, [UnavailableBetween(2024-07-18T00:00, 2024-07-18T14:30)]),  # Rex Kotovich
              Tuple(2015KUCA01, [UnavailableBetween(2024-07-18T09:30, 2024-07-18T10:15)]),  # Carter Kucala
              Tuple(2019KUCA01, [UnavailableBetween(2024-07-18T10:30, 2024-07-18T11:00)]),  # Lisa Kucala
              Tuple(2014GROV01, [UnavailableBetween(2024-07-18T16:15, 2024-07-18T17:00)]),  # Saransh Grover
