@@ -47,3 +47,24 @@ Define("RoundOneAssignmentSets",
          EarlyAssignmentSets(),
          StaffAssignmentSets({1, Event}, {2, Date}),
          EveryoneAssignmentSets()))
+
+Define("RoundTwoAssignmentSets",
+       [AssignmentSet("Top",
+                      (RoundPosition(PreviousRound({1, Round})) <= 4),
+                      And(In(Stage(), FinalsStages()), (GroupNumber() == 4)),
+                      featured=true),
+        AssignmentSet("Four", (RoundPosition(PreviousRound({1, Round})) <= 100), (GroupNumber() == 4)),
+        AssignmentSet("Three", (RoundPosition(PreviousRound({1, Round})) <= 200), (GroupNumber() == 3)),
+        AssignmentSet("Two", (RoundPosition(PreviousRound({1, Round})) <= 300), (GroupNumber() == 2)),
+        AssignmentSet("One", (RoundPosition(PreviousRound({1, Round})) <= 400), (GroupNumber() == 1))])
+
+Define("SemifinalAssignmentSets",
+       [AssignmentSet("Top",
+                      (RoundPosition(PreviousRound({1, Round})) <= 4),
+                      In(Stage(), FinalsStages()),
+                      featured=true),
+        AssignmentSet("Everyone", true, true)])
+
+Define("FinalsAssignmentSets",
+       [AssignmentSet("Evens", Even(RoundPosition(PreviousRound({1, Round}))), (Stage() == RED)),
+        AssignmentSet("Odds", Not(Even(RoundPosition(PreviousRound({1, Round})))), (Stage() == BLUE))])
