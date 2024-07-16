@@ -22,7 +22,8 @@ Define("Unavailable",
              Tuple(2014GULA02, [UnavailableBetween(2024-07-18T00:00, 2024-07-18T12:00),  # For long room setup
                                 UnavailableBetween(2024-07-19T00:00, 2024-07-19T12:00),  # For long room setup
                                 UnavailableBetween(2024-07-20T10:30, 2024-07-20T10:30),  # For long room setup
-                                UnavailableBetween(2024-07-19T13:00, 2024-07-19T15:00)]),  # Abdullah Gulab
+                                UnavailableBetween(2024-07-19T13:00, 2024-07-19T15:00),
+                                UnavailableBetween(2024-07-20T16:00, 2024-07-20T17:00)]),  # Abdullah Gulab
              Tuple(2016MURP05, [UnavailableBetween(2024-07-21T00:00, 2024-07-21T09:30)]),  # Max Murphy
              Tuple(2016WILE01, [UnavailableBetween(2024-07-18T08:00, 2024-07-18T16:30)]),  # Kristin Knowles
              Tuple(2014GRIG01, [UnavailableBetween(2024-07-21T00:00, 2024-07-21T23:59)]),  # Stephen Griggs
