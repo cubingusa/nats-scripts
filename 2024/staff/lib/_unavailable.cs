@@ -31,7 +31,8 @@ Define("Unavailable",
              Tuple(2015GOVI01, [BeforeTimes(CompetingTimes(2015GOVI01, In(EventForRound(Round()), [_333oh])))]),  # Dylan Govic
              Tuple(2019PAHL02, [UnavailableBetween(2024-07-20T14:15, 2024-07-20T16:45)]),  # Michael Willow Pahl
              Tuple(2017RICH02, [DuringTimes(CompetingTimes(2017RICH02, In(Round(), [_555-r2])))]),  # Braden Richards
-             Tuple(2022RAMI15, [BeforeTimes(CompetingTimes(2022RAMI15, In(EventForRound(Round()), [_clock])))]),  # Ledger Ramirez
+             Tuple(2022RAMI15, [BeforeTimes(CompetingTimes(2022RAMI15, In(EventForRound(Round()), [_clock]))),
+                                UnavailableBetween(2024-07-21T14:00, 2024-07-21T16:00)]),  # Ledger Ramirez
              Tuple(2017COOL02, [UnavailableBetween(2024-07-20T16:45, 2024-07-20T23:59)]),  # Ethan Coolidge
              Tuple(2016DONO02, [UnavailableBetween(2024-07-21T15:00, 2024-07-21T23:59)]),  # Orion Donovan
              Tuple(2017MILL04, [UnavailableBetween(2024-07-18T10:00, 2024-07-18T12:00),
