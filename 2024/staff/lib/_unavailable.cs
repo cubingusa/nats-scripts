@@ -50,6 +50,7 @@ Define("Unavailable",
              Tuple(2015MACK06, [UnavailableBetween(2024-07-19T15:45, 2024-07-19T16:30)]),  # Zeke Mackay
              Tuple(2020LONG05, [UnavailableBetween(2024-07-20T10:00, 2024-07-20T11:30)]),  # Shain Longbehn
              Tuple(2018AMSB02, [UnavailableBetween(2024-07-20T11:00, 2024-07-20T12:00)]),  # Stone Amsbaugh
+             Tuple(2015HADA01, [UnavailableBetween(2024-07-21T00:00, 2024-07-21T23:59)]),  # Garrett Hadaway
              Tuple(2013ESPA01, [UnavailableBetween(2024-07-20T16:00, 2024-07-20T16:30)])],  # Jonathan Esparaz
            defaultValue=[]),
          If(StaffingThursdayFMC(Arg<Person>()),
