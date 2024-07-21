@@ -4,11 +4,13 @@
 Define("AssignRoundTwo",
        AssignGroups({1, Round},
                     RoundTwoAssignmentSets({1, Round}),
-                    DefaultScorers(Date(RoundStartTime({1, Round})))))
+                    DefaultScorers(Date(RoundStartTime({1, Round})),
+                                   EventForRound({1, Round}))))
 Define("AssignSemifinals",
        AssignGroups({1, Round},
                     SemifinalAssignmentSets({1, Round}),
-                    DefaultScorers(Date(RoundStartTime({1, Round})))))
+                    DefaultScorers(Date(RoundStartTime({1, Round})),
+                                   EventForRound({1, Round}))))
 
 Define("FinalsStations",
        [StationAssignmentRule(true, "ascending", RoundPosition(PreviousRound({1, Round})))])

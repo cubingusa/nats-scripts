@@ -188,8 +188,12 @@ Define("FirstNameCluster",
        defaultValue=FirstName(Arg<Person>())))
 
 # Arg 1: date
+# Arg 2: event
 Define("DefaultScorers",
-       Concat([ByMatchingValue(FirstNameCluster(Arg<Person>()), -5)],
+       Concat([ByMatchingValue(FirstNameCluster(Arg<Person>()), -5),
+               ByFilters((PsychSheetPosition({2, Event}) <= 6),
+                         Not(In(Stage(), FinalsStages())),
+                         -10)],
               Map(Stages(),
                   ByFilters((AssignedStage(Arg<Person>(), {1, Date}) == Arg<String>()),
                             (Stage() == Arg<String>()), 10))))
