@@ -1,15 +1,6 @@
 #include "_qualified.cs"
 #include "_times.cs"
 
-Define("RegisteredPeopleInPhase",
-       Persons(And(Registered(),
-                   QualifiedForPhase(Arg<Person>(), {1, Number}))))
-
-Define("RegisteredPeopleOnlyInPhase",
-       Persons(And(Registered(),
-                   QualifiedForPhase(Arg<Person>(), {1, Number}),
-                   Not(QualifiedForPhase(Arg<Person>(), ({1, Number} - 1))))))
-       
 Define("ReportPhase",
     All(
       Header(("Phase " + ToString({1, Number}))),
