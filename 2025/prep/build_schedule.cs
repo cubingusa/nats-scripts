@@ -1,27 +1,30 @@
 #include "../lib/_constants.cs"
 
+DeleteRooms(AllStages())
+DeleteRooms([LONG_ROOM, MAIN_HALL, LOBBY])
+
 CreateRoom(MAIN_RED, "#ff0000")
 CreateRoom(MAIN_BLUE, "#0000ff")
 CreateRoom(MAIN_GREEN, "#00ff00")
-CreateRoom(MAIN_ORANGE, "#ff8800")
+CreateRoom(MAIN_ORANGE, "#ff8000")
 CreateRoom(MAIN_YELLOW, "#ffff00")
 CreateRoom(MAIN_WHITE, "#ffffff")
 
-CreateRoom(SIDE_RED, "#ff0000")
-CreateRoom(SIDE_BLUE, "#0000ff")
-CreateRoom(SIDE_GREEN, "#00ff00")
-CreateRoom(SIDE_ORANGE, "#ff8800")
+CreateRoom(SIDE_RED, "#c00000", groupNamePrefix="RR")
+CreateRoom(SIDE_BLUE, "#000080", groupNamePrefix="BB")
+CreateRoom(SIDE_GREEN, "#008000", groupNamePrefix="GG")
+CreateRoom(SIDE_ORANGE, "#c06000", groupNamePrefix="OO")
 
 CreateRoom(LONG_ROOM, "#888888")
 CreateRoom(MAIN_HALL, "#000088")
 CreateRoom(LOBBY, "#000000")
 
 # Long room
-CreateGroups(_333mbf-r1-a1, 1, LONG_ROOM, 2025-07-03T13:15, 2025-07-03T14:30)
-CreateGroups(_333mbf-r1-a2, 1, LONG_ROOM, 2025-07-05T13:15, 2025-07-05T14:30)
-CreateGroups(_333fm-r1-a1, 1, LONG_ROOM, 2025-07-03T15:15, 2025-07-03T16:30)
-CreateGroups(_333fm-r1-a2, 1, LONG_ROOM, 2025-07-04T15:15, 2025-07-04T16:30)
-CreateGroups(_333fm-r1-a3, 1, LONG_ROOM, 2025-07-05T15:15, 2025-07-05T16:30)
+CreateGroups(_333mbf-r1-a1, 1, LONG_ROOM, 2025-07-03T13:15, 2025-07-03T14:30, useStageName=false)
+CreateGroups(_333mbf-r1-a2, 1, LONG_ROOM, 2025-07-05T13:15, 2025-07-05T14:30, useStageName=false)
+CreateGroups(_333fm-r1-a1, 1, LONG_ROOM, 2025-07-03T15:15, 2025-07-03T16:30, useStageName=false)
+CreateGroups(_333fm-r1-a2, 1, LONG_ROOM, 2025-07-04T15:15, 2025-07-04T16:30, useStageName=false)
+CreateGroups(_333fm-r1-a3, 1, LONG_ROOM, 2025-07-05T15:15, 2025-07-05T16:30, useStageName=false)
 
 # Thursday
 Map(SideStages(), CreateGroups(_555bf-r1, 1, 2025-07-03T09:00, 2025-07-03T10:00))
@@ -123,4 +126,4 @@ CreateMiscActivity("Cube Submission for 3x3x3 Multi-Blind", "other-multi", LONG_
 CreateMiscActivity("Cube Submission for 3x3x3 Multi-Blind", "other-multi", LONG_ROOM, 2025-07-05T08:45, 2025-07-05T10:00)
 CreateMiscActivity("Opening Ceremony", "other-misc", MAIN_HALL, 2025-07-03T18:00, 2025-07-03T19:00)
 CreateMiscActivity("Rubik's Nations Cup", "other-misc", MAIN_HALL, 2025-07-03T19:00, 2025-07-03T20:30)
-CreateMiscActivity("Awards", "other-awards", MAIN_HALL, 2025-07-06T18:00, 2025-07-09T19:00)
+CreateMiscActivity("Awards", "other-awards", MAIN_HALL, 2025-07-06T18:00, 2025-07-06T19:00)
