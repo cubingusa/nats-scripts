@@ -1,8 +1,9 @@
 # Volunteer teams
-#define DATAENTRY "staff-dataentry"
-#define CORE_VOLUNTEER "core-volunteer"
-#define COMMENTATOR "commentator"
+#define DATAENTRY "Data Team"
+#define CORE_VOLUNTEER "Core Volunteer Team"
+#define COMMENTATOR "Live Stream Commentator"
 #define STAGE_LEAD "stage-lead"
+#define STAFF_TEAM "staff-team"
 
 # Stages
 #define MAIN_RED "Red Stage"
