@@ -51,7 +51,7 @@ Map(SideStages(), CreateGroups(_777-r1, 4, 2025-07-04T09:00, 2025-07-04T10:00,
                                extraMinutesByGroup=[Tuple(4, 15)]))
 
 Map(MainStages(), CreateGroups(_222-r1, 9, 2025-07-04T09:50, 2025-07-04T12:05))
-Map(MainStages(), CreateGroups(_222-r1, 10, 2025-07-04T10:00, 2025-07-04T12:15))
+Map(SideStages(), CreateGroups(_222-r1, 10, 2025-07-04T10:00, 2025-07-04T12:15))
 
 Map(MainStages(), CreateGroups(_333oh-r2, 1, 2025-07-04T12:05, 2025-07-04T12:25))
 Map(AllStages(), CreateGroups(_pyram-r2, 1, 2025-07-04T12:25, 2025-07-04T12:45))
@@ -121,7 +121,7 @@ CreateMiscActivity("Check-in opens", "other-checkin", LOBBY, 2025-07-06T08:00, 2
 CreateMiscActivity("Lunch", "other-lunch", MAIN_HALL, 2025-07-03T12:45, 2025-07-03T13:45)
 CreateMiscActivity("Lunch", "other-lunch", MAIN_HALL, 2025-07-04T12:45, 2025-07-04T13:45)
 CreateMiscActivity("Lunch", "other-lunch", MAIN_HALL, 2025-07-05T12:45, 2025-07-05T13:45)
-CreateMiscActivity("Lunch", "other-lunch", MAIN_HALL, 2025-07-06T12:45, 2025-07-06T13:45)
+CreateMiscActivity("Lunch", "other-lunch", MAIN_HALL, 2025-07-06T12:50, 2025-07-06T13:50)
 CreateMiscActivity("Cube Submission for 3x3x3 Multi-Blind", "other-multi", LONG_ROOM, 2025-07-03T08:45, 2025-07-03T10:00)
 CreateMiscActivity("Cube Submission for 3x3x3 Multi-Blind", "other-multi", LONG_ROOM, 2025-07-05T08:45, 2025-07-05T10:00)
 CreateMiscActivity("Opening Ceremony", "other-misc", MAIN_HALL, 2025-07-03T18:00, 2025-07-03T19:00)
