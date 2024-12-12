@@ -16,7 +16,7 @@
 #define SIDE_BLUE "Ballroom Blue"
 #define SIDE_GREEN "Ballroom Green"
 #define SIDE_ORANGE "Ballroom Orange"
-#define LONG_ROOM "Long Room"
+#define LONG_ROOM "Room 607-610"
 #define MAIN_HALL "Main Hall"
 #define LOBBY "Lobby"
 
