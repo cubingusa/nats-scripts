@@ -16,9 +16,12 @@
 #define SIDE_BLUE "Ballroom Blue"
 #define SIDE_GREEN "Ballroom Green"
 #define SIDE_ORANGE "Ballroom Orange"
+
+# Rooms
 #define LONG_ROOM "Room 607-610"
-#define MAIN_HALL "Main Hall"
+#define MAIN_HALL "Hall 4"
 #define LOBBY "Lobby"
+#define BALLROOM "Ballroom 6"
 
 Define("AllStages", [MAIN_RED, MAIN_BLUE, MAIN_GREEN, MAIN_ORANGE, MAIN_YELLOW, MAIN_WHITE,
                      SIDE_RED, SIDE_BLUE, SIDE_GREEN, SIDE_ORANGE])
