@@ -56,8 +56,8 @@ WHERE competition_event_id IN (
 AND number = 2;
 
 INSERT INTO rounds (competition_event_id, format_id, number, time_limit, scramble_set_count, total_number_of_rounds, created_at, updated_at)
-SELECT competition_events.id, "3", 3,
-'{"centiseconds":24000,"cumulativeRoundIds":[]}', 1, "m", CURRENT_TIME(), CURRENT_TIME()
+SELECT competition_events.id, "m", 3,
+'{"centiseconds":24000,"cumulativeRoundIds":[]}', 1, 3, CURRENT_TIME(), CURRENT_TIME()
 FROM competition_events
 WHERE competition_id = "WC2025"
 AND event_id IN ("666", "777");
