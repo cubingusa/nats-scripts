@@ -73,7 +73,7 @@ Map(FinalsStages(), CreateGroups(_333oh-r3, 1, 2025-07-04T18:30, 2025-07-04T18:5
 
 # Saturday
 Map(MainStages(), CreateGroups(_333bf-r1, 2, 2025-07-05T09:00, 2025-07-05T09:40))
-Map(SideStages(), CreateGroups(_333bf-r2, 4, 2025-07-05T09:00, 2025-07-05T10:20))
+Map(SideStages(), CreateGroups(_333bf-r1, 4, 2025-07-05T09:00, 2025-07-05T10:20))
 
 Map(MainStages(), CreateGroups(_skewb-r1, 8, 2025-07-05T09:40, 2025-07-05T11:25))
 Map(SideStages(), CreateGroups(_skewb-r1, 10, 2025-07-05T10:20, 2025-07-05T12:20))
