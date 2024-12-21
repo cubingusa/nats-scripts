@@ -1,6 +1,6 @@
 -- Scripts for updating the database based on planned changes to WC2025.
 --
--- docker exec -i database mysql wca_development < ~/wc2025_setup.sql
+-- docker exec -i database mysql wca_development < wc2025_setup.sql
 
 DELETE FROM registration_competition_events WHERE registration_id IN (SELECT DISTINCT id FROM registrations WHERE competition_id="WC2025");
 
