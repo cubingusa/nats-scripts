@@ -23,7 +23,7 @@
 #define MAIN_PYRAM 7
 #define SIDE_PYRAM 11
 #define MAIN_SKEWB 8
-#define MAIN_SKEWB 10
+#define SIDE_SKEWB 10
 
 #define MAIN_SQ1 3
 #define SIDE_SQ1 5
