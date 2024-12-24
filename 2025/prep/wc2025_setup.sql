@@ -61,3 +61,6 @@ SELECT competition_events.id, "m", 3,
 FROM competition_events
 WHERE competition_id = "WC2025"
 AND event_id IN ("666", "777");
+
+-- After running, use DEV_add_fake_results.cs to "open WCA Live" for round 1.
+update rounds set round_results = null where competition_event_id in (select id from competition_events where competition_id = "WC2025");
