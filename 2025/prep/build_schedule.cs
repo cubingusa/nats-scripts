@@ -63,8 +63,8 @@ Map(MainStages(), CreateGroups(_444-r1, MAIN_444, 2025-07-04T13:45, 2025-07-04T1
 Map(SideStages(), CreateGroups(_444-r1, SIDE_444, 2025-07-04T13:45, 2025-07-04T16:15,
                                extraMinutesByGroup=[Tuple(7, 10), Tuple(8, 10), Tuple(9, 10), Tuple(10, 10)]))
 
-Map(MainStages(), CreateGroups(_minx-r1, 4, 2025-07-04T15:55, 2025-07-04T17:15))
-Map(SideStages(), CreateGroups(_minx-r1, 5, 2025-07-04T16:15, 2025-07-04T17:15,
+Map(MainStages(), CreateGroups(_minx-r1, MAIN_MINX, 2025-07-04T15:55, 2025-07-04T17:15))
+Map(SideStages(), CreateGroups(_minx-r1, SIDE_MINX, 2025-07-04T16:15, 2025-07-04T17:15,
                                extraMinutesByGroup=[Tuple(5, 10)]))
 
 Map(FinalsStages(), CreateGroups(_555-r3, 1, 2025-07-04T17:30, 2025-07-04T17:50))

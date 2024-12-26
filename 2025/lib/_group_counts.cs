@@ -18,8 +18,8 @@
 
 #define MAIN_CLOCK 6
 #define SIDE_CLOCK 5
-#define MAIN_MINX
-#define SIDE_MINX
+#define MAIN_MINX 4
+#define SIDE_MINX 5
 #define MAIN_PYRAM 7
 #define SIDE_PYRAM 11
 #define MAIN_SKEWB 8
