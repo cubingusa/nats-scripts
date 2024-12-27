@@ -22,8 +22,8 @@ CreateStage(SIDE_ORANGE, BALLROOM, "#c06000", groupNamePrefix="OO")
 
 
 # Long room
-CreateGroups(_333mbf-r1-a1, 1, LONG_ROOM, 2025-07-03T13:15, 2025-07-03T14:30, useStageName=false)
-CreateGroups(_333mbf-r1-a2, 1, LONG_ROOM, 2025-07-05T13:15, 2025-07-05T14:30, useStageName=false)
+CreateGroups(_333mbf-r1-a1, 1, LONG_ROOM, 2025-07-03T13:00, 2025-07-03T14:15, useStageName=false)
+CreateGroups(_333mbf-r1-a2, 1, LONG_ROOM, 2025-07-05T13:00, 2025-07-05T14:15, useStageName=false)
 CreateGroups(_333fm-r1-a1, 1, LONG_ROOM, 2025-07-03T15:15, 2025-07-03T16:30, useStageName=false)
 CreateGroups(_333fm-r1-a2, 1, LONG_ROOM, 2025-07-04T15:15, 2025-07-04T16:30, useStageName=false)
 CreateGroups(_333fm-r1-a3, 1, LONG_ROOM, 2025-07-05T15:15, 2025-07-05T16:30, useStageName=false)
