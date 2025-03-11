@@ -4,4 +4,5 @@
 
 AssignGroups(_444-r1,
              RoundOneAssignmentSets(_444, 2025-07-04, MAIN_444, SIDE_444),
-             DefaultScorers())
+             Concat(DefaultScorers(),
+                    [ByFilters(CompetingIn(_333fm), (StartTime() < 2025-07-04T16:40), -100)]))
