@@ -1,7 +1,7 @@
 # Volunteer teams
-#define DATAENTRY "Data Team"
-#define CORE_VOLUNTEER "Core Volunteer Team"
-#define COMMENTATOR "Live Stream Commentator"
+#define DATAENTRY "staff-dataentry"
+#define CORE_VOLUNTEER "core-volunteer"
+#define COMMENTATOR "commentator"
 #define STAGE_LEAD "stage-lead"
 #define STAFF_TEAM "staff-team"
 
@@ -28,3 +28,5 @@ Define("AllStages", [MAIN_RED, MAIN_BLUE, MAIN_GREEN, MAIN_ORANGE, MAIN_YELLOW, 
 Define("MainStages", [MAIN_RED, MAIN_BLUE, MAIN_GREEN, MAIN_ORANGE, MAIN_YELLOW, MAIN_WHITE])
 Define("SideStages", [SIDE_RED, SIDE_BLUE, SIDE_GREEN, SIDE_ORANGE])
 Define("FinalsStages", [MAIN_RED, MAIN_BLUE])
+
+Define("IsDataEntry", (StringProperty("assigned-team") == DATAENTRY))
