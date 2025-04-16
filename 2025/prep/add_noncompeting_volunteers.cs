@@ -24,3 +24,8 @@ AddPerson(314044) # David Krasne
 AddPerson(253981) # Nupur Khandelwal
 AddPerson(28160) # Laís Helena Réga Serra Marques
 AddPerson(294120) # Kirsty Grainger
+AddPerson(451233) # Natálie Rajdusová
+AddPerson(6130) # Christian Goñi
+AddPerson(159733) # Brendan Burgess
+AddPerson(464503) # Mat Rapoza
+AddPerson(480441) # Paul Hays
