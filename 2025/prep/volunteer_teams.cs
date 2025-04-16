@@ -18,16 +18,13 @@ Define("IsLongRoomMaybe",
 #define UNOFFICIAL_YES "Yes definitely!"
 #define UNOFFICIAL_MAYBE "I could help some"
 
-#define STAGE_LEAD_CAPTAIN "stage-lead-captain"
-#define STAGE_LEAD_REGULAR "stage-lead-regular"
 #define IS_FINALS_VOLUNTEER_PROPERTY "finals-volunteer"
 
 Define(
     "BasicConstraints",
     [
       BalanceConstraint("Num Events", Length(RegisteredEvents()), 0.2),
-      LimitConstraint("Stage Lead Captains", (StringProperty(STAGE_LEAD) == STAGE_LEAD_CAPTAIN), 1, 10),
-      LimitConstraint("Stage Leads", (StringProperty(STAGE_LEAD) == STAGE_LEAD_REGULAR), 2, 10),
+      LimitConstraint("Stage Leads", (StringProperty(STAGE_LEAD) == STAGE_LEAD), 3, 10),
       LimitConstraint("Long Room yes", IsLongRoomYes(), 2, 10),
       LimitConstraint("Long Room maybe", IsLongRoomMaybe(), 3, 10),
       BalanceConstraint("delegate", (StringProperty("delegate-status") != "Not a WCA Delegate"), 5)
