@@ -69,6 +69,17 @@ Define(
     Map([_333, _222, _444, _555, _666, _777, _333bf, _333oh, _clock, _pyram, _skewb, _sq1, _minx],
       BalanceConstraint((EventId() + "-semi"), (PsychSheetPosition() < 200), 2)))
 
+Define(
+    "SpecificTeams",
+    [
+      SpecificAssignmentScore(
+        "ChineseTeams",
+        In(Country(), ["CN", "HK", "TW"]),
+        (Arg<Number>() <= 3),
+        50
+      )
+    ])
+
 DeleteProperty(Persons(HasProperty(STAFF_TEAM)), STAFF_TEAM)
 
 Cluster(
@@ -80,4 +91,5 @@ Cluster(
       ScramblerConstraints(),
       RoundOneConstraints(),
       RoundTwoConstraints(),
-      SemiConstraints()))
+      SemiConstraints(),
+      SpecificTeams()))
