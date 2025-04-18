@@ -141,7 +141,9 @@ Define(
         Or(NPerGroup(_444bf, 1, 20),
            NPerGroup(_sq1, MAIN_SQ1, 20)),
         In(AssignedStageForTeam(Arg<Number>(), 2025-07-06), MainStages()),
-        30)])
+        30),
+      SpecificAssignmentScore(
+          "Bailing", (Name() == "Bailing Hou"), In(Arg<Number>(), [1, 8, 9]), 30)])
 
 DeleteProperty(Persons(HasProperty(STAFF_TEAM)), STAFF_TEAM)
 
