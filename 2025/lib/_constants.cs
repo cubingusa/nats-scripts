@@ -4,6 +4,9 @@
 #define COMMENTATOR "commentator"
 #define STAGE_LEAD "stage-lead"
 #define STAFF_TEAM "staff-team"
+#define WCA_BOOTH "wca-booth"
+#define MAIN_HALL_ORGANIZER "main-hall-organizer"
+#define BALLROOM_ORGANIZER "ballroom-organizer"
 
 # Stages
 #define MAIN_RED "Red Stage"

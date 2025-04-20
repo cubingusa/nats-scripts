@@ -10,7 +10,22 @@ Define(
                 In(Stage(), FinalsStages()),
                 featured=true))
 
-# TODO: Early assignment sets: data, commentators, WCA booth, others
+Define(
+  "EarlyAssignmentSets",
+  [AssignmentSet("commentators",
+                 (BooleanProperty(COMMENTATOR),
+                  (Stage() == MAIN_RED))),
+   AssignmentSet("wca_booth",
+                 BooleanProperty(WCA_BOOTH),
+                 (Stage() == MAIN_GREEN)),
+   AssignmentSet("main_hall_organizers",
+                 BooleanProperty(MAIN_HALL_ORGANIZER),
+                 (Stage() == MAIN_ORANGE)),
+   AssignmentSet("ballroom_organizers",
+                 BooleanProperty(BALLROOM_ORGANIZER),
+                 (Stage() == BALLROOM_ORANGE)),
+  ]
+    )
 
 # TODO: Staff
 
