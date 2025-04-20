@@ -1,4 +1,6 @@
+#include "../../lib/_assigned_stage.cs"
 #include "../../lib/_constants.cs"
+#include "../../lib/_eligible_scramblers.cs"
 
 # Args:
 # 1: Event
@@ -13,8 +15,8 @@ Define(
 Define(
   "EarlyAssignmentSets",
   [AssignmentSet("commentators",
-                 (BooleanProperty(COMMENTATOR),
-                  (Stage() == MAIN_RED))),
+                 BooleanProperty(COMMENTATOR),
+                 (Stage() == MAIN_RED)),
    AssignmentSet("wca_booth",
                  BooleanProperty(WCA_BOOTH),
                  (Stage() == MAIN_GREEN)),
@@ -23,11 +25,23 @@ Define(
                  (Stage() == MAIN_ORANGE)),
    AssignmentSet("ballroom_organizers",
                  BooleanProperty(BALLROOM_ORGANIZER),
-                 (Stage() == BALLROOM_ORANGE)),
-  ]
-    )
+                 (Stage() == SIDE_ORANGE))])
 
-# TODO: Staff
+Define(
+  "VolunteerAssignmentSets",
+  Flatten(Map(
+    AllStages(),
+    [AssignmentSet(("stage-leads-" + Arg<String>()),
+                   And(BooleanProperty(STAGE_LEAD),
+                       (AssignedStage(Arg<Person>(), {2, Date}) == Arg<String>())),
+                   (Stage() == Arg<String>())),
+     AssignmentSet(("scramblers-" + Arg<String>()),
+                   And(CanScramble({1, Event}),
+                       (AssignedStage(Arg<Person>(), {2, Date}) == Arg<String>())),
+                   (Stage() == Arg<String>())),
+     AssignmentSet(("volunteers-" + Arg<String>()),
+                   (AssignedStage(Arg<Person>(), {2, Date}) == Arg<String>()),
+                   (Stage() == Arg<String>()))])))
 
 Define(
   "FinalsStagesAssignmentSet",
@@ -56,10 +70,11 @@ Define(
 # 4: Finals stage competitors
 # 5: Main hall competitors
 Define("RoundOneAssignmentSetsImplImpl",
-       [TopCompetitors({1, Event}, {3, Number}),
-        FinalsStagesAssignmentSet({1, Event}, {4, Number}),
-        MainHallAssignmentSet({1, Event}, {4, Number}, {5, Number}),
-        BallroomAssignmentSet({1, Event}, {5, Number})])
+       Concat([TopCompetitors({1, Event}, {3, Number}),
+               FinalsStagesAssignmentSet({1, Event}, {4, Number})],
+              VolunteerAssignmentSets({1, Event}, {2, Date}),
+              [MainHallAssignmentSet({1, Event}, {4, Number}, {5, Number}),
+               BallroomAssignmentSet({1, Event}, {5, Number})]))
 
 # Args:
 # 1: Event
@@ -70,8 +85,8 @@ Define("RoundOneAssignmentSetsImplImpl",
 Define("RoundOneAssignmentSetsImpl",
        RoundOneAssignmentSetsImplImpl({1, Event}, {2, Date},
                                       ({3, Number} * 4),
-                                      ((({3, Number} * 2) / (({3, Number} * 6) + ({4, Number} * 4))) * {5, Number}),
-                                      ((({3, Number} * 6) / (({3, Number} * 6) + ({4, Number} * 4))) * {5, Number})))
+                                      ((({3, Number} * 1.9) / (({3, Number} * 5.8) + ({4, Number} * 4))) * {5, Number}),
+                                      ((({3, Number} * 5.8) / (({3, Number} * 5.8) + ({4, Number} * 4))) * {5, Number})))
 
 # Args:
 # 1: Event

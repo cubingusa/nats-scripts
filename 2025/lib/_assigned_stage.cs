@@ -44,3 +44,9 @@ Define(
                              Tuple(8, MAIN_ORANGE),
                              Tuple(9, MAIN_YELLOW),
                              Tuple(10, MAIN_WHITE)])])))
+
+Define(
+    "AssignedStage",
+    If(HasProperty(STAFF_TEAM, {1, Person}),
+       AssignedStageForTeam(NumberProperty(STAFF_TEAM, {1, Person}), {2, Date}),
+       "n/a"))
