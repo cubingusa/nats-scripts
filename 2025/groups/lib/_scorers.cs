@@ -1,9 +1,10 @@
-# TODO: First name clusters
+#include "_name_clusters.cs"
+
 # TODO: Staff stages
 # TODO: add time between competing in different rooms.
 
 Define("DefaultScorers",
-       [ByMatchingValue(FirstName(), -5),
+       [ByMatchingValue(FirstNameCluster(), -5),
         ByMatchingValue(Country(), 4, limit=2),
         ByMatchingValue(Country(), -1),
         # Put competitors in Chinese-speaking countries on one of the stages with a Chinese-speaking stage lead.
