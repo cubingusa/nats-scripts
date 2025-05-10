@@ -7,6 +7,8 @@
 #define WCA_BOOTH "wca-booth"
 #define MAIN_HALL_ORGANIZER "main-hall-organizer"
 #define BALLROOM_ORGANIZER "ballroom-organizer"
+#define FINALS_TEAM "finals-team"
+#define FINALS_VOLUNTEER "finals-team-volunteer"
 
 # Stages
 #define MAIN_RED "Red Stage"
