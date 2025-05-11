@@ -44,6 +44,7 @@ Define("Unavailable",
              Tuple(2022CHES04, [DuringTimes(CompetingTimes(2022CHES03, true))]),  # Tommy Chestnutt
              Tuple(2017HART11, [DuringTimes(CompetingTimes(2016HART02, IsFinal(Round())))]),  # Nancy Hartman
              Tuple(2011HAYS01, [DuringTimes(CompetingTimes(2009HAYS01, true))]),  # Paul Hays
+             Tuple(2011HAYS02, [DuringTimes(CompetingTimes(2009HAYS01, true))]),  # Donna Hays
              Tuple(p308553, [DuringTimes(CompetingTimes(2018KUCZ01, true))]),  # Dawn Kuczaj
              Tuple(2017MARQ06, [DuringTimes(CompetingTimes(2014MARQ02, true))]),  # Lais Helena Rega Serra Marques
              Tuple(2012BUBE01, [DuringTimes(CompetingTimes(2024ARRA01, true))]),  # Alina Arranhado
