@@ -129,6 +129,7 @@ CreateMiscActivity("Lunch", "other-lunch", MAIN_HALL, 2025-07-03T12:45, 2025-07-
 CreateMiscActivity("Lunch", "other-lunch", MAIN_HALL, 2025-07-04T12:45, 2025-07-04T13:45)
 CreateMiscActivity("Lunch", "other-lunch", MAIN_HALL, 2025-07-05T12:45, 2025-07-05T13:45)
 CreateMiscActivity("Lunch", "other-lunch", MAIN_HALL, 2025-07-06T12:50, 2025-07-06T13:50)
+CreateMiscActivity("Unofficial Event Finals", "other-misc", MAIN_HALL, 2025-07-06T13:00, 2025-07-06T13:40)
 CreateMiscActivity("Cube Submission for 3x3x3 Multi-Blind", "other-multi", LONG_ROOM, 2025-07-03T08:30, 2025-07-03T10:00)
 CreateMiscActivity("Cube Submission for 3x3x3 Multi-Blind", "other-multi", LONG_ROOM, 2025-07-05T08:45, 2025-07-05T10:00)
 CreateMiscActivity("Opening Ceremony", "other-misc", MAIN_HALL, 2025-07-03T18:00, 2025-07-03T19:00)
