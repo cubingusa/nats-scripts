@@ -14,10 +14,12 @@ Define("Unavailable",
              Tuple(2010BENT01, [UnavailableBetween(2025-07-03T14:45, 2025-07-03T15:15),
                                 UnavailableBetween(2025-07-04T14:45, 2025-07-04T15:15),
                                 UnavailableBetween(2025-07-05T14:45, 2025-07-05T15:15)]),  # Jan Bentlage
+             Tuple(2018NEVE02, [UnavailableBetween(2025-07-03T14:45, 2025-07-03T15:15),
+                                UnavailableBetween(2025-07-04T14:45, 2025-07-04T15:15),
+                                UnavailableBetween(2025-07-05T14:45, 2025-07-05T15:15)]),  # Adrian Neveu
              Tuple(2014GULA02, [UnavailableBetween(2025-07-04T12:00, 2025-07-04T15:00)]),  # Abdullah Gulab
              Tuple(2015PADG01, [UnavailableBetween(2025-07-04T00:00, 2025-07-04T23:59)]),  # Dalton Padgett
              Tuple(2023NIEU03, [DuringTimes(CompetingTimes(2018NIEU01, true))]),  # Wendy Nieuwland
-             Tuple(2012MAYE01, [UnavailableBetween(2025-07-06T00:00, 2025-07-06T23:59)]),  # Theo Mayer
              Tuple(2015SETT01, [UnavailableBetween(2025-07-05T15:00, 2025-07-05T23:59)]),  # Fabian Settelen
              Tuple(2016MURP05, [UnavailableBetween(2025-07-06T00:00, 2025-07-06T09:30)]),  # Max Murphy
              Tuple(p130670, [DuringTimes(CompetingTimes(2016HOBB01, (EventForRound(Round()) == _pyram)))]),  # Jeff Hobbs
