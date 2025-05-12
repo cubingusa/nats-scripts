@@ -11,12 +11,12 @@
 #define FINALS_VOLUNTEER "finals-team-volunteer"
 
 # Stages
-#define MAIN_RED "Red Stage"
-#define MAIN_BLUE "Blue Stage"
-#define MAIN_GREEN "Green Stage"
-#define MAIN_ORANGE "Orange Stage"
-#define MAIN_YELLOW "Yellow Stage"
-#define MAIN_WHITE "White Stage"
+#define MAIN_RED "Main Red"
+#define MAIN_BLUE "Main Blue"
+#define MAIN_GREEN "Main Green"
+#define MAIN_ORANGE "Main Orange"
+#define MAIN_YELLOW "Main Yellow"
+#define MAIN_WHITE "Main White"
 #define SIDE_RED "Ballroom Red"
 #define SIDE_BLUE "Ballroom Blue"
 #define SIDE_GREEN "Ballroom Green"
