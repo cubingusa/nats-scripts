@@ -29,7 +29,8 @@ Define("Unavailable",
              Tuple(2023KRAS01, [DuringTimes(CompetingTimes(2022KRAS02, true))]),  # David Krasne
              Tuple(2020EYOU01, [DuringTimes(CompetingTimes(2019EYOU01, In(EventForRound(Round()), [_pyram, _666]))),
                                 DuringTimes(CompetingTimes(2018EYOU02, In(EventForRound(Round()), [_pyram, _666])))]),  # Wee-Yeong Eyou
-             # TODO: Reeta Eyou
+             Tuple(p484684, [DuringTimes(CompetingTimes(2019EYOU01, In(EventForRound(Round()), [_pyram, _666]))),
+                             DuringTimes(CompetingTimes(2018EYOU02, In(EventForRound(Round()), [_pyram, _666])))]),  # Reeta Eyou
              Tuple(2022KUCA01, [DuringTimes(CompetingTimes(2015KUCA01, (EventForRound(Round())) == _skewb))]),  # Joe Kucala
              Tuple(2021VOAI01, [UnavailableBetween(2025-07-05T17:30, 2025-07-05T23:59)]),  # Aileen Vo
              Tuple(2018GREN02, [UnavailableBetween(2025-07-06T00:00, 2025-07-06T11:00)]),  # William Greninger
