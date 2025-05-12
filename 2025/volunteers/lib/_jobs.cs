@@ -18,5 +18,5 @@ Define("Runners", Job("runner", {1, Number},
                       eligibility=And((NumberProperty("percent-runner") > 0),
                                       Not(HasProperty(STAGE_LEAD)),
                                       BooleanProperty(CORE_STAFF))))
-Define("Primary Delegate", Job("Primary Delegate", 1, eligibility=BooleanProperty(STAGE_LEAD)))
-Define("Secondary Delegate", Job("Secondary Delegate", 1, eligibility=BooleanProperty(STAGE_LEAD)))
+Define("PrimaryDelegate", Job("Primary Delegate", 1, eligibility=BooleanProperty(STAGE_LEAD)))
+Define("SecondaryDelegate", Job("Secondary Delegate", 1, eligibility=BooleanProperty(STAGE_LEAD)))
