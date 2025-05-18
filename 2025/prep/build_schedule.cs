@@ -8,12 +8,12 @@ CreateRoom(BALLROOM, "#008800")
 CreateRoom(LONG_ROOM, "#888888")
 CreateRoom(LOBBY, "#000000")
 
-CreateStage(MAIN_RED, MAIN_HALL, "#ff0000")
-CreateStage(MAIN_BLUE, MAIN_HALL, "#0000ff")
-CreateStage(MAIN_GREEN, MAIN_HALL, "#00ff00")
-CreateStage(MAIN_ORANGE, MAIN_HALL, "#ff8000")
-CreateStage(MAIN_YELLOW, MAIN_HALL, "#ffff00")
-CreateStage(MAIN_WHITE, MAIN_HALL, "#ffffff")
+CreateStage(MAIN_RED, MAIN_HALL, "#ff0000", groupNamePrefix="Main Red")
+CreateStage(MAIN_BLUE, MAIN_HALL, "#0000ff", groupNamePrefix="Main Blue")
+CreateStage(MAIN_GREEN, MAIN_HALL, "#00ff00", groupNamePrefix="Main Green")
+CreateStage(MAIN_ORANGE, MAIN_HALL, "#ff8000", groupNamePrefix="Main Orange")
+CreateStage(MAIN_YELLOW, MAIN_HALL, "#ffff00", groupNamePrefix="Main Yellow")
+CreateStage(MAIN_WHITE, MAIN_HALL, "#ffffff", groupNamePrefix="Main White")
 
 CreateStage(SIDE_RED, BALLROOM, "#c00000", groupNamePrefix="RR")
 CreateStage(SIDE_BLUE, BALLROOM, "#000080", groupNamePrefix="BB")
@@ -74,10 +74,10 @@ Map(FinalsStages(), CreateGroups(_333oh-r3, 1, 2025-07-04T18:30, 2025-07-04T18:5
 
 # Saturday
 Map(MainStages(), CreateGroups(_333bf-r1, MAIN_333BF, 2025-07-05T09:00, 2025-07-05T09:40))
-Map(SideStages(), CreateGroups(_333bf-r1, SIDE_333BF, 2025-07-05T09:00:01, 2025-07-05T10:20))
+Map(SideStages(), CreateGroups(_333bf-r1, SIDE_333BF, 2025-07-05T09:00:01, 2025-07-05T10:00))
 
 Map(MainStages(), CreateGroups(_skewb-r1, MAIN_SKEWB, 2025-07-05T09:40, 2025-07-05T11:25))
-Map(SideStages(), CreateGroups(_skewb-r1, SIDE_SKEWB, 2025-07-05T10:20, 2025-07-05T12:20))
+Map(SideStages(), CreateGroups(_skewb-r1, SIDE_SKEWB, 2025-07-05T10:00, 2025-07-05T12:15))
 
 Map(MainStages(), CreateGroups(_777-r2, 1, 2025-07-05T11:25, 2025-07-05T11:45))
 Map(MainStages(), CreateGroups(_minx-r2, 1, 2025-07-05T11:45, 2025-07-05T12:05))

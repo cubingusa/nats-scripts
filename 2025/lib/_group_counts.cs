@@ -12,7 +12,7 @@
 #define SIDE_777 4
 
 #define MAIN_333BF 2
-#define SIDE_333BF 4
+#define SIDE_333BF 3
 #define MAIN_333OH 8
 #define SIDE_333OH 8
 
@@ -22,8 +22,8 @@
 #define SIDE_MINX 5
 #define MAIN_PYRAM 7
 #define SIDE_PYRAM 11
-#define MAIN_SKEWB 8
-#define SIDE_SKEWB 10
+#define MAIN_SKEWB 7
+#define SIDE_SKEWB 9
 
 #define MAIN_SQ1 3
 #define SIDE_SQ1 5
