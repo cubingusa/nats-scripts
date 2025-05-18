@@ -28,5 +28,5 @@
 #define MAIN_SQ1 3
 #define SIDE_SQ1 5
 
-#define MAIN_333_R2 3
-#define SIDE_333_R2 5
+#define MAIN_333_R2 4
+#define SIDE_333_R2 4
