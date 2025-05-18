@@ -7,7 +7,7 @@
 # 2: Number of top people
 Define(
   "TopCompetitors",
-  If((Event() == _clock),
+  If((EventId({1, Event}) == "clock"),
      AssignmentSet("top",
                    (PsychSheetPosition({1, Event}) <= 8),
                    And(In(Stage(), FinalsStages()), (GroupNumber() > 4)),
@@ -90,7 +90,7 @@ Define("RoundOneAssignmentSetsImplImpl",
 Define("RoundOneAssignmentSetsImpl",
        RoundOneAssignmentSetsImplImpl({1, Event}, {2, Date},
                                       ({3, Number} * 4),
-                                      ((({3, Number} * 1.9) / (({3, Number} * 5.8) + ({4, Number} * 4))) * {5, Number}),
+                                      ((({3, Number} * 1.8) / (({3, Number} * 5.8) + ({4, Number} * 4))) * {5, Number}),
                                       ((({3, Number} * 5.8) / (({3, Number} * 5.8) + ({4, Number} * 4))) * {5, Number})))
 
 # Args:
