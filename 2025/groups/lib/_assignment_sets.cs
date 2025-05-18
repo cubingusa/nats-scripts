@@ -7,10 +7,15 @@
 # 2: Number of top people
 Define(
   "TopCompetitors",
-  AssignmentSet("top",
-                (PsychSheetPosition({1, Event}) <= {2, Number}),
-                In(Stage(), FinalsStages()),
-                featured=true))
+  If((Event() == _clock),
+     AssignmentSet("top",
+                   (PsychSheetPosition({1, Event}) <= 8),
+                   And(In(Stage(), FinalsStages()), (GroupNumber() > 4)),
+                   featured=true),
+     AssignmentSet("top",
+                   (PsychSheetPosition({1, Event}) <= {2, Number}),
+                   In(Stage(), FinalsStages()),
+                   featured=true)))
 
 Define(
   "EarlyAssignmentSets",
