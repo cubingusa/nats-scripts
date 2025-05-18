@@ -8,7 +8,7 @@ Define("ThursdayAssignmentsForStage",
        All(
          DoVolunteerAssignments(
            _555bf-r1, {1, String}, 2025-07-03,
-           [Judges(10), Scramblers(3), Runners(2), PrimaryDelegate(), SecondaryDelegate()],
+           [Judges(10), Scramblers(3), Runners(2), Checkers(1), PrimaryDelegate(), SecondaryDelegate()],
            VolunteerScorers(_555bf, 2025-07-03)),
          DoVolunteerAssignments(
            _clock-r1, {1, String}, 2025-07-03,

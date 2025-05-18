@@ -14,9 +14,12 @@ Define("Scramblers", Job("scrambler", {1, Number},
                                          (NumberProperty("percent-scrambler") > 0),
                                          Not(HasProperty(STAGE_LEAD)),
                                          BooleanProperty(CORE_STAFF))))
+Define("Checkers", Job("ScrambleChecker", {1, Number},
+                       eligibility=And(Not(HasProperty(STAGE_LEAD)),
+                                       BooleanProperty(CORE_STAFF))))
 Define("Runners", Job("runner", {1, Number},
                       eligibility=And((NumberProperty("percent-runner") > 0),
                                       Not(HasProperty(STAGE_LEAD)),
                                       BooleanProperty(CORE_STAFF))))
-Define("PrimaryDelegate", Job("Primary Delegate", 1, eligibility=BooleanProperty(STAGE_LEAD)))
-Define("SecondaryDelegate", Job("Secondary Delegate", 1, eligibility=BooleanProperty(STAGE_LEAD)))
+Define("PrimaryDelegate", Job("Delegate", 1, eligibility=BooleanProperty(STAGE_LEAD)))
+Define("SecondaryDelegate", Job("SecondaryDelegate", 1, eligibility=BooleanProperty(STAGE_LEAD)))
