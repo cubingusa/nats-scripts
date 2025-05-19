@@ -33,5 +33,7 @@ Define("AllStages", [MAIN_RED, MAIN_BLUE, MAIN_GREEN, MAIN_ORANGE, MAIN_YELLOW, 
 Define("MainStages", [MAIN_RED, MAIN_BLUE, MAIN_GREEN, MAIN_ORANGE, MAIN_YELLOW, MAIN_WHITE])
 Define("SideStages", [SIDE_RED, SIDE_BLUE, SIDE_GREEN, SIDE_ORANGE])
 Define("FinalsStages", [MAIN_RED, MAIN_BLUE])
+Define("NonFinalsStages", [MAIN_GREEN, MAIN_ORANGE, MAIN_YELLOW, MAIN_WHITE,
+                           SIDE_RED, SIDE_BLUE, SIDE_GREEN, SIDE_ORANGE])
 
 Define("IsDataEntry", (StringProperty("assigned-team") == DATAENTRY))

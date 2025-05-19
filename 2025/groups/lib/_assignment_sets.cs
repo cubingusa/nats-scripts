@@ -33,9 +33,9 @@ Define(
                  (Stage() == SIDE_ORANGE))])
 
 Define(
-  "VolunteerAssignmentSets",
+  "VolunteerAssignmentSetsImpl",
   Flatten(Map(
-    AllStages(),
+    {3, Array<Stage>},
     [AssignmentSet(("stage-leads-" + Arg<String>()),
                    And(BooleanProperty(STAGE_LEAD),
                        (AssignedStage(Arg<Person>(), {2, Date}) == Arg<String>())),
@@ -47,6 +47,14 @@ Define(
      AssignmentSet(("volunteers-" + Arg<String>()),
                    (AssignedStage(Arg<Person>(), {2, Date}) == Arg<String>()),
                    (Stage() == Arg<String>()))])))
+
+Define(
+    "FinalsStagesVolunteerAssignmentSets",
+    VolunteerAssignmentSetsImpl({1, Event}, {2, Date}, FinalsStages()))
+
+Define(
+    "OtherVolunteerAssignmentSets",
+    VolunteerAssignmentSetsImpl({1, Event}, {2, Date}, NonFinalsStages()))
 
 Define(
   "FinalsStagesAssignmentSet",
@@ -75,9 +83,10 @@ Define(
 # 4: Finals stage competitors
 # 5: Main hall competitors
 Define("RoundOneAssignmentSetsImplImpl",
-       Concat([TopCompetitors({1, Event}, {3, Number}),
-               FinalsStagesAssignmentSet({1, Event}, {4, Number})],
-              VolunteerAssignmentSets({1, Event}, {2, Date}),
+       Concat([TopCompetitors({1, Event}, {3, Number})],
+              FinalsStagesVolunteerAssignmentSets({1, Event}, {2, Date}),
+              [FinalsStagesAssignmentSet({1, Event}, {4, Number})],
+              OtherVolunteerAssignmentSets({1, Event}, {2, Date}),
               [MainHallAssignmentSet({1, Event}, {4, Number}, {5, Number}),
                BallroomAssignmentSet({1, Event}, {5, Number})]))
 
