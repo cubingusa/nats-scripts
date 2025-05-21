@@ -7,3 +7,17 @@ AssignGroups(_333oh-r1,
              Concat(DefaultScorers(),
                     [ByFilters(CompetingIn(_333mbf), (StartTime() < 2025-07-03T14:30), -100),
                      ByFilters(CompetingIn(_333fm), (EndTime() > 2025-07-03T15:00), -100)]))
+
+"Sanity Check - Multi competitors"
+Table(
+    Sort(Persons(And(CompetingIn(_333mbf), CompetingIn(_333oh))), StartTime(AssignedGroup(_333oh-r1))),
+    [Column("Name", Name()),
+     Column("Group", ((Stage(AssignedGroup(_333oh-r1)) + " ") + ToString(GroupNumber(AssignedGroup(_333oh-r1))))),
+     Column("StartTime", StartTime(AssignedGroup(_333oh-r1)))])
+
+"Sanity Check - FMC competitors"
+Table(
+    Sort(Persons(And(CompetingIn(_333fm), CompetingIn(_333oh))), EndTime(AssignedGroup(_333oh-r1))),
+    [Column("Name", Name()),
+     Column("Group", ((Stage(AssignedGroup(_333oh-r1)) + " ") + ToString(GroupNumber(AssignedGroup(_333oh-r1))))),
+     Column("EndTime", EndTime(AssignedGroup(_333oh-r1)))])
