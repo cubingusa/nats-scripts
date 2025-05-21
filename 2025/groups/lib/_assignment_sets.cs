@@ -87,6 +87,7 @@ Define("RoundOneAssignmentSetsImplImpl",
               FinalsStagesVolunteerAssignmentSets({1, Event}, {2, Date}),
               [FinalsStagesAssignmentSet({1, Event}, {4, Number})],
               OtherVolunteerAssignmentSets({1, Event}, {2, Date}),
+              EarlyAssignmentSets(),
               [MainHallAssignmentSet({1, Event}, {4, Number}, {5, Number}),
                BallroomAssignmentSet({1, Event}, {5, Number})]))
 
