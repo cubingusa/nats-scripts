@@ -3,7 +3,7 @@
 Define("CompetingTimes",
        Map(Filter(AssignedGroups({1, Person}),
                   And({2, Boolean(Group)},
-                      Not(In(Event(), [_333fm, _333mbf]))), StartTime()))
+                      Not(In(Event(), [_333fm, _333mbf])))), StartTime()))
 
 Define("Unavailable",
        Concat(
