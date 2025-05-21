@@ -1,5 +1,4 @@
 #include "../../lib/_constants.cs"
-#include "../../lib/_long_room_staff.cs"
 
 Define("CompetingTimes",
        Map(Filter(AssignedGroups({1, Person}), {2, Boolean(Group)}), StartTime()))
@@ -31,17 +30,17 @@ Define("Unavailable",
                                 DuringTimes(CompetingTimes(2018EYOU02, In(EventForRound(Round()), [_pyram, _666])))]),  # Wee-Yeong Eyou
              Tuple(p484684, [DuringTimes(CompetingTimes(2019EYOU01, In(EventForRound(Round()), [_pyram, _666]))),
                              DuringTimes(CompetingTimes(2018EYOU02, In(EventForRound(Round()), [_pyram, _666])))]),  # Reeta Eyou
-             Tuple(2022KUCA01, [DuringTimes(CompetingTimes(2015KUCA01, (EventForRound(Round())) == _skewb))]),  # Joe Kucala
+             Tuple(2022KUCA01, [DuringTimes(CompetingTimes(2015KUCA01, (EventForRound(Round()) == _skewb)))]),  # Joe Kucala
              Tuple(2021VOAI01, [UnavailableBetween(2025-07-05T17:30, 2025-07-05T23:59)]),  # Aileen Vo
              Tuple(2018GREN02, [UnavailableBetween(2025-07-06T00:00, 2025-07-06T11:00)]),  # William Greninger
-             Tuple(2024GROS05, [UnavailableBetween(2025-07-05T00:00, 2025-07-05T23:59)]),  # Zalman Grossbaum
+             Tuple(2023GROS05, [UnavailableBetween(2025-07-05T00:00, 2025-07-05T23:59)]),  # Zalman Grossbaum
              Tuple(2022DAYJ01, [UnavailableBetween(2025-07-06T00:00, 2025-07-06T12:00)]),  # Joey Day
              Tuple(2017OSUD01, [UnavailableBetween(2025-07-06T00:00, 2025-07-06T23:59)]),  # Peter Osudar
              Tuple(2019BEZZ01, [UnavailableBetween(2025-07-06T00:00, 2025-07-06T12:00)]),  # Nico Bezzerides
              Tuple(2008WARL01, [UnavailableBetween(2025-07-05T16:30, 2025-07-05T23:59)]),  # Jackson Warley
              Tuple(2019BURG06, [UnavailableBetween(2025-07-05T00:00, 2025-07-05T10:00)]),  # Brendan Burgess
-             Tuple(2022GRAI02, [DuringTimes(CompetingTimes(2018GRAI01, In(EventForRound(Round()), [_clock, _minx])))])  # Kirsty Grainger
-# TODO: Lorenzo Gonzalez
+             Tuple(2022GRAI02, [DuringTimes(CompetingTimes(2018GRAI01, In(EventForRound(Round()), [_clock, _minx])))]),  # Kirsty Grainger
+             Tuple(2018GONZ09, [DuringTimes(CompetingTimes(2018PERE37, true))]),  # Lorenzo Gonzalez
              Tuple(2020TONG02, [UnavailableBetween(2025-07-03T00:00, 2025-07-03T12:45)]),  # Draco Tong
              Tuple(2013FRAI01, [UnavailableBetween(2025-07-05T11:45, 2025-07-05T12:25)]),  # Diego Fraile
              Tuple(2022CHES04, [DuringTimes(CompetingTimes(2022CHES03, true))]),  # Tommy Chestnutt
@@ -51,10 +50,10 @@ Define("Unavailable",
              Tuple(p308553, [DuringTimes(CompetingTimes(2018KUCZ01, true))]),  # Dawn Kuczaj
              Tuple(2017MARQ06, [DuringTimes(CompetingTimes(2014MARQ02, true))]),  # Lais Helena Rega Serra Marques
              Tuple(2012BUBE01, [DuringTimes(CompetingTimes(2024ARRA01, true))]),  # Alina Arranhado
-             Tuple(2023RUSH01, [DuringTimes(CompetingTimes(2018RUSH01, (RoundNumber() > 1)))]),  # Catherine Rush
+             Tuple(2023RUSH01, [DuringTimes(CompetingTimes(2018RUSH01, (RoundNumber(Round()) > 1)))]),  # Catherine Rush
              Tuple(2022RUSH01, [DuringTimes(CompetingTimes(2023RUSH01, true)),
                                 DuringTimes(CompetingTimes(2018RUSH01, true))]),  # Anthony Kalaya Rush
-             Tuple(2019BLAC02, [DuringTimes(CompetingTimes(2017BLAC06, (EventForRound() == _skewb)))])  # Sonja Black
+             Tuple(2019BLAC02, [DuringTimes(CompetingTimes(2017BLAC06, (EventForRound(Round()) == _skewb)))]),  # Sonja Black
              Tuple(2019BUCH04, [DuringTimes(CompetingTimes(2015SPEN01, true))]),  # Rachel Spendla
              Tuple(2005STIL01, [DuringTimes(CompetingTimes(2003LEEJ01, true))]),  # Peter Still
              Tuple(2023MONE01, [DuringTimes(CompetingTimes(2023MONE03, true)),
