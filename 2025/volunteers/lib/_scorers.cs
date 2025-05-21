@@ -1,4 +1,5 @@
 #include "../../lib/_eligible_scramblers.cs"
+#include "../../lib/_constants.cs"
 
 Define("ScrambleSpeedWeight",
        [Tuple(_333, 3),
@@ -31,5 +32,10 @@ Define("VolunteerScorers",
                             Switch(Switch({1, Event}, EventsToScramblingEvents()), ScrambleLimits()),
                             Switch({1, Event}, ScrambleSpeedWeight()),
                             ["scrambler"]),
-         FollowingGroupScorer(-50)
+         FollowingGroupScorer(-50),
+         ConditionalScorer((StringProperty("delegate-status") == "Not a WCA Delegate"),
+                           In(Stage(), FinalsStages()),
+                           (Arg<String>() == "judge"),
+                           (Arg<Number>() == 1),
+                           -50)
        ])
