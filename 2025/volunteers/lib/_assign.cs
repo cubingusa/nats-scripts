@@ -12,7 +12,7 @@ Define("DoVolunteerAssignments",
        AssignStaff(
          {1, Round},
          (Stage() == {2, String}),
-         Persons((AssignedStage(Arg<Person>(), {3, Date}) == Arg<String>())),
+         Persons((AssignedStage(Arg<Person>(), {3, Date}) == {2, String})),
          {4, Array<AssignmentJob>},
          {5, Array<AssignmentScorer>},
          unavailable=Unavailable(Arg<Person>())))
