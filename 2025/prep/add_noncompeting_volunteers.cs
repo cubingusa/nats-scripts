@@ -28,3 +28,5 @@ AddPerson(6130) # Christian Goñi
 AddPerson(159733) # Brendan Burgess
 AddPerson(464503) # Mat Rapoza
 AddPerson(480441) # Paul Hays
+AddPerson(385123) # Wendy Nieuwland
+AddPerson(215340) # Wee-Young Eyou
