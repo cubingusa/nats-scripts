@@ -17,11 +17,15 @@ Define(
                    In(Stage(), FinalsStages()),
                    featured=true)))
 
+# Args:
+# 1: Number of Groups.
 Define(
   "EarlyAssignmentSets",
   [AssignmentSet("commentators",
                  BooleanProperty(COMMENTATOR),
-                 (Stage() == MAIN_RED)),
+                 And((Stage() == MAIN_RED),
+                     Or((GroupNumber() < {1, Number}),
+                        (GroupNumber() <= 3)))),
    AssignmentSet("wca_booth",
                  BooleanProperty(WCA_BOOTH),
                  (Stage() == MAIN_GREEN)),
@@ -82,12 +86,13 @@ Define(
 # 3: Top competitors
 # 4: Finals stage competitors
 # 5: Main hall competitors
+# 6: Main hall groups
 Define("RoundOneAssignmentSetsImplImpl",
        Concat([TopCompetitors({1, Event}, {3, Number})],
               FinalsStagesVolunteerAssignmentSets({1, Event}, {2, Date}),
               [FinalsStagesAssignmentSet({1, Event}, {4, Number})],
               OtherVolunteerAssignmentSets({1, Event}, {2, Date}),
-              EarlyAssignmentSets(),
+              EarlyAssignmentSets({6, Number}),
               [MainHallAssignmentSet({1, Event}, {4, Number}, {5, Number}),
                BallroomAssignmentSet({1, Event}, {5, Number})]))
 
@@ -101,7 +106,8 @@ Define("RoundOneAssignmentSetsImpl",
        RoundOneAssignmentSetsImplImpl({1, Event}, {2, Date},
                                       ({3, Number} * 4),
                                       ((({3, Number} * 1.8) / (({3, Number} * 5.8) + ({4, Number} * 4))) * {5, Number}),
-                                      ((({3, Number} * 5.8) / (({3, Number} * 5.8) + ({4, Number} * 4))) * {5, Number})))
+                                      ((({3, Number} * 5.8) / (({3, Number} * 5.8) + ({4, Number} * 4))) * {5, Number}),
+                                      {3, Number}))
 
 # Args:
 # 1: Event
