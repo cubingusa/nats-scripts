@@ -4,4 +4,4 @@
 
 AssignGroups(_333bf-r1,
              RoundOneAssignmentSets(_333bf, 2025-07-05, MAIN_333BF, SIDE_333BF),
-             DefaultScorers())
+             DefaultScorers(2025-07-05))

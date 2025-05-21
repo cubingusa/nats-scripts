@@ -6,7 +6,7 @@
 
 AssignGroups(_minx-r1,
              RoundOneAssignmentSets(_minx, 2025-07-04, MAIN_MINX, SIDE_MINX),
-             Concat(DefaultScorers(),
+             Concat(DefaultScorers(2025-07-04),
                     [ByFilters(CompetingIn(_333fm), (StartTime() < 2025-07-04T16:45), -100),
                      ByFilters(PossiblyWillAdvance(_555-r3, Arg<Person>()),
                                (EndTime() > 2025-07-04T17:05), -100),

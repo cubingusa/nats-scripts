@@ -6,7 +6,7 @@
 
 AssignGroups(_222-r1,
              RoundOneAssignmentSets(_222, 2025-07-04, MAIN_222, SIDE_222),
-             Concat(DefaultScorers(),
+             Concat(DefaultScorers(2025-07-04),
                     [ByFilters(PossiblyWillAdvance(_333oh-r2, Arg<Person>()),
                                (EndTime() > 2025-07-04T11:30), -100),
                      ByFilters(PossiblyWillAdvance(_pyram-r2, Arg<Person>()),

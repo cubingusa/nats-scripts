@@ -6,7 +6,7 @@
 
 AssignGroups(_skewb-r1,
              RoundOneAssignmentSets(_skewb, 2025-07-05, MAIN_SKEWB, SIDE_SKEWB),
-             Concat(DefaultScorers(),
+             Concat(DefaultScorers(2025-07-05),
                     [ByFilters(PossiblyWillAdvance(_777-r2, Arg<Person>()),
                                (EndTime() > 2025-07-05T11:00), -100),
                      ByFilters(PossiblyWillAdvance(_minx-r2, Arg<Person>()),

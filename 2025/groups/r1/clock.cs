@@ -4,7 +4,7 @@
 
 AssignGroups(_clock-r1,
              RoundOneAssignmentSets(_clock, 2025-07-03, MAIN_CLOCK, SIDE_CLOCK),
-             DefaultScorers())
+             DefaultScorers(2025-07-03))
 
 
 "Sanity Check - 5BLD competitors"

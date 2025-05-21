@@ -4,6 +4,6 @@
 
 AssignGroups(_333-r1,
              RoundOneAssignmentSets(_333, 2025-07-05, MAIN_333, SIDE_333),
-             Concat(DefaultScorers(),
+             Concat(DefaultScorers(2025-07-05),
                     [ByFilters(CompetingIn(_333mbf), (StartTime() < 2025-07-05T14:30), -100),
                      ByFilters(CompetingIn(_333fm), (EndTime() > 2025-07-05T15:00), -100)]))

@@ -5,6 +5,6 @@
 
 AssignGroups(_sq1-r1,
              RoundOneAssignmentSets(_sq1, 2025-07-06, MAIN_SQ1, SIDE_SQ1),
-             Concat(DefaultScorers(),
+             Concat(DefaultScorers(2025-07-06),
                     [ByFilters(BooleanProperty(COMMENTATOR),
                                (EndTime() > 2025-07-06T10:30), -100)]))
