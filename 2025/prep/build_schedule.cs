@@ -15,10 +15,10 @@ CreateStage(MAIN_ORANGE, MAIN_HALL, "#ff8000", groupNamePrefix="Main Orange")
 CreateStage(MAIN_YELLOW, MAIN_HALL, "#ffff00", groupNamePrefix="Main Yellow")
 CreateStage(MAIN_WHITE, MAIN_HALL, "#ffffff", groupNamePrefix="Main White")
 
-CreateStage(SIDE_RED, BALLROOM, "#c00000", groupNamePrefix="RR")
-CreateStage(SIDE_BLUE, BALLROOM, "#000080", groupNamePrefix="BB")
-CreateStage(SIDE_GREEN, BALLROOM, "#008000", groupNamePrefix="GG")
-CreateStage(SIDE_ORANGE, BALLROOM, "#c06000", groupNamePrefix="OO")
+CreateStage(SIDE_RED, BALLROOM, "#c00000", groupNamePrefix="Ballroom Red")
+CreateStage(SIDE_BLUE, BALLROOM, "#000080", groupNamePrefix="Ballroom Blue")
+CreateStage(SIDE_GREEN, BALLROOM, "#008000", groupNamePrefix="Ballroom Green")
+CreateStage(SIDE_ORANGE, BALLROOM, "#c06000", groupNamePrefix="Ballroom Orange")
 
 
 # Long room
@@ -110,7 +110,7 @@ Map(SideStages(), CreateGroups(_skewb-r2, 1, 2025-07-06T11:50:01, 2025-07-06T12:
 Map(MainStages(), CreateGroups(_333bf-r2, 1, 2025-07-06T12:10, 2025-07-06T12:30))
 Map(MainStages(), CreateGroups(_sq1-r2, 1, 2025-07-06T12:30, 2025-07-06T12:50))
 
-Map(MainStages(), CreateGroups(_333-r3, 1, 2025-07-06T13:50, 2025-07-06T14:15))
+Map(MainStages(), CreateGroups(_333-r3, 1, 2025-07-06T13:50, 2025-07-06T14:20))
 
 Map(FinalsStages(), CreateGroups(_skewb-r3, 1, 2025-07-06T14:25, 2025-07-06T14:45))
 Map(FinalsStages(), CreateGroups(_666-r3, 1, 2025-07-06T14:50, 2025-07-06T15:10))
