@@ -117,3 +117,41 @@ Define("RoundOneAssignmentSetsImpl",
 Define("RoundOneAssignmentSets",
        RoundOneAssignmentSetsImpl({1, Event}, {2, Date}, {3, Number}, {4, Number},
                                   Length(Persons(CompetingIn({1, Event})))))
+
+
+Define("ThreeRoundTwoAssignmentSets",
+       [
+         AssignmentSet("group4_featured", (RoundPosition(_333-r1)) <= 4),
+                       And(In(Stage(), FinalsStages()), (GroupNumber() == 4)),
+                       featured=true),
+         AssignmentSet("group4_finals", (RoundPosition(_333-r1) <= 40),
+                       And(In(Stage(), FinalsStages()), (GroupNumber() == 4))),
+         AssignmentSet("group4_main", And((RoundPosition(_333-r1) >= 41),
+                                          (RoundPosition(_333-r1) <= 110)),
+                       And(In(Stage(), MainStages()), (GroupNumber() == 4))),
+         AssignmentSet("early_featured", And((RoundPosition(_333-r1) >= 111),
+                                             (RoundPosition(_333-r1) <= 122)),
+                       And(In(Stage(), FinalsStages()), (GroupNumber() < 4)),
+                       featured=true),
+         AssignmentSet("early_finals", And((RoundPosition(_333-r1) >= 111),
+                                           (RoundPosition(_333-r1) <= 230)),
+                       And(In(Stage(), FinalsStages()), (GroupNumber() < 4))),
+         AssignmentSet("early_main", And((RoundPosition(_333-r1) >= 231),
+                                         (RoundPosition(_333-r1) <= 450)),
+                       And(In(Stage(), MainStages()), (GroupNumber() < 4))),
+         AssignmentSet("ballroom", (RoundPosition(_333-r1) >= 451),
+                       In(Stage(), BallroomStages()))])
+
+# Args:
+# 1: Round
+Define("SemifinalAssignmentSets",
+       [
+         AssignmentSet("top", (RoundPosition(PreviousRound({1, Round})) <= 4),
+                       In(Stage(), FinalsStages()),
+                       featured=true),
+         AssignmentSet("finals", (RoundPosition(PreviousRound({1, Round})) <= 40),
+                       In(Stage(), FinalsStages())),
+         AssginmentSet("main", (RoundPosition(PreviousRound({1, Round})) <= 120),
+                       In(Stage(), MainStages())),
+         AssignmentSet("ballroom", (RoundPosition(PreviousRound({1, Round})) >= 121),
+                       In(Stage(), BallroomStages()))])
