@@ -155,3 +155,30 @@ Define("SemifinalAssignmentSets",
                        In(Stage(), MainStages())),
          AssignmentSet("ballroom", (RoundPosition(PreviousRound({1, Round})) >= 121),
                        In(Stage(), BallroomStages()))])
+
+Define("ThreeSemiFinalAssignmentSets",
+       [
+         AssignmentSet("WhiteStage",
+                       And(Even(RoundPosition(_333-r2)), (RoundPosition(_333-r2) >= 41)),
+                       (Stage() == MAIN_WHITE)),
+         AssignmentSet("YellowStage",
+                       And(Not(Even(RoundPosition(_333-r2))), (RoundPosition(_333-r2) >= 41)),
+                       (Stage() == MAIN_YELLOW)),
+         AssignmentSet("OrangeStage",
+                       And(Even(RoundPosition(_333-r2)), (RoundPosition(_333-r2) >= 21)),
+                       (Stage() == MAIN_ORANGE)),
+         AssignmentSet("GreenStage",
+                       And(Not(Even(RoundPosition(_333-r2))), (RoundPosition(_333-r2) >= 21)),
+                       (Stage() == MAIN_GREEN)),
+         AssignmentSet("RedStage",
+                       And(Even(RoundPosition(_333-r2)), (RoundPosition(_333-r2) <= 20)),
+                       (Stage() == MAIN_RED)),
+         AssignmentSet("BlueStage",
+                       And(Not(Even(RoundPosition(_333-r2))), (RoundPosition(_333-r2) <= 20)),
+                       (Stage() == MAIN_BLUE)),
+       ])
+
+Define("FinalAssignmentSets",
+       [AssignmentSet("Evens", Even(RoundPosition(PreviousRound({1, Round}))), (Stage() == RED)),
+        AssignmentSet("Odds", Not(Even(RoundPosition(PreviousRound({1, Round})))), (Stage() == BLUE))])
+
