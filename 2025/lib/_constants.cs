@@ -37,3 +37,5 @@ Define("NonFinalsStages", [MAIN_GREEN, MAIN_ORANGE, MAIN_YELLOW, MAIN_WHITE,
                            SIDE_RED, SIDE_BLUE, SIDE_GREEN, SIDE_ORANGE])
 
 Define("IsDataEntry", (StringProperty("assigned-team") == DATAENTRY))
+Define("IsDelegate", (And((StringProperty("assigned-team") == CORE_VOLUNTEER),
+                          (StringProperty("delegate-status") != "Not a WCA Delegate"))))

@@ -30,7 +30,7 @@ Define(
       LimitConstraint("Long Room yes", IsLongRoomYes(), 2, 10),
       LimitConstraint("Long Room maybe", IsLongRoomMaybe(), 3, 10),
       BalanceConstraint("< 18", (Age() < 18), 1),
-      BalanceConstraint("delegate", (StringProperty("delegate-status") != "Not a WCA Delegate"), 5),
+      BalanceConstraint("delegate", IsDelegate(), 5),
       BalanceConstraint("Unavailable", NumberProperty("unavail"), 5)
     ])
 
