@@ -4,7 +4,9 @@
 
 AssignGroups(_clock-r1,
              RoundOneAssignmentSets(_clock, 2025-07-03, MAIN_CLOCK, SIDE_CLOCK),
-             DefaultScorers(2025-07-03))
+             Concat(DefaultScorers(2025-07-03),
+                    [ByFilters(BooleanProperty(MULTI_VOLUNTEER), (EndTime() <= 2025-07-03T10:00), 10),
+                     ByFilters(BooleanProperty(MULTI_VOLUNTEER), (EndTime() <= 2025-07-03T10:15), 5)]))
 
 
 "Sanity Check - 5BLD competitors"

@@ -5,8 +5,10 @@
 AssignGroups(_333oh-r1,
              RoundOneAssignmentSets(_333oh, 2025-07-03, MAIN_333OH, SIDE_333OH),
              Concat(DefaultScorers(2025-07-03),
-                    [ByFilters(CompetingIn(_333mbf), (StartTime() < 2025-07-03T14:30), -100),
-                     ByFilters(CompetingIn(_333fm), (EndTime() > 2025-07-03T15:00), -100)]))
+                    [ByFilters(Or(CompetingIn(_333mbf), BooleanProperty(MULTI_VOLUNTEER)),
+                               (StartTime() < 2025-07-03T14:30), -100),
+                     ByFilters(Or(CompetingIn(_333fm), BooleanProperty(FMC_VOLUNTEER)),
+                               (EndTime() > 2025-07-03T15:00), -100)]))
 
 "Sanity Check - Multi competitors"
 Table(

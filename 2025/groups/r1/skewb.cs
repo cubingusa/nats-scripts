@@ -16,4 +16,7 @@ AssignGroups(_skewb-r1,
                      ByFilters(PossiblyWillAdvance(_222-r2, Arg<Person>()),
                                (EndTime() > 2025-07-05T12:00), -100),
                      ByFilters(BooleanProperty(COMMENTATOR),
-                               (EndTime() > 2025-07-05T11:00), -100)]))
+                               (EndTime() > 2025-07-05T11:00), -100),
+                     ByFilters(BooleanProperty(MULTI_VOLUNTEER),
+                               Or((EndTime() < 2025-07-05T10:00),
+                                  (StartTime() >= 2025-07-05T12:00)), 10)]))
