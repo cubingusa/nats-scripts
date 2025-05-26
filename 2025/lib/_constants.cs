@@ -10,6 +10,9 @@
 #define FINALS_TEAM "finals-team"
 #define FINALS_VOLUNTEER "finals-team-volunteer"
 
+#define MULTI_VOLUNTEER "multi-volunteer"
+#define FMC_VOLUNTEER "fmc-volunteer"
+
 # Stages
 #define MAIN_RED "Main Red"
 #define MAIN_BLUE "Main Blue"
@@ -37,5 +40,6 @@ Define("NonFinalsStages", [MAIN_GREEN, MAIN_ORANGE, MAIN_YELLOW, MAIN_WHITE,
                            SIDE_RED, SIDE_BLUE, SIDE_GREEN, SIDE_ORANGE])
 
 Define("IsDataEntry", (StringProperty("assigned-team") == DATAENTRY))
-Define("IsDelegate", (And((StringProperty("assigned-team") == CORE_VOLUNTEER),
-                          (StringProperty("delegate-status") != "Not a WCA Delegate"))))
+Define("IsDelegate", And(BooleanProperty(CORE_VOLUNTEER),
+                         (StringProperty("delegate-status") != "Not a WCA Delegate")))
+Define("IsStageLead", (StringProperty(STAGE_LEAD) == STAGE_LEAD))

@@ -4,17 +4,24 @@
 #include "../lib/_group_counts.cs"
 
 #define LONG_ROOM_PREFERENCE "long-room-preference"
-#define LONG_ROOM_YES "Yes please! As much as possible"
-#define LONG_ROOM_MAYBE "I could do that for some of the competition, but not too much"
+#define LONG_ROOM_YES "Yes please! As much as possible."
+#define LONG_ROOM_MAYBE "I could do that for some of the competition, but not too much."
 
-Define("IsLongRoomYes",
-       And((StringProperty(LONG_ROOM_PREFERENCE) == LONG_ROOM_YES),
-           Not((PsychSheetPosition(_333fm) <= 50)),
-           Not((PsychSheetPosition(_333mbf) <= 50)),
-           Not(HasProperty(STAGE_LEAD))))
-Define("IsLongRoomMaybe",
+Define("FMCEligible",
        And(In(StringProperty(LONG_ROOM_PREFERENCE), [LONG_ROOM_YES, LONG_ROOM_MAYBE]),
-           Not(HasProperty(STAGE_LEAD))))
+           Not(CompetingIn(_333fm)),
+           Not(IsStageLead()),
+           IsDelegate()))
+Define("MultiYes",
+       And(In(StringProperty(LONG_ROOM_PREFERENCE), [LONG_ROOM_YES]),
+           Not(CompetingIn(_333mbf)),
+           Not(IsStageLead()),
+           IsDelegate()))
+Define("MultiMaybe",
+       And(In(StringProperty(LONG_ROOM_PREFERENCE), [LONG_ROOM_YES, LONG_ROOM_MAYBE]),
+           Not(CompetingIn(_333mbf)),
+           Not(IsStageLead()),
+           IsDelegate()))
 
 #define UNOFFICIAL_PREFERENCE "unofficial-preference"
 #define UNOFFICIAL_YES "Yes definitely!"
@@ -26,9 +33,10 @@ Define(
     "BasicConstraints",
     [
       BalanceConstraint("Num Events", Length(RegisteredEvents()), 0.2),
-      LimitConstraint("Stage Leads", (StringProperty(STAGE_LEAD) == STAGE_LEAD), 3, 10),
-      LimitConstraint("Long Room yes", IsLongRoomYes(), 2, 10),
-      LimitConstraint("Long Room maybe", IsLongRoomMaybe(), 3, 10),
+      LimitConstraint("Stage Leads", IsStageLead(), 3, 10),
+      BalanceConstraint("Multi yes", MultiYes(), 5),
+      LimitConstraint("Multi maybe", MultiMaybe(), 3, 10),
+      LimitConstraint("FMC yes", FMCEligible(), 3, 10),
       BalanceConstraint("< 18", (Age() < 18), 1),
       BalanceConstraint("delegate", IsDelegate(), 5),
       BalanceConstraint("Unavailable", NumberProperty("unavail"), 5)
@@ -159,3 +167,37 @@ Cluster(
       RoundTwoConstraints(),
       SemiConstraints(),
       SpecificTeams()))
+
+# Args:
+# 1: Stage number
+# 2: Max needed
+# 3: Property name
+# 4: Eligibility
+Define("MaybeSelectLongRoomPerson",
+       If((Length(Persons(And((NumberProperty(STAFF_TEAM) == {1, Number}),
+                               BooleanProperty({3, String})))) < {2, Number}),
+          SetProperty([RandomChoice(Persons(And(
+              (NumberProperty(STAFF_TEAM) == {1, Number}),
+              {4, Boolean(Person)},
+              Not(BooleanProperty(FMC_VOLUNTEER)),
+              Not(BooleanProperty(MULTI_VOLUNTEER)))))],
+            {3, String}, true),
+          ""))
+
+SetProperty(Persons(MultiYes()), MULTI_VOLUNTEER, true)
+Map([1, 2, 3, 4, 5],
+    All(
+      MaybeSelectLongRoomPerson(Arg<Number>(), 2, MULTI_VOLUNTEER, MultiMaybe()),
+      MaybeSelectLongRoomPerson(Arg<Number>(), 2, MULTI_VOLUNTEER, MultiMaybe())))
+Map([1, 2, 3, 4, 5],
+    MaybeSelectLongRoomPerson(Arg<Number>(), 1, FMC_VOLUNTEER, FMCEligible()))
+Map([6, 7, 8, 9, 10],
+    All(
+      MaybeSelectLongRoomPerson(Arg<Number>(), 3, MULTI_VOLUNTEER, MultiMaybe()),
+      MaybeSelectLongRoomPerson(Arg<Number>(), 3, MULTI_VOLUNTEER, MultiMaybe()),
+      MaybeSelectLongRoomPerson(Arg<Number>(), 3, MULTI_VOLUNTEER, MultiMaybe())))
+
+Header("FMC People")
+Persons(BooleanProperty(FMC_VOLUNTEER))
+Header("Multi People")
+Persons(BooleanProperty(MULTI_VOLUNTEER))
