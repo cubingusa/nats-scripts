@@ -30,6 +30,7 @@ SetProperty(
         (NumberProperty("attending") > 2)
       )
     ), COMMENTATOR, true)
+SetProperty([2018HOUB01], COMMENTATOR, true)
 
 DeleteProperty(Persons(HasProperty(WCA_BOOTH)), WCA_BOOTH)
 SetProperty(
