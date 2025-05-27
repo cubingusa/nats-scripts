@@ -63,7 +63,12 @@ Define("Unavailable",
              Tuple(2024CHEW09, [DuringTimes(CompetingTimes(2024CHEW02, true))]),  # Joanne Chew
              Tuple(2019BURG06, [DuringTimes(CompetingTimes(2018BURG03, true))]),  # Brendan Burgess
              Tuple(p464503, [DuringTimes(CompetingTimes(2021RAPO01, true))])  # Mat Rapoza
-           ]
-           )
-      
+           ]),
+           If(BooleanProperty(FMC_VOLUNTEER),
+              [UnavailableBetween(2025-07-03T14:45, 2025-07-03T17:20),
+               UnavailableBetween(2025-07-04T14:45, 2025-07-04T17:20),
+               UnavailableBetween(2025-07-05T14:45, 2025-07-05T17:20)], []),
+           If(BooleanProperty(MULTI_VOLUNTEER),
+              [UnavailableBetween(2025-07-03T10:00, 2025-07-03T15:00),
+               UnavailableBetween(2025-07-05T10:00, 2025-07-05T15:00)], [])
        ))
