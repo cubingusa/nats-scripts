@@ -31,6 +31,13 @@
 #define LOBBY "Lobby"
 #define BALLROOM "Ballroom 6"
 
+# Accommodations
+#define ACCOMMODATION "accommodation"
+#define NO_SATURDAY "sat"
+#define NO_SUNDAY_MORNING "sun"
+#define NO_FRIDAY_EARLY_AFTERNOON "fri_pm"
+
+
 Define("AllStages", [MAIN_RED, MAIN_BLUE, MAIN_GREEN, MAIN_ORANGE, MAIN_YELLOW, MAIN_WHITE,
                      SIDE_RED, SIDE_BLUE, SIDE_GREEN, SIDE_ORANGE])
 Define("MainStages", [MAIN_RED, MAIN_BLUE, MAIN_GREEN, MAIN_ORANGE, MAIN_YELLOW, MAIN_WHITE])

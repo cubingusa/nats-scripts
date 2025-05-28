@@ -7,4 +7,5 @@ AssignGroups(_444-r1,
              Concat(DefaultScorers(),
                     [ByFilters(Or(CompetingIn(_333fm), BooleanProperty(FMC_VOLUNTEER)),
                                (StartTime() >= 2025-07-04T15:00), -100),
-                     ByFilters((LastName() == "Khanani"), (StartTime() >= 2025-07-04T15:00), 100)]))
+                     ByFilters((StringProperty(ACCOMMODATION) == NO_FRIDAY_EARLY_AFTERNOON),
+                               (StartTime() >= 2025-07-04T15:00), 100)]))
