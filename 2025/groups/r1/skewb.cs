@@ -20,3 +20,7 @@ AssignGroups(_skewb-r1,
                      ByFilters(BooleanProperty(MULTI_VOLUNTEER),
                                Or((EndTime() < 2025-07-05T10:00),
                                   (StartTime() >= 2025-07-05T12:00)), 10)]))
+
+ManuallyAssign(Persons(And(CompetingIn(_skewb-r1),
+                           (StringProperty(ACCOMMODATION) == NO_SATURDAY))),
+               _skewb-r1, MAIN_GREEN, 1)

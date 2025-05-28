@@ -8,3 +8,7 @@ AssignGroups(_sq1-r1,
              Concat(DefaultScorers(2025-07-06),
                     [ByFilters(BooleanProperty(COMMENTATOR),
                                (EndTime() > 2025-07-06T10:30), -100)]))
+
+ManuallyAssign(Persons(And(CompetingIn(_sq1-r1),
+                           (StringProperty(ACCOMMODATION) == NO_SUNDAY_MORNING))),
+               _sq1-r1, MAIN_GREEN, 1)
