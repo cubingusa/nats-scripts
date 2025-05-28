@@ -30,3 +30,5 @@ AddPerson(464503) # Mat Rapoza
 AddPerson(480441) # Paul Hays
 AddPerson(385123) # Wendy Nieuwland
 AddPerson(215340) # Wee-Young Eyou
+AddPerson(263874) # Anthony Tindal
+AddPerson(246) # Chris Krueger
