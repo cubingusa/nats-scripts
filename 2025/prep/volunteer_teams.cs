@@ -67,8 +67,8 @@ Define(
            Map([_555, _666, _777, _333bf, _clock, _sq1, _minx, _444bf],
                BalanceConstraint(EventId(), CompetingIn(), 0.1)),
            [BalanceConstraint("555bf", CompetingIn(_555bf), 3),
-            BalanceConstraint("333fm", (PsychSheetPosition(_333fm) <= 30), 3),
-            BalanceConstraint("333mbf", (PsychSheetPosition(_333mbf) <= 20), 3)]))
+            BalanceConstraint("333fm", CompetingIn(_333fm), 3),
+            BalanceConstraint("333mbf", CompetingIn(_333mbf), 3)]))
 
 Define(
     "RoundTwoConstraints",
