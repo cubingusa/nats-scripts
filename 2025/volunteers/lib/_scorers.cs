@@ -19,7 +19,7 @@ Define("ScrambleSpeedWeight",
         Tuple(_444bf, 3),
         Tuple(_555bf, 3)])
 
-Define("StandardJobNames", ["judge", "scrambler", "runner", "Primary Delegate", "Secondary Delegate"])
+Define("StandardJobNames", ["judge", "scrambler", "runner", "Delegate"])
 
 Define("VolunteerScorers",
        [
@@ -38,5 +38,8 @@ Define("VolunteerScorers",
                            In(Stage(), FinalsStages()),
                            (Arg<String>() == "judge"),
                            (Arg<Number>() == 1),
-                           -50)
+                           -50),
+         ConditionalScorer(Or(BooleanProperty(MAIN_HALL_BACKUP_STAGE_LEAD),
+                              BooleanProperty(BALLROOM_BACKUP_STAGE_LEAD)),
+                           true, true, true, -100)
        ])
