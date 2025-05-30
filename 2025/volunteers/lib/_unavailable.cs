@@ -10,7 +10,6 @@ Define("Unavailable",
          Switch(
            {1, Person},
            [
-             Tuple(2017MILL04, [UnavailableBetween(2025-07-03T00:00, 2025-07-03T23:59)]),  # Zachary Miller
              Tuple(2017PRES02, [UnavailableBetween(2025-07-04T16:00, 2025-07-04T23:59)]),  # Peter Preston
              Tuple(2010BENT01, [UnavailableBetween(2025-07-03T14:45, 2025-07-03T15:15),
                                 UnavailableBetween(2025-07-04T14:45, 2025-07-04T15:15),
