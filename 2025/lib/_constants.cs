@@ -5,6 +5,7 @@
 #define STAGE_LEAD "stage-lead"
 #define STAFF_TEAM "staff-team"
 #define WCA_BOOTH "wca-booth"
+#define WCA_BOARD "wca-board"
 #define MAIN_HALL_BACKUP_STAGE_LEAD "main-hall-organizer"
 #define BALLROOM_BACKUP_STAGE_LEAD "ballroom-organizer"
 #define FINALS_TEAM "finals-team"

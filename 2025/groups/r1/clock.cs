@@ -8,6 +8,9 @@ AssignGroups(_clock-r1,
                     [ByFilters(BooleanProperty(MULTI_VOLUNTEER), (EndTime() <= 2025-07-03T10:00), 10),
                      ByFilters(BooleanProperty(MULTI_VOLUNTEER), (EndTime() <= 2025-07-03T10:15), 5)]))
 
+ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
+                           CompetingIn(_clock-r1))),
+               _clock-r1, SIDE_RED, 1)
 
 "Sanity Check - 5BLD competitors"
 Table(

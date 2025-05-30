@@ -13,3 +13,7 @@ AssignGroups(_222-r1,
                                (EndTime() > 2025-07-04T12:00), -100),
                      ByFilters(BooleanProperty(COMMENTATOR),
                                (EndTime() > 2025-07-04T11:45), -100)]))
+
+ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
+                           CompetingIn(_222-r1))),
+               _222-r1, MAIN_ORANGE, 3)

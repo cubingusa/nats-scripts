@@ -13,3 +13,6 @@ AssignGroups(_333-r1,
 ManuallyAssign(Persons(And(CompetingIn(_333-r1),
                            (StringProperty(ACCOMMODATION) == NO_SATURDAY))),
                _333-r1, MAIN_GREEN, 1)
+
+ManuallyAssign([2010THOM03, 2016SILV08], MAIN_RED, 1)
+ManuallyAssign([2018SMIT42], MAIN_BLUE, 1)

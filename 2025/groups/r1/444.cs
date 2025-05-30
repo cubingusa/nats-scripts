@@ -9,3 +9,7 @@ AssignGroups(_444-r1,
                                (StartTime() >= 2025-07-04T15:00), -100),
                      ByFilters((StringProperty(ACCOMMODATION) == NO_FRIDAY_EARLY_AFTERNOON),
                                (StartTime() >= 2025-07-04T15:00), 100)]))
+
+ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
+                           CompetingIn(_444-r1))),
+               _444-r1, MAIN_YELLOW, 1)
