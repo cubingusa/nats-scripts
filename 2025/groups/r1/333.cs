@@ -13,7 +13,8 @@ AssignGroups(_333-r1,
                                Or((EndTime() <= 2025-07-05T14:30),
                                   (StartTime() >= 2025-07-05T15:30)), 10),
                      ByFilters((Arg<Person>() == 2012ICKL01),
-                               (EndTime() <= 2025-07-05T15:15), 10)]))
+                               (EndTime() <= 2025-07-05T15:15), 10),
+                     ByMatchingValue(If((WcaId() == "2023PETR15"), "2012PARK03", WcaId()), 100)]))
 
 ManuallyAssign(Persons(And(CompetingIn(_333-r1),
                            (StringProperty(ACCOMMODATION) == NO_SATURDAY))),

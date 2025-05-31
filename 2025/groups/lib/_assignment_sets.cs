@@ -12,10 +12,15 @@ Define(
                    (PsychSheetPosition({1, Event}) <= 8),
                    And(In(Stage(), FinalsStages()), (GroupNumber() > 4)),
                    featured=true),
-     AssignmentSet("top",
-                   (PsychSheetPosition({1, Event}) <= {2, Number}),
-                   In(Stage(), FinalsStages()),
-                   featured=true)))
+     If((EventId({1, Event}) == "333"),
+        AssignmentSet("top",
+                      Or((PsychSheetPosition({1, Event}) <= 39), (WcaId() == "2023PETR15")),
+                      In(Stage(), FinalsStages()),
+                      featured=true),
+        AssignmentSet("top",
+                      (PsychSheetPosition({1, Event}) <= {2, Number}),
+                      In(Stage(), FinalsStages()),
+                      featured=true))))
 
 # Args:
 # 1: Number of Groups.
