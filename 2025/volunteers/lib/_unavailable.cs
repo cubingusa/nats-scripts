@@ -77,7 +77,7 @@ Define("Unavailable",
              Tuple(2015SPEN01, [UnavailableBetween(2025-07-04T14:15, 2025-07-04T15:15)]), # Sam Spendla
              Tuple(2022HEXT01, [UnavailableBetween(2025-07-04T14:15, 2025-07-04T15:15)]), # Oliver Hexter
              Tuple(2013DICK01, [UnavailableBetween(2025-07-04T15:15, 2025-07-04T16:15)]), # Matthew Dickman
-             Tuple(2020LONG05, [UnavailableBetween(2025-07-05T10:30, 2025-07-05T12:00)]), # Shain Longbehn
+             Tuple(2020LONG05, [UnavailableBetween(2025-07-05T09:30, 2025-07-05T11:00)]), # Shain Longbehn
              Tuple(2016LOPE37, [UnavailableBetween(2025-07-05T14:30, 2025-07-05T15:15)]) # Ruben Lopez de Juan
            ]),
            If(BooleanProperty(FMC_VOLUNTEER),
