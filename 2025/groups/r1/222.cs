@@ -12,8 +12,12 @@ AssignGroups(_222-r1,
                      ByFilters(PossiblyWillAdvance(_pyram-r2, Arg<Person>()),
                                (EndTime() > 2025-07-04T12:00), -100),
                      ByFilters(BooleanProperty(COMMENTATOR),
-                               (EndTime() > 2025-07-04T11:45), -100)]))
+                               (EndTime() > 2025-07-04T11:45), -100),
+                     ByFilters((Arg<Person>() == 2015KUCA01),
+                               (StartTime() >= 2025-07-04T10:30), 10),
+                     ByFilters(In(Arg<Person>(), [2014GOSL01, 2011HOLL04]),
+                               (EndTime() <= 2025-07-04T10:30), 10)]))
 
 ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
                            CompetingIn(_222-r1))),
-               _222-r1, MAIN_ORANGE, 3)
+               _222-r1, SIDE_ORANGE, 10)

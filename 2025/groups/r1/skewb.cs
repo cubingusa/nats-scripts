@@ -19,7 +19,11 @@ AssignGroups(_skewb-r1,
                                (EndTime() > 2025-07-05T11:00), -100),
                      ByFilters(BooleanProperty(MULTI_VOLUNTEER),
                                Or((EndTime() < 2025-07-05T10:00),
-                                  (StartTime() >= 2025-07-05T12:00)), 10)]))
+                                  (StartTime() >= 2025-07-05T12:00)), 10),
+                     ByFilters((Arg<Person>() == 2007STRO01),
+                               (StartTime() >= 2025-07-05T10:30), 10),
+                     ByFilters((Arg<Person>() == 2020LONG05),
+                               (EndTime() <= 2025-07-05T10:30), 10)]))
 
 ManuallyAssign(Persons(And(CompetingIn(_skewb-r1),
                            (StringProperty(ACCOMMODATION) == NO_SATURDAY))),

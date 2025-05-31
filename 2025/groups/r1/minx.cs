@@ -12,4 +12,6 @@ AssignGroups(_minx-r1,
                      ByFilters(PossiblyWillAdvance(_555-r3, Arg<Person>()),
                                (EndTime() > 2025-07-04T17:05), -100),
                      ByFilters(BooleanProperty(COMMENTATOR),
-                               (EndTime() > 2025-07-04T17:00), -100)]))
+                               (EndTime() > 2025-07-04T17:00), -100),
+                     ByFilters((Arg<Person>() == 2012GOOD02),
+                               (EndTime() <= 2025-07-04T16:30), 10)]))

@@ -6,7 +6,10 @@ AssignGroups(_clock-r1,
              RoundOneAssignmentSets(_clock, 2025-07-03, MAIN_CLOCK, SIDE_CLOCK),
              Concat(DefaultScorers(2025-07-03),
                     [ByFilters(BooleanProperty(MULTI_VOLUNTEER), (EndTime() <= 2025-07-03T10:00), 10),
-                     ByFilters(BooleanProperty(MULTI_VOLUNTEER), (EndTime() <= 2025-07-03T10:15), 5)]))
+                     ByFilters(BooleanProperty(MULTI_VOLUNTEER), (EndTime() <= 2025-07-03T10:15), 5),
+                     ByFilters((Arg<Person>() == 2013DIPI01),
+                               Or((StartTime() >= 2025-07-03T11:00),
+                                  (EndTime() <= 2025-07-03T10:00)), 10)]))
 
 ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
                            CompetingIn(_clock-r1))),

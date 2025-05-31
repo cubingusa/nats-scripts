@@ -4,4 +4,6 @@
 
 AssignGroups(_777-r1,
              RoundOneAssignmentSets(_777, 2025-07-04, MAIN_777, SIDE_777),
-             DefaultScorers(2025-07-04))
+             Concat([DefaultScorers(2025-07-04),
+                     ByFilters((Arg<Person>() == 2015KUCA01),
+                               (EndTime() <= 2025-07-04T09:30), 10)]))

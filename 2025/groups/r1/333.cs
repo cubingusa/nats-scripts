@@ -8,7 +8,12 @@ AssignGroups(_333-r1,
                     [ByFilters(Or(CompetingIn(_333mbf), BooleanProperty(MULTI_VOLUNTEER)),
                                (StartTime() < 2025-07-05T14:30), -100),
                      ByFilters(Or(CompetingIn(_333fm), BooleanProperty(FMC_VOLUNTEER)),
-                               (EndTime() > 2025-07-05T15:00), -100)]))
+                               (EndTime() > 2025-07-05T15:00), -100),
+                     ByFilters((Arg<Person>() == 2016LOPE37),
+                               Or((EndTime() <= 2025-07-05T14:30),
+                                  (StartTime() >= 2025-07-05T15:30)), 10),
+                     ByFilters((Arg<Person>() == 2012ICKL01),
+                               (EndTime() <= 2025-07-05T15:15), 10)]))
 
 ManuallyAssign(Persons(And(CompetingIn(_333-r1),
                            (StringProperty(ACCOMMODATION) == NO_SATURDAY))),
