@@ -14,6 +14,10 @@
 #define MULTI_VOLUNTEER "multi-volunteer"
 #define FMC_VOLUNTEER "fmc-volunteer"
 
+#define FTO_VOLUNTEER "fto"
+#define TEAM_BLD_VOLUNTEER "team-bld"
+#define MIRROR_BLOCKS_VOLUNTEER "mirror-blocks"
+
 # Stages
 #define MAIN_RED "Main Red"
 #define MAIN_BLUE "Main Blue"

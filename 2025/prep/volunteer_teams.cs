@@ -29,6 +29,19 @@ Define("MultiMaybe",
 
 #define IS_FINALS_VOLUNTEER_PROPERTY "finals-volunteer"
 
+Define("FTOEligible",
+       And(In(StringProperty(UNOFFICIAL_PREFERENCE), [UNOFFICIAL_YES, UNOFFICIAL_MAYBE]),
+           Not(IsStageLead()),
+           In("FTO", ArrayProperty("unofficial-events"))))
+Define("MirrorBlocksEligible",
+       And(In(StringProperty(UNOFFICIAL_PREFERENCE), [UNOFFICIAL_YES, UNOFFICIAL_MAYBE]),
+           Not(IsStageLead()),
+           In("Mirror Blocks", ArrayProperty("unofficial-events"))))
+Define("TeamBLDEligible",
+       And((StringProperty(UNOFFICIAL_PREFERENCE) == UNOFFICIAL_YES),
+           Not(IsStageLead()),
+           In("3x3 (Team BLD)", ArrayProperty("unofficial-events"))))
+
 Define(
     "BasicConstraints",
     [
@@ -39,7 +52,10 @@ Define(
       LimitConstraint("FMC yes", FMCEligible(), 3, 10),
       BalanceConstraint("< 18", (Age() < 18), 1),
       BalanceConstraint("delegate", IsDelegate(), 5),
-      BalanceConstraint("Unavailable", NumberProperty("unavail"), 5)
+      BalanceConstraint("Unavailable", NumberProperty("unavail"), 5),
+      LimitConstraint("FTOEligible", FTOEligible(), 2, 10),
+      LimitConstraint("MirrorBlocksEligible", MirrorBlocksEligible(), 2, 10),
+      LimitConstraint("TeamBLDEligible", TeamBLDEligible(), 2, 10)
     ])
 
 Define(
@@ -168,23 +184,30 @@ Cluster(
       SemiConstraints(),
       SpecificTeams()))
 
+DeleteProperty(Persons(HasProperty(MULTI_VOLUNTEER)), MULTI_VOLUNTEER)
+DeleteProperty(Persons(HasProperty(FMC_VOLUNTEER)), FMC_VOLUNTEER)
+DeleteProperty(Persons(HasProperty(FTO_VOLUNTEER)), FTO_VOLUNTEER)
+DeleteProperty(Persons(HasProperty(MIRROR_BLOCKS_VOLUNTEER)), MIRROR_BLOCKS_VOLUNTEER)
+DeleteProperty(Persons(HasProperty(TEAM_BLD_VOLUNTEER)), TEAM_BLD_VOLUNTEER)
 # Args:
-# 1: Stage number
+# 1: Team number
 # 2: Max needed
 # 3: Property name
 # 4: Eligibility
 Define("MaybeSelectLongRoomPerson",
        If((Length(Persons(And((NumberProperty(STAFF_TEAM) == {1, Number}),
                                BooleanProperty({3, String})))) < {2, Number}),
-          SetProperty([RandomChoice(Persons(And(
+          SetProperty(Filter([RandomChoice(Persons(And(
               (NumberProperty(STAFF_TEAM) == {1, Number}),
               {4, Boolean(Person)},
               Not(BooleanProperty(FMC_VOLUNTEER)),
-              Not(BooleanProperty(MULTI_VOLUNTEER)))))],
+              Not(BooleanProperty(MULTI_VOLUNTEER)))))], Not(IsNull(Arg<Person>()))),
             {3, String}, true),
           ""))
 
 SetProperty(Persons(MultiYes()), MULTI_VOLUNTEER, true)
+Persons(And((NumberProperty(STAFF_TEAM) == 1), MultiMaybe(), Not(BooleanProperty(FMC_VOLUNTEER)),
+               Not(BooleanProperty(MULTI_VOLUNTEER))))
 Map([1, 2, 3, 4, 5],
     All(
       MaybeSelectLongRoomPerson(Arg<Number>(), 2, MULTI_VOLUNTEER, MultiMaybe()),
@@ -197,7 +220,43 @@ Map([6, 7, 8, 9, 10],
       MaybeSelectLongRoomPerson(Arg<Number>(), 3, MULTI_VOLUNTEER, MultiMaybe()),
       MaybeSelectLongRoomPerson(Arg<Number>(), 3, MULTI_VOLUNTEER, MultiMaybe())))
 
-Header("FMC People")
+SetProperty([2010AMBR01], FMC_VOLUNTEER, true)
+SetProperty([2010AMBR01], MULTI_VOLUNTEER, true)
+
+Map([1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    SetProperty(Filter([RandomChoice(Persons(And(
+            FTOEligible(),
+            Not(BooleanProperty(FMC_VOLUNTEER)),
+            Not(BooleanProperty(MULTI_VOLUNTEER)),
+            (NumberProperty(STAFF_TEAM) == Arg<Number>()))))], Not(IsNull(Arg<Person>()))),
+      FTO_VOLUNTEER, true))
+
+Map([1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    SetProperty(Filter([RandomChoice(Persons(And(
+            MirrorBlocksEligible(),
+            Not(BooleanProperty(FMC_VOLUNTEER)),
+            Not(BooleanProperty(MULTI_VOLUNTEER)),
+            Or(Not(BooleanProperty(FTO_VOLUNTEER)),
+               (StringProperty(UNOFFICIAL_PREFERENCE) == UNOFFICIAL_YES)),
+            (NumberProperty(STAFF_TEAM) == Arg<Number>()))))], Not(IsNull(Arg<Person>()))),
+      MIRROR_BLOCKS_VOLUNTEER, true))
+
+Map([1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    SetProperty(Filter([RandomChoice(Persons(And(
+            TeamBLDEligible(),
+            Not(BooleanProperty(FMC_VOLUNTEER)),
+            Not(BooleanProperty(MULTI_VOLUNTEER)),
+            (NumberProperty(STAFF_TEAM) == Arg<Number>()))))], Not(IsNull(Arg<Person>()))),
+      TEAM_BLD_VOLUNTEER, true))
+
+Header("FMC Volunteers")
 Persons(BooleanProperty(FMC_VOLUNTEER))
-Header("Multi People")
+Header("Multi Volunteers")
 Persons(BooleanProperty(MULTI_VOLUNTEER))
+
+Header("FTO Volunteers")
+Persons(BooleanProperty(FTO_VOLUNTEER))
+Header("Mirror Blocks Volunteers")
+Persons(BooleanProperty(MIRROR_BLOCKS_VOLUNTEER))
+Header("Team Blind Volunteer")
+Persons(BooleanProperty(TEAM_BLD_VOLUNTEER))
