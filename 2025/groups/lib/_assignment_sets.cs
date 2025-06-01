@@ -33,13 +33,7 @@ Define(
                         (GroupNumber() <= 3)))),
    AssignmentSet("wca_booth",
                  BooleanProperty(WCA_BOOTH),
-                 (Stage() == MAIN_GREEN)),
-   AssignmentSet("main_hall_organizers",
-                 BooleanProperty(MAIN_HALL_ORGANIZER),
-                 (Stage() == MAIN_ORANGE)),
-   AssignmentSet("ballroom_organizers",
-                 BooleanProperty(BALLROOM_ORGANIZER),
-                 (Stage() == SIDE_ORANGE))])
+                 (Stage() == MAIN_GREEN))])
 
 Define(
   "VolunteerAssignmentSetsImpl",
@@ -126,7 +120,7 @@ Define("RoundOneAssignmentSets",
 
 Define("ThreeRoundTwoAssignmentSets",
        [
-         AssignmentSet("group4_featured", (RoundPosition(_333-r1)) <= 4),
+         AssignmentSet("group4_featured", (RoundPosition(_333-r1) <= 4),
                        And(In(Stage(), FinalsStages()), (GroupNumber() == 4)),
                        featured=true),
          AssignmentSet("group4_finals", (RoundPosition(_333-r1) <= 40),
@@ -145,7 +139,7 @@ Define("ThreeRoundTwoAssignmentSets",
                                          (RoundPosition(_333-r1) <= 450)),
                        And(In(Stage(), MainStages()), (GroupNumber() < 4))),
          AssignmentSet("ballroom", (RoundPosition(_333-r1) >= 451),
-                       In(Stage(), BallroomStages()))])
+                       In(Stage(), SideStages()))])
 
 # Args:
 # 1: Round
@@ -156,10 +150,10 @@ Define("SemifinalAssignmentSets",
                        featured=true),
          AssignmentSet("finals", (RoundPosition(PreviousRound({1, Round})) <= 40),
                        In(Stage(), FinalsStages())),
-         AssginmentSet("main", (RoundPosition(PreviousRound({1, Round})) <= 120),
+         AssignmentSet("main", (RoundPosition(PreviousRound({1, Round})) <= 120),
                        In(Stage(), MainStages())),
          AssignmentSet("ballroom", (RoundPosition(PreviousRound({1, Round})) >= 121),
-                       In(Stage(), BallroomStages()))])
+                       In(Stage(), SideStages()))])
 
 Define("ThreeSemiFinalAssignmentSets",
        [
@@ -180,10 +174,9 @@ Define("ThreeSemiFinalAssignmentSets",
                        (Stage() == MAIN_RED)),
          AssignmentSet("BlueStage",
                        And(Not(Even(RoundPosition(_333-r2))), (RoundPosition(_333-r2) <= 20)),
-                       (Stage() == MAIN_BLUE)),
-       ])
+                       (Stage() == MAIN_BLUE))])
 
 Define("FinalAssignmentSets",
-       [AssignmentSet("Evens", Even(RoundPosition(PreviousRound({1, Round}))), (Stage() == RED)),
-        AssignmentSet("Odds", Not(Even(RoundPosition(PreviousRound({1, Round})))), (Stage() == BLUE))])
+       [AssignmentSet("Evens", Even(RoundPosition(PreviousRound({1, Round}))), (Stage() == MAIN_RED)),
+        AssignmentSet("Odds", Not(Even(RoundPosition(PreviousRound({1, Round})))), (Stage() == MAIN_BLUE))])
 
