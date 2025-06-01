@@ -16,7 +16,7 @@ AssignGroups(_333-r1,
                                (EndTime() <= 2025-07-05T15:15), 10),
                      ByMatchingValue(If((WcaId() == "2023PETR15"), "2012PARK03", WcaId()), 100)]))
 
-ManuallyAssign(Persons(And(CompetingIn(_333-r1),
+ManuallyAssign(Persons(And(CompetingIn(_333),
                            (StringProperty(ACCOMMODATION) == NO_SATURDAY))),
                _333-r1, MAIN_GREEN, 1)
 

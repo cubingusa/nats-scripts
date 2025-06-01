@@ -12,7 +12,7 @@ AssignGroups(_clock-r1,
                                   (EndTime() <= 2025-07-03T10:00)), 10)]))
 
 ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
-                           CompetingIn(_clock-r1))),
+                           CompetingIn(_clock))),
                _clock-r1, SIDE_RED, 1)
 
 "Sanity Check - 5BLD competitors"

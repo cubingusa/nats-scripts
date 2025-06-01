@@ -7,5 +7,5 @@ AssignGroups(_333bf-r1,
              DefaultScorers(2025-07-05))
 
 ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
-                           CompetingIn(_333bf-r1))),
+                           CompetingIn(_333bf))),
                _333bf-r1, SIDE_GREEN, 1)

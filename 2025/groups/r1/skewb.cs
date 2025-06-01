@@ -23,10 +23,10 @@ AssignGroups(_skewb-r1,
                      ByFilters((Arg<Person>() == 2020LONG05),
                                (StartTime() >= 2025-07-05T11:00), 10)]))
 
-ManuallyAssign(Persons(And(CompetingIn(_skewb-r1),
+ManuallyAssign(Persons(And(CompetingIn(_skewb),
                            (StringProperty(ACCOMMODATION) == NO_SATURDAY))),
                _skewb-r1, MAIN_GREEN, 1)
 
 ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
-                           CompetingIn(_skewb-r1))),
+                           CompetingIn(_skewb))),
                _skewb-r1, SIDE_RED, 8)

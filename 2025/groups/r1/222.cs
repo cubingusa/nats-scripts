@@ -19,5 +19,5 @@ AssignGroups(_222-r1,
                                (EndTime() <= 2025-07-04T10:30), 10)]))
 
 ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
-                           CompetingIn(_222-r1))),
+                           CompetingIn(_222))),
                _222-r1, SIDE_ORANGE, 10)

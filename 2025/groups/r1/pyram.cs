@@ -19,5 +19,5 @@ AssignGroups(_pyram-r1,
                                (StartTime() >= 2025-07-03T16:30), 10)]))
 
 ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
-                           CompetingIn(_pyram-r1))),
+                           CompetingIn(_pyram))),
                _pyram-r1, SIDE_RED, 9)
