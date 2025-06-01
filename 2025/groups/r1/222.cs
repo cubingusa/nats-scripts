@@ -13,7 +13,7 @@ AssignGroups(_222-r1,
                                (EndTime() > 2025-07-04T12:00), -100),
                      ByFilters(BooleanProperty(COMMENTATOR),
                                (EndTime() > 2025-07-04T11:45), -100),
-                     ByFilters((Arg<Person>() == 2015KUCA01),
+                     ByFilters((WcaId() == "2015KUCA01"),
                                (StartTime() >= 2025-07-04T10:30), 10),
                      ByFilters(In(Arg<Person>(), [2014GOSL01, 2011HOLL04]),
                                (EndTime() <= 2025-07-04T10:30), 10)]))

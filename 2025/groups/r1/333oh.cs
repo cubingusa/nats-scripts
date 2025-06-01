@@ -9,10 +9,10 @@ AssignGroups(_333oh-r1,
                                (StartTime() < 2025-07-03T14:30), -100),
                      ByFilters(Or(CompetingIn(_333fm), BooleanProperty(FMC_VOLUNTEER)),
                                (EndTime() > 2025-07-03T15:00), -100),
-                     ByFilters((Arg<Person>() == 2015MACK06),
+                     ByFilters((WcaId() == "2015MACK06"),
                                Or((StartTime() >= 2025-07-03T15:00),
                                   (EndTime() <= 2025-07-03T14:15)), 10),
-                     ByFilters((Arg<Person>() == 2018DAIN02),
+                     ByFilters((WcaId() == "2018DAIN02"),
                                (EndTime() <= 2025-07-03T15:15), 10)]))
 
 "Sanity Check - Multi competitors"

@@ -11,7 +11,7 @@ AssignGroups(_444-r1,
                                (StartTime() >= 2025-07-04T15:00), 100),
                      ByFilters(In(Arg<Person>(), [2011HOLL04, 2015SPEN01, 2022HEXT01, 2016HOOV01, 2016MORA24]),
                                (EndTime() <= 2025-07-04T14:15), 10),
-                     ByFilters((Arg<Person>() == 2013DICK01),
+                     ByFilters((WcaId() == "2013DICK01"),
                                (EndTime() <= 2025-07-04T15:15), 10)]))
 
 ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),

@@ -15,7 +15,7 @@ AssignGroups(_pyram-r1,
                                (EndTime() > 2025-07-03T17:15), -100),
                      ByFilters(BooleanProperty(COMMENTATOR),
                                (EndTime() > 2025-07-03T17:00), -100),
-                     ByFilters(In(Arg<Person>() == 2016MORA24),
+                     ByFilters(In(WcaId() == "2016MORA24"),
                                (StartTime() >= 2025-07-03T16:30), 10)]))
 
 ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
