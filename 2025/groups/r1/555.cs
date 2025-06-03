@@ -7,7 +7,7 @@ AssignGroups(_555-r1,
              Concat(DefaultScorers(2025-07-03),
                     [ByFilters(CompetingIn(_333mbf), (EndTime() > 2025-07-03T12:30), -100),
                      ByFilters(BooleanProperty(MULTI_VOLUNTEER), (StartTime() > 2025-07-03T12:00), 10),
-                     ByFilters((WcaId() == "2012CANT02"),
+                     ByFilters((WcaId() == "2013DIPI01"),
                                (EndTime() <= 2025-07-03T11:45), 10)]))
 
 ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),

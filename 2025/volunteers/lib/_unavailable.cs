@@ -67,8 +67,8 @@ Define("Unavailable",
                                 UnavailableBetween(2025-07-04T15:15, 2025-07-04T16:30),
                                 UnavailableBetween(2025-07-05T15:15, 2025-07-05T16:30)]), # Takumi Tamura
              Tuple(2019SULE01, [UnavailableBetween(2025-07-05T16:00, 2025-07-05T23:59)]), # Daniyal Suleimen
-             Tuple(2013DIPI01, [UnavailableBetween(2025-07-03T10:00, 2025-07-03T11:00)]), # Guido DiPietro
-             Tuple(2012CANT02, [UnavailableBetween(2025-07-03T11:45, 2025-07-03T11:45)]), # Simone Cantarelli
+             Tuple(2012CANT02, [UnavailableBetween(2025-07-03T10:00, 2025-07-03T11:00)]), # Simone Cantarelli
+             Tuple(2013DIPI01, [UnavailableBetween(2025-07-03T11:45, 2025-07-03T12:45)]), # Guido DiPietro
              Tuple(2015MACK06, [UnavailableBetween(2025-07-03T14:15, 2025-07-03T15:00)]), # Zeke Mackay
              Tuple(2018DAIN02, [UnavailableBetween(2025-07-03T15:15, 2025-07-03T15:45)]), # Peri Le Dain
              Tuple(2019KUCA01, [UnavailableBetween(2025-07-03T15:15, 2025-07-03T15:45)]), # Lisa Kucala
