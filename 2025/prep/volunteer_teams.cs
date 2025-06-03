@@ -96,8 +96,8 @@ Define(
     Map([_333, _222, _444, _555, _666, _777, _333bf, _333oh, _clock, _pyram, _skewb, _sq1, _minx],
       BalanceConstraint((EventId() + "-semi"), (PsychSheetPosition() < 200), 2)))
 
-Define("NPerGroup",
-       (PsychSheetPosition({1, Event}) < ({2, Number} * {3, Number})))
+Define("MainStageCompetitor",
+       (PsychSheetPosition({1, Event}) < ({2, Number} * 40)))
 
 Define(
     "SpecificTeams",
@@ -108,67 +108,37 @@ Define(
         (Arg<Number>() <= 3),
         50),
       SpecificAssignmentScore(
-        "ThursdayStrongPreference",
-        Or(NPerGroup(_clock, MAIN_CLOCK, 8),
-           NPerGroup(_555, MAIN_555, 8),
-           NPerGroup(_333oh, MAIN_333OH, 8),
-           NPerGroup(_pyram, MAIN_PYRAM, 8)),
-        In(AssignedStageForTeam(Arg<Number>(), 2025-07-03), MainStages()),
-        50),
-      SpecificAssignmentScore(
-        "ThursdayWeakPreference",
-        Or(NPerGroup(_clock, MAIN_CLOCK, 20),
-           NPerGroup(_555, MAIN_555, 20),
-           NPerGroup(_333oh, MAIN_333OH, 20),
-           NPerGroup(_pyram, MAIN_PYRAM, 20)),
+        "ThursdayPreference",
+        Or(MainStageCompetitor(_clock, MAIN_CLOCK),
+           MainStageCompetitor(_555, MAIN_555),
+           MainStageCompetitor(_333oh, MAIN_333OH),
+           MainStageCompetitor(_pyram, MAIN_PYRAM)),
         In(AssignedStageForTeam(Arg<Number>(), 2025-07-03), MainStages()),
         30),
       SpecificAssignmentScore(
-        "FridayStrongPreference",
-        Or(NPerGroup(_777, MAIN_777, 8),
-           NPerGroup(_222, MAIN_222, 8),
-           NPerGroup(_444, MAIN_444, 8),
-           NPerGroup(_minx, MAIN_MINX, 8)),
-        In(AssignedStageForTeam(Arg<Number>(), 2025-07-04), MainStages()),
-        50),
-      SpecificAssignmentScore(
-        "FridayWeakPreference",
-        Or(NPerGroup(_777, MAIN_777, 20),
-           NPerGroup(_222, MAIN_222, 20),
-           NPerGroup(_444, MAIN_444, 20),
-           NPerGroup(_minx, MAIN_MINX, 20)),
+        "FridayPreference",
+        Or(MainStageCompetitor(_777, MAIN_777),
+           MainStageCompetitor(_222, MAIN_222),
+           MainStageCompetitor(_444, MAIN_444),
+           MainStageCompetitor(_minx, MAIN_MINX)),
         In(AssignedStageForTeam(Arg<Number>(), 2025-07-04), MainStages()),
         30),
       SpecificAssignmentScore(
-        "SaturdayStrongPreference",
-        Or(NPerGroup(_333bf, MAIN_333BF, 8),
-           NPerGroup(_skewb, MAIN_SKEWB, 8),
-           NPerGroup(_333, MAIN_333, 8),
-           NPerGroup(_666, MAIN_666, 8)),
-        In(AssignedStageForTeam(Arg<Number>(), 2025-07-05), MainStages()),
-        50),
-      SpecificAssignmentScore(
-        "SaturdayWeakPreference",
-        Or(NPerGroup(_333bf, MAIN_333BF, 20),
-           NPerGroup(_skewb, MAIN_SKEWB, 20),
-           NPerGroup(_333, MAIN_333, 20),
-           NPerGroup(_666, MAIN_666, 20)),
+        "SaturdayPreference",
+        Or(MainStageCompetitor(_333bf, MAIN_333BF),
+           MainStageCompetitor(_skewb, MAIN_SKEWB),
+           MainStageCompetitor(_333, MAIN_333),
+           MainStageCompetitor(_666, MAIN_666)),
         In(AssignedStageForTeam(Arg<Number>(), 2025-07-05), MainStages()),
         30),
       SpecificAssignmentScore(
-        "SundayStrongPreference",
-        Or(NPerGroup(_444bf, 1, 12),
-           NPerGroup(_sq1, MAIN_SQ1, 8)),
+        "SundayPreference",
+        Or(MainStageCompetitor(_444bf, 1),
+           MainStageCompetitor(_sq1, MAIN_SQ1)),
         In(AssignedStageForTeam(Arg<Number>(), 2025-07-06), MainStages()),
-        50),
+        20),
       SpecificAssignmentScore(
-        "SundayWeakPreference",
-        Or(NPerGroup(_444bf, 1, 20),
-           NPerGroup(_sq1, MAIN_SQ1, 20)),
-        In(AssignedStageForTeam(Arg<Number>(), 2025-07-06), MainStages()),
-        30),
-      SpecificAssignmentScore(
-          "Bailing", (Name() == "Bailing Hou"), In(Arg<Number>(), [1, 8, 9]), 30)])
+          "Bailing", (Name() == "Bailing Hou"), In(Arg<Number>(), [1, 3, 8, 9]), 30)])
 
 DeleteProperty(Persons(HasProperty(STAFF_TEAM)), STAFF_TEAM)
 
@@ -206,8 +176,7 @@ Define("MaybeSelectLongRoomPerson",
           ""))
 
 SetProperty(Persons(MultiYes()), MULTI_VOLUNTEER, true)
-Persons(And((NumberProperty(STAFF_TEAM) == 1), MultiMaybe(), Not(BooleanProperty(FMC_VOLUNTEER)),
-               Not(BooleanProperty(MULTI_VOLUNTEER))))
+
 Map([1, 2, 3, 4, 5],
     All(
       MaybeSelectLongRoomPerson(Arg<Number>(), 2, MULTI_VOLUNTEER, MultiMaybe()),
@@ -260,3 +229,9 @@ Header("Mirror Blocks Volunteers")
 Persons(BooleanProperty(MIRROR_BLOCKS_VOLUNTEER))
 Header("Team Blind Volunteer")
 Persons(BooleanProperty(TEAM_BLD_VOLUNTEER))
+
+DeleteProperty(Persons(HasProperty(DATA_TEAM)), DATA_TEAM)
+SetProperty([2007STRO01, 2016HOOV01, 2014SHAH08, 2018PERE37, 2018GODI01, 2014MORE05], DATA_TEAM, 1)
+SetProperty([2011HOLL04, 2020DWOR01, 2013ROGA02], DATA_TEAM, 2)
+SetProperty([2011GROG02, 2017KELL10, 2022TAOS01, 2022GALA01], DATA_TEAM, 3)
+SetProperty([2021VITA01], DATA_TEAM, 4)

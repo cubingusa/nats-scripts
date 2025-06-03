@@ -10,6 +10,7 @@
 #define BALLROOM_BACKUP_STAGE_LEAD "ballroom-organizer"
 #define FINALS_TEAM "finals-team"
 #define FINALS_VOLUNTEER "finals-team-volunteer"
+#define DATA_TEAM "data-team"
 
 #define MULTI_VOLUNTEER "multi-volunteer"
 #define FMC_VOLUNTEER "fmc-volunteer"

@@ -22,8 +22,18 @@ Define(
                       In(Stage(), FinalsStages()),
                       featured=true))))
 
+# The first event of the day should be group 1; other events are spread out.
+Define("DataEntryImpl",
+       AssignmentSet("data-entry",
+                     (AssignedRoom(Arg<Person>(), {4, Date}) == {1, String}),
+                     And((Stage() == {2, String}),
+                         Or(Not(In(EventId({3, Event}), ["clock", "777", "333bf", "sq1"])),
+                            (GroupNumber() == 1)))))
+
 # Args:
 # 1: Number of Groups.
+# 2: Event
+# 3: Date
 Define(
   "EarlyAssignmentSets",
   [AssignmentSet("commentators",
@@ -33,7 +43,9 @@ Define(
                         (GroupNumber() <= 3)))),
    AssignmentSet("wca_booth",
                  BooleanProperty(WCA_BOOTH),
-                 (Stage() == MAIN_GREEN))])
+                 (Stage() == MAIN_GREEN)),
+   DataEntryImpl(MAIN_HALL, MAIN_ORANGE, {2, Event}, {3, Date}),
+   DataEntryImpl(BALLROOM, SIDE_BLUE, {2, Event}, {3, Date})])
 
 Define(
   "VolunteerAssignmentSetsImpl",
@@ -91,7 +103,7 @@ Define("RoundOneAssignmentSetsImplImpl",
               FinalsStagesVolunteerAssignmentSets({1, Event}, {2, Date}),
               [FinalsStagesAssignmentSet({1, Event}, {4, Number})],
               OtherVolunteerAssignmentSets({1, Event}, {2, Date}),
-              EarlyAssignmentSets({6, Number}),
+              EarlyAssignmentSets({6, Number}, {1, Event}, {2, Date}),
               [MainHallAssignmentSet({1, Event}, {4, Number}, {5, Number}),
                BallroomAssignmentSet({1, Event}, {5, Number})]))
 
@@ -104,8 +116,8 @@ Define("RoundOneAssignmentSetsImplImpl",
 Define("RoundOneAssignmentSetsImpl",
        RoundOneAssignmentSetsImplImpl({1, Event}, {2, Date},
                                       ({3, Number} * 4),
-                                      ((({3, Number} * 1.8) / (({3, Number} * 5.8) + ({4, Number} * 4))) * {5, Number}),
-                                      ((({3, Number} * 5.8) / (({3, Number} * 5.8) + ({4, Number} * 4))) * {5, Number}),
+                                      ((({3, Number} * 1.7) / (({3, Number} * 5.7) + ({4, Number} * 4))) * {5, Number}),
+                                      ((({3, Number} * 5.7) / (({3, Number} * 5.7) + ({4, Number} * 4))) * {5, Number}),
                                       {3, Number}))
 
 # Args:
