@@ -38,7 +38,7 @@ Define(
 Define(
   "VolunteerAssignmentSetsImpl",
   Flatten(Map(
-    {3, Array<Stage>},
+    {3, Array<String>},
     [AssignmentSet(("stage-leads-" + Arg<String>()),
                    And(BooleanProperty(STAGE_LEAD),
                        (AssignedStage(Arg<Person>(), {2, Date}) == Arg<String>())),
