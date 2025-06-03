@@ -2,14 +2,14 @@
 #define SIDE_333 10
 #define MAIN_222 9
 #define SIDE_222 10
-#define MAIN_444 6
-#define SIDE_444 10
-#define MAIN_555 4
-#define SIDE_555 6
+#define MAIN_444 7
+#define SIDE_444 7
+#define MAIN_555 5
+#define SIDE_555 5
 #define MAIN_666 3
-#define SIDE_666 4
+#define SIDE_666 3
 #define MAIN_777 2
-#define SIDE_777 4
+#define SIDE_777 3
 
 #define MAIN_333BF 2
 #define SIDE_333BF 3
