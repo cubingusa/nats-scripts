@@ -20,5 +20,5 @@ ManuallyAssign(Persons(And(CompetingIn(_333),
                            (StringProperty(ACCOMMODATION) == NO_SATURDAY))),
                _333-r1, MAIN_GREEN, 1)
 
-ManuallyAssign([2010THOM03, 2016SILV08], MAIN_RED, 1)
-ManuallyAssign([2018SMIT42], MAIN_BLUE, 1)
+ManuallyAssign([2010THOM03, 2016SILV08], _333-r1, MAIN_RED, 1)
+ManuallyAssign([2018SMIT42], _333-r1, MAIN_BLUE, 1)
