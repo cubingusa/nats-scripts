@@ -2,8 +2,8 @@
 #define SIDE_333 10
 #define MAIN_222 9
 #define SIDE_222 10
-#define MAIN_444 7
-#define SIDE_444 7
+#define MAIN_444 6
+#define SIDE_444 8
 #define MAIN_555 5
 #define SIDE_555 5
 #define MAIN_666 3
