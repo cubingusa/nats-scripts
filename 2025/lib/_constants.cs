@@ -56,3 +56,7 @@ Define("IsDataEntry", (StringProperty("assigned-team") == DATAENTRY))
 Define("IsDelegate", And(BooleanProperty(CORE_VOLUNTEER),
                          (StringProperty("delegate-status") != "Not a WCA Delegate")))
 Define("IsStageLead", (StringProperty(STAGE_LEAD) == STAGE_LEAD))
+
+Define("IsStageLeadTogether", And(IsStageLead({1, Person}), IsStageLead({2, Person}),
+                                  (StringProperty(STAFF_TEAM, {1, Person}) ==
+                                   StringProperty(STAFF_TEAM, {2, Person}))))

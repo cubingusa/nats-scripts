@@ -8,8 +8,14 @@ AssignGroups(_clock-r1,
                     [ByFilters(BooleanProperty(MULTI_VOLUNTEER), (EndTime() <= 2025-07-03T10:00), 10),
                      ByFilters(BooleanProperty(MULTI_VOLUNTEER), (EndTime() <= 2025-07-03T10:15), 5),
                      ByFilters((WcaId() == "2012CANT02"),
-                               Or((StartTime() >= 2025-07-03T11:00),
-                                  (EndTime() <= 2025-07-03T10:00)), 10)]))
+                               Not(Overlaps(2025-07-03T10:00, 2025-07-03T11:00)), 10),
+                     ByFilters(IsStageLeadTogether(Arg<Person>(), 2012CANT02),
+                               Not(Overlaps(2025-07-03T10:00, 2025-07-03T11:00)), 5),
+                     ByFilters(Or(IsStageLeadTogether(Arg<Person>(), 2013DIPI01),
+                                  IsStageLeadTogether(Arg<Person>(), 2013WALL03),
+                                  IsStageLeadTogether(Arg<Person>(), 2015KUCA01),
+                                  IsStageLeadTogether(Arg<Person>(), 2009LIUE01)),
+                               Not(Overlaps(2025-07-03T09:00, 2025-07-03T10:00)), 5)]))
 
 ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
                            CompetingIn(_clock))),

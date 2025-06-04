@@ -20,7 +20,8 @@ AssignGroups(_skewb-r1,
                      ByFilters(BooleanProperty(MULTI_VOLUNTEER),
                                Or((EndTime() < 2025-07-05T10:00),
                                   (StartTime() >= 2025-07-05T12:00)), 10),
-                     ByFilters((WcaId() == "2020LONG05"),
+                     ByFilters(Or((WcaId() == "2020LONG05"),
+                                  IsStageLeadTogether(Arg<Person>(), 2020LONG05)),
                                (StartTime() >= 2025-07-05T11:00), 10)]))
 
 ManuallyAssign(Persons(And(CompetingIn(_skewb),
