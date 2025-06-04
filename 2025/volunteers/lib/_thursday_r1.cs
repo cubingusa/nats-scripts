@@ -19,6 +19,10 @@ Define("ThursdayAssignmentsForStage",
            [Judges(10, _555), Scramblers(4, _555), Runners(4), Delegates(2)],
            VolunteerScorers(_555, 2025-07-03)),
          DoVolunteerAssignments(
+           _333oh-r1, {1, String}, 2025-07-03,
+           [Judges(10, _333oh), Scramblers(3, _333oh), Runners(4), Delegates(2)],
+           VolunteerScorers(_333oh, 2025-07-03)),
+         DoVolunteerAssignments(
            _pyram-r1, {1, String}, 2025-07-03,
            [Judges(10, _pyram), Scramblers(3, _pyram), Runners(4), Delegates(2)],
            VolunteerScorers(_pyram, 2025-07-03))))
