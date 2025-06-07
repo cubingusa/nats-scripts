@@ -23,6 +23,10 @@ AssignGroups(_333oh-r1,
                      ByFilters((WcaId() == "2018DAIN02"),
                                (EndTime() <= 2025-07-03T15:15), 10)]))
 
+ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
+                           CompetingIn(_333oh))),
+               _333oh-r1, MAIN_ORANGE, 1)
+
 "Sanity Check - Multi competitors"
 Table(
     Sort(Persons(And(CompetingIn(_333mbf), CompetingIn(_333oh))), StartTime(AssignedGroup(_333oh-r1))),
