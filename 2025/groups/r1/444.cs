@@ -4,7 +4,7 @@
 
 AssignGroups(_444-r1,
              RoundOneAssignmentSets(_444, 2025-07-04, MAIN_444, SIDE_444),
-             Concat(DefaultScorers(),
+             Concat(DefaultScorers(2025-07-04),
                     [ByFilters(Or(CompetingIn(_333fm), BooleanProperty(FMC_VOLUNTEER)),
                                (StartTime() >= 2025-07-04T15:00), -100),
                      ByFilters((StringProperty(ACCOMMODATION) == NO_FRIDAY_EARLY_AFTERNOON),
