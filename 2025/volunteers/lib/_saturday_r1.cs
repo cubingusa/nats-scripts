@@ -8,7 +8,7 @@ Define("SaturdayAssignmentsForStage",
        All(
          DoVolunteerAssignments(
            _333bf-r1, {1, String}, 2025-07-05,
-           [Judges(10, _333bf), Scramblers(2, _333bf), Runners(3), Delegates(3)],
+           [Judges(10, _333bf), Scramblers(2, _333bf), Runners(3), Delegates(2)],
            VolunteerScorers(_333bf, 2025-07-05)),
          DoVolunteerAssignments(
            _skewb-r1, {1, String}, 2025-07-05,
