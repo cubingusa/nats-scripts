@@ -19,7 +19,7 @@ AssignGroups(_clock-r1,
 
 ManuallyAssign(Persons(And(BooleanProperty(WCA_BOARD),
                            CompetingIn(_clock))),
-               _clock-r1, SIDE_RED, 1)
+               _clock-r1, MAIN_GREEN, 6)
 
 "Sanity Check - 5BLD competitors"
 Table(
