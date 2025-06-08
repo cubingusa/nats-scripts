@@ -25,4 +25,7 @@ Define("ThursdayAssignmentsForStage",
          DoVolunteerAssignments(
            _pyram-r1, {1, String}, 2025-07-03,
            [Judges(10, _pyram), Scramblers(3, _pyram), Runners(4), Delegates(2)],
-           VolunteerScorers(_pyram, 2025-07-03))))
+           VolunteerScorers(_pyram, 2025-07-03)),
+         WorkloadReport(Persons((AssignedStage(Arg<Person>(), 2025-07-03) == {1, String})))))
+
+
