@@ -81,7 +81,19 @@ Define("Unavailable",
              Tuple(2022HEXT01, [UnavailableBetween(2025-07-04T14:15, 2025-07-04T15:15)]), # Oliver Hexter
              Tuple(2013DICK01, [UnavailableBetween(2025-07-04T15:15, 2025-07-04T16:15)]), # Matthew Dickman
              Tuple(2020LONG05, [UnavailableBetween(2025-07-05T09:30, 2025-07-05T11:00)]), # Shain Longbehn
-             Tuple(2016LOPE37, [UnavailableBetween(2025-07-05T14:30, 2025-07-05T15:15)]) # Ruben Lopez de Juan
+             Tuple(2016LOPE37, [UnavailableBetween(2025-07-05T14:30, 2025-07-05T15:15)]), # Ruben Lopez de Juan
+             # Unofficial events
+             Tuple(2017BRYA06, [UnavailableBetween(2025-07-03T09:00, 2025-07-03T10:15)]), # Aedan Bryant
+             Tuple(2020OREN01, [UnavailableBetween(2025-07-03T09:00, 2025-07-03T11:15)]), # Kinkajou Oren
+             Tuple(2022KHAN05, [UnavailableBetween(2025-07-03T09:45, 2025-07-03T12:15)]), # Nupur Khandelwal
+             Tuple(2022STON03, [UnavailableBetween(2025-07-03T10:45, 2025-07-03T13:15)]), # Tuval Stone
+             Tuple(2014MELL03, [UnavailableBetween(2025-07-03T11:45, 2025-07-03T13:15),
+                                UnavailableBetween(2025-07-03T16:45, 2025-07-03T18:00)]), # Gabriel Sageiro Gomes de Mello
+             Tuple(2022LEAV01, [UnavailableBetween(2025-07-03T12:00, 2025-07-03T14:15)]), # Orion Leavitt-Lytle
+             Tuple(2020TONG02, [UnavailableBetween(2025-07-03T12:00, 2025-07-03T15:15)]), # Draco Tong
+             Tuple(2023VINC03, [UnavailableBetween(2025-07-03T13:45, 2025-07-03T16:15)]), # Addison Vincelli
+             Tuple(2003HARD01, [UnavailableBetween(2025-07-03T14:45, 2025-07-03T17:15)]), # Chris Hardwick
+             Tuple(2015MACD03, [UnavailableBetween(2025-07-03T15:45, 2025-07-03T18:15)]) # James Macdiarmid
            ]),
            If(BooleanProperty(FMC_VOLUNTEER),
               [UnavailableBetween(2025-07-03T14:45, 2025-07-03T17:20),
