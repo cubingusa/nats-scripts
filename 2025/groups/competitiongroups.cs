@@ -1,4 +1,4 @@
-#include "../../lib/_constants.cs"
+#include "../lib/_constants.cs"
 
 ClearCompetitionGroupsAssignments(Persons(true))
 
@@ -41,3 +41,8 @@ CreateCompetitionGroupsAssignments(
     [2015MACD03], "Mirror Blocks volunteering", 2025-07-03T16:00, 2025-07-03T18:00)
 CreateCompetitionGroupsAssignments(
     [2014MELL03], "Mirror Blocks volunteering", 2025-07-03T17:00, 2025-07-03T18:00)
+
+CreateCompetitionGroupsAssignments(
+    Persons(BooleanProperty(MULTI_VOLUNTEER)), "Multi Blind Scrambling", 2025-07-03T10:00, 2025-07-03T12:00)
+CreateCompetitionGroupsAssignments(
+    Persons(BooleanProperty(MULTI_VOLUNTEER)), "Multi Blind Scrambling", 2025-07-05T10:00, 2025-07-05T12:00)
