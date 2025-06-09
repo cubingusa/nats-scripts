@@ -4,7 +4,8 @@
 
 # Args:
 # 1: Stage
-Define("SaturdayAssignmentsForStage",
+
+Define("SaturdayMorningAssignmentsForStage",
        All(
          DoVolunteerAssignments(
            _333bf-r1, {1, String}, 2025-07-05,
@@ -13,7 +14,10 @@ Define("SaturdayAssignmentsForStage",
          DoVolunteerAssignments(
            _skewb-r1, {1, String}, 2025-07-05,
            [Judges(10, _skewb), Scramblers(3, _skewb), Runners(4), Delegates(2)],
-           VolunteerScorers(_skewb, 2025-07-05)),
+           VolunteerScorers(_skewb, 2025-07-05))))
+
+Define("SaturdayAfternoonAssignmentsForStage",
+       All(
          DoVolunteerAssignments(
            _333-r1, {1, String}, 2025-07-05,
            [Judges(10, _333), Scramblers(3, _333), Runners(4), Delegates(2)],
@@ -22,3 +26,9 @@ Define("SaturdayAssignmentsForStage",
            _666-r1, {1, String}, 2025-07-05,
            [Judges(10, _666), Scramblers(4, _666), Runners(3), Delegates(2)],
            VolunteerScorers(_666, 2025-07-05))))
+
+Define("SaturdayAssignmentsForStage",
+       All(
+         SaturdayMorningAssignmentsForStage({1, String}),
+         SaturdayAfternoonAssignmentsForStage({1, String}),
+         WorkloadReport(Persons((AssignedStage(Arg<Person>(), 2025-07-05) == {1, String})))))

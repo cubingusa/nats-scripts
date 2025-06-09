@@ -1,4 +1,5 @@
 #include "../../lib/_constants.cs"
+#include "../../lib/_advancement.cs"
 
 Define("CompetingTimes",
        Map(Filter(AssignedGroups({1, Person}),
@@ -62,10 +63,12 @@ Define("Unavailable",
              Tuple(2024CHEW09, [DuringTimes(CompetingTimes(2024CHEW02, true))]),  # Joanne Chew
              Tuple(2019BURG06, [DuringTimes(CompetingTimes(2018BURG03, true))]),  # Brendan Burgess
              Tuple(p464503, [DuringTimes(CompetingTimes(2021RAPO01, true))]),  # Mat Rapoza
+             Tuple(2013BURL01, [UnavailableBetween(2025-07-03T00:00, 2025-07-06T23:59)]), # Łukasz Burliga
              Tuple(2011MASS01, [UnavailableBetween(2025-07-05T17:50, 2025-07-05T18:35),
                                 UnavailableBetween(2025-07-03T14:45, 2025-07-03T15:15)]), # Nikolai Masson
              Tuple(2018HOUB01, [UnavailableBetween(2025-07-04T13:45, 2025-07-04T14:15),
-                                UnavailableBetween(2025-07-05T09:40, 2025-07-05T10:10)]), # Bailing Hou
+                                UnavailableBetween(2025-07-05T09:40, 2025-07-05T10:10),
+                                UnavailableForDate(2025-07-06)]), # Bailing Hou
              Tuple(2019TAMU01, [UnavailableBetween(2025-07-03T15:15, 2025-07-03T16:30),
                                 UnavailableBetween(2025-07-04T15:15, 2025-07-04T16:30),
                                 UnavailableBetween(2025-07-05T15:15, 2025-07-05T16:30)]), # Takumi Tamura
@@ -101,5 +104,9 @@ Define("Unavailable",
                UnavailableBetween(2025-07-05T14:45, 2025-07-05T17:20)], []),
            If(BooleanProperty(MULTI_VOLUNTEER),
               [UnavailableBetween(2025-07-03T10:00, 2025-07-03T15:00),
-               UnavailableBetween(2025-07-05T10:00, 2025-07-05T15:00)], [])
+               UnavailableBetween(2025-07-05T10:00, 2025-07-05T15:00)], []),
+           If(LikelyToAdvance(_clock-r2, Arg<Person>()),
+              [UnavailableBetween(2025-07-03T17:00, 2025-07-03T18:00)], []),
+           If(LikelyToAdvance(_555-r2, Arg<Person>()),
+              [UnavailableBetween(2025-07-03T17:15, 2025-07-03T18:00)], [])
        ))
