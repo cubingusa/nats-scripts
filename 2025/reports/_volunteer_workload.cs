@@ -2,7 +2,7 @@
 
 Define("WorkloadReport",
     Table(
-      {1, Array<Person>},
+      Sort({1, Array<Person>}, LengthOfJobs()),
       [
         Column("Name", Name()),
         Column("Team", NumberProperty(STAFF_TEAM)),
