@@ -98,7 +98,8 @@ Define("Unavailable",
              Tuple(2023VINC03, [UnavailableBetween(2025-07-03T13:45, 2025-07-03T16:15)]), # Addison Vincelli
              Tuple(2003HARD01, [UnavailableBetween(2025-07-03T14:45, 2025-07-03T17:15)]), # Chris Hardwick
              Tuple(2015MACD03, [UnavailableBetween(2025-07-03T15:45, 2025-07-03T18:15)]) # James Macdiarmid
-           ]),
+           ],
+           defaultValue=[]),
            If(BooleanProperty(FMC_VOLUNTEER),
               [UnavailableBetween(2025-07-03T14:45, 2025-07-03T17:20),
                UnavailableBetween(2025-07-04T14:45, 2025-07-04T17:20),
