@@ -40,6 +40,7 @@ Define("Unavailable",
              Tuple(2017OSUD01, [UnavailableBetween(2025-07-06T00:00, 2025-07-06T23:59)]),  # Peter Osudar
              Tuple(2019BEZZ01, [UnavailableBetween(2025-07-06T00:00, 2025-07-06T12:00)]),  # Nico Bezzerides
              Tuple(2008WARL01, [UnavailableBetween(2025-07-05T16:30, 2025-07-05T23:59)]),  # Jackson Warley
+             Tuple(2017PLEI01, [UnavailableBetween(2025-07-04T11:30, 2025-07-05T12:45)]),  # Coleton Pleiss
              Tuple(2019BURG06, [UnavailableBetween(2025-07-05T00:00, 2025-07-05T10:00),
                                 DuringTimes(CompetingTimes(2018BURG03, (EventForRound(Round()) == _pyram)))]),  # Brendan Burgess
              Tuple(2022GRAI02, [DuringTimes(CompetingTimes(2018GRAI01, In(EventForRound(Round()), [_clock, _minx])))]),  # Kirsty Grainger
