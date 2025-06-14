@@ -47,6 +47,13 @@ Define("Unavailable",
              Tuple(2018GONZ09, [DuringTimes(CompetingTimes(2018PERE37, true))]),  # Lorenzo Gonzalez
              Tuple(2020TONG02, [UnavailableBetween(2025-07-03T00:00, 2025-07-03T12:45)]),  # Draco Tong
              Tuple(2013FRAI01, [UnavailableBetween(2025-07-05T11:45, 2025-07-05T12:25)]),  # Diego Fraile
+             Tuple(2006KRUE01, [UnavailableBetween(2025-07-03T00:00, 2025-07-03T12:00)]),  # Chris Krueger
+             Tuple(2007SEID01, [UnavailableBetween(2025-07-03T00:00, 2025-07-03T11:00)]),  # Alex Seidler
+             Tuple(2018LAWS02, [UnavailableBetween(2025-07-03T00:00, 2025-07-03T14:00)]),  # Benson Lawson
+             Tuple(2022CHOW14, [UnavailableBetween(2025-07-03T00:00, 2025-07-03T14:00)]),  # Winston Chow
+             Tuple(2009GUIL01, [UnavailableBetween(2025-07-03T00:00, 2025-07-03T13:00)]),  # Kevin Guillamound
+             Tuple(2018TRAN09, [UnavailableForDate(2025-07-03)]),  # Tien Tran
+             Tuple(2014STEL02, [UnavailableBetween(2025-07-03T00:00, 2025-07-03T11:00)]),  # Noah Stelting
              Tuple(2022CHES04, [DuringTimes(CompetingTimes(2022CHES03, true))]),  # Tommy Chestnutt
              Tuple(2017HART11, [DuringTimes(CompetingTimes(2016HART02, IsFinal(Round())))]),  # Nancy Hartman
              Tuple(2011HAYS01, [DuringTimes(CompetingTimes(2009HAYS01, true))]),  # Paul Hays
@@ -66,6 +73,7 @@ Define("Unavailable",
              Tuple(2019BURG06, [DuringTimes(CompetingTimes(2018BURG03, true))]),  # Brendan Burgess
              Tuple(p464503, [DuringTimes(CompetingTimes(2021RAPO01, true))]),  # Mat Rapoza
              Tuple(2013BURL01, [UnavailableBetween(2025-07-03T00:00, 2025-07-06T23:59)]), # Łukasz Burliga
+             Tuple(2012PONC02, [UnavailableBetween(2025-07-03T12:25, 2025-07-03T12:45)]), # Patrick Ponce
              Tuple(2011MASS01, [UnavailableBetween(2025-07-05T17:50, 2025-07-05T18:35),
                                 UnavailableBetween(2025-07-03T14:45, 2025-07-03T15:15)]), # Nikolai Masson
              Tuple(2018HOUB01, [UnavailableBetween(2025-07-04T13:45, 2025-07-04T14:15),
@@ -80,7 +88,8 @@ Define("Unavailable",
              Tuple(2015MACK06, [UnavailableBetween(2025-07-03T14:15, 2025-07-03T15:00)]), # Zeke Mackay
              Tuple(2018DAIN02, [UnavailableBetween(2025-07-03T15:15, 2025-07-03T15:45)]), # Peri Le Dain
              Tuple(2019KUCA01, [UnavailableBetween(2025-07-03T15:15, 2025-07-03T15:45)]), # Lisa Kucala
-             Tuple(2015KUCA01, [UnavailableBetween(2025-07-04T09:30, 2025-07-04T10:30)]), # Carter Kucala
+             Tuple(2015KUCA01, [UnavailableBetween(2025-07-04T09:30, 2025-07-04T10:30),
+                                UnavailableBetween(2025-07-05T10:50, 2025-07-05T11:20)]), # Carter Kucala
              Tuple(2014GOSL01, [UnavailableBetween(2025-07-04T10:30, 2025-07-04T12:00)]), # Raymond Goslow
              Tuple(2015SPEN01, [UnavailableBetween(2025-07-04T14:15, 2025-07-04T15:15)]), # Sam Spendla
              Tuple(2022HEXT01, [UnavailableBetween(2025-07-04T14:15, 2025-07-04T15:15)]), # Oliver Hexter
