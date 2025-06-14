@@ -14,5 +14,8 @@ Table(
                           BooleanProperty(COMMENTATOR),
                           HasRole("organizer"),
                           HasRole("delegate"))),
+    Column("Volunteer Team", If(BooleanProperty(CORE_VOLUNTEER), ToString(NumberProperty(STAFF_TEAM)),
+                                If(HasRole(DATAENTRY), "Data Entry",
+                                   If(BooleanProperty(COMMENTATOR), "Commentator", "")))),
     Column("Is Organizer", HasRole("organizer")),
     Column("Is Delegate", HasRole("delegate"))])
