@@ -97,17 +97,28 @@ Define("Unavailable",
              Tuple(2020LONG05, [UnavailableBetween(2025-07-05T09:30, 2025-07-05T11:00)]), # Shain Longbehn
              Tuple(2016LOPE37, [UnavailableBetween(2025-07-05T14:30, 2025-07-05T15:15)]), # Ruben Lopez de Juan
              # Unofficial events
-             Tuple(2017BRYA06, [UnavailableBetween(2025-07-03T09:00, 2025-07-03T10:15)]), # Aedan Bryant
+             Tuple(2017BRYA06, [UnavailableBetween(2025-07-03T09:00, 2025-07-03T10:15),
+                                UnavailableBetween(2025-07-04T12:00, 2025-07-04T14:45)]), # Aedan Bryant
              Tuple(2020OREN01, [UnavailableBetween(2025-07-03T09:00, 2025-07-03T11:15)]), # Kinkajou Oren
              Tuple(2022KHAN05, [UnavailableBetween(2025-07-03T09:45, 2025-07-03T12:15)]), # Nupur Khandelwal
              Tuple(2022STON03, [UnavailableBetween(2025-07-03T10:45, 2025-07-03T13:15)]), # Tuval Stone
              Tuple(2014MELL03, [UnavailableBetween(2025-07-03T11:45, 2025-07-03T13:15),
-                                UnavailableBetween(2025-07-03T16:45, 2025-07-03T18:00)]), # Gabriel Sageiro Gomes de Mello
-             Tuple(2022LEAV01, [UnavailableBetween(2025-07-03T12:00, 2025-07-03T14:15)]), # Orion Leavitt-Lytle
+                                UnavailableBetween(2025-07-03T16:45, 2025-07-03T18:00),
+                                UnavailableBetween(2025-07-04T11:45, 2025-07-04T13:15)]), # Gabriel Sageiro Gomes de Mello
+             Tuple(2022LEAV01, [UnavailableBetween(2025-07-03T12:00, 2025-07-03T14:15),
+                                UnavailableBetween(2025-07-04T10:45, 2025-07-04T13:15)]), # Orion Leavitt-Lytle
              Tuple(2020TONG02, [UnavailableBetween(2025-07-03T12:00, 2025-07-03T15:15)]), # Draco Tong
              Tuple(2023VINC03, [UnavailableBetween(2025-07-03T13:45, 2025-07-03T16:15)]), # Addison Vincelli
-             Tuple(2003HARD01, [UnavailableBetween(2025-07-03T14:45, 2025-07-03T17:15)]), # Chris Hardwick
-             Tuple(2015MACD03, [UnavailableBetween(2025-07-03T15:45, 2025-07-03T18:15)]) # James Macdiarmid
+             Tuple(2003HARD01, [UnavailableBetween(2025-07-03T14:45, 2025-07-03T17:15),
+                                UnavailableBetween(2025-07-04T09:00, 2025-07-04T10:15),
+                                UnavailableBetween(2025-07-04T16:45, 2025-07-04T18:15)]), # Chris Hardwick
+             Tuple(2015MACD03, [UnavailableBetween(2025-07-03T15:45, 2025-07-03T18:15),
+                                UnavailableBetween(2025-07-04T09:00, 2025-07-04T11:15)]), # James Macdiarmid
+             Tuple(2019BLAC02, [UnavailableBetween(2025-07-04T09:45, 2025-07-04T12:15)]), # Sonja Black
+             Tuple(2017CAST41, [UnavailableBetween(2025-07-04T12:00, 2025-07-04T15:15)]), # Raymos Castillo
+             Tuple(2022TIND01, [UnavailableBetween(2025-07-04T14:15, 2025-07-04T16:15)]), # Anthony Tindal
+             Tuple(2017OSUD01, [UnavailableBetween(2025-07-04T14:45, 2025-07-04T17:15)]), # Peter Osudar
+             Tuple(2017LAMB06, [UnavailableBetween(2025-07-04T15:45, 2025-07-04T18:15)]) # Andreas Lambropoulos
            ],
            defaultValue=[]),
            If(BooleanProperty(FMC_VOLUNTEER),
