@@ -24,7 +24,8 @@ Define("StandardJobNames", ["judge", "scrambler", "runner", "Delegate"])
 Define("VolunteerScorers",
        [
          PriorAssignmentScorer(-5, -1, Midnight({2, Date})),
-         PreferenceScorer(weight=5, prefix="percent-", prior=15, allJobs=StandardJobNames()),
+         PriorAssignmentScorer(-2, 0, 2025-07-03T00:00),
+         PreferenceScorer(weight=5, prefix="percent-", prior=15, allJobs=["judge", "scrambler", "runner"]),
          SameJobScorer(60, -5, 4, jobs=StandardJobNames()),
          ConsecutiveJobScorer(90, -3, 0, jobs=StandardJobNames()),
          ConsecutiveJobScorer(30, -5, 0, jobs=["scrambler"]),
