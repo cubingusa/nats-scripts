@@ -10,11 +10,7 @@ Define("FridayMorningAssignmentsForStage",
          DoVolunteerAssignments(
            _777-r1, {1, String}, 2025-07-04,
            [Judges(10, _777), Scramblers(4, _777), Runners(2), Delegates(2)],
-           VolunteerScorers(_777, 2025-07-04)),
-         DoVolunteerAssignments(
-           _222-r1, {1, String}, 2025-07-04,
-           [Judges(10, _222), Scramblers(3, _222), Runners(4), Delegates(2)],
-           VolunteerScorers(_222, 2025-07-04))))
+           VolunteerScorers(_777, 2025-07-04))))
 
 Define("FridayAfternoonAssignmentsForStage",
        All(
