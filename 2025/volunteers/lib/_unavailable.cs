@@ -54,6 +54,7 @@ Define("Unavailable",
              Tuple(2009GUIL01, [UnavailableBetween(2025-07-03T00:00, 2025-07-03T13:00)]),  # Kevin Guillamound
              Tuple(2018TRAN09, [UnavailableForDate(2025-07-03)]),  # Tien Tran
              Tuple(2014STEL02, [UnavailableBetween(2025-07-03T00:00, 2025-07-03T11:00)]),  # Noah Stelting
+             Tuple(2023HINC04, [UnavailableBetween(2025-07-03T00:00, 2025-07-05T12:00)]),  # Chan Ho Hin
              Tuple(2022CHES04, [DuringTimes(CompetingTimes(2022CHES03, true))]),  # Tommy Chestnutt
              Tuple(2017HART11, [DuringTimes(CompetingTimes(2016HART02, IsFinal(Round())))]),  # Nancy Hartman
              Tuple(2011HAYS01, [DuringTimes(CompetingTimes(2009HAYS01, true))]),  # Paul Hays
@@ -106,19 +107,30 @@ Define("Unavailable",
                                 UnavailableBetween(2025-07-03T16:45, 2025-07-03T18:00),
                                 UnavailableBetween(2025-07-04T11:45, 2025-07-04T13:15)]), # Gabriel Sageiro Gomes de Mello
              Tuple(2022LEAV01, [UnavailableBetween(2025-07-03T12:00, 2025-07-03T14:15),
-                                UnavailableBetween(2025-07-04T10:45, 2025-07-04T13:15)]), # Orion Leavitt-Lytle
+                                UnavailableBetween(2025-07-04T10:45, 2025-07-04T13:15),
+                                UnavailableBetween(2025-07-05T12:00, 2025-07-05T14:15)]), # Orion Leavitt-Lytle
              Tuple(2020TONG02, [UnavailableBetween(2025-07-03T12:00, 2025-07-03T15:15)]), # Draco Tong
              Tuple(2023VINC03, [UnavailableBetween(2025-07-03T13:45, 2025-07-03T16:15)]), # Addison Vincelli
              Tuple(2003HARD01, [UnavailableBetween(2025-07-03T14:45, 2025-07-03T17:15),
                                 UnavailableBetween(2025-07-04T09:00, 2025-07-04T10:15),
                                 UnavailableBetween(2025-07-04T16:45, 2025-07-04T18:15)]), # Chris Hardwick
              Tuple(2015MACD03, [UnavailableBetween(2025-07-03T15:45, 2025-07-03T18:15),
-                                UnavailableBetween(2025-07-04T09:00, 2025-07-04T11:15)]), # James Macdiarmid
+                                UnavailableBetween(2025-07-04T09:00, 2025-07-04T11:15),
+                                UnavailableBetween(2025-07-05T16:45, 2025-07-05T18:15)]), # James Macdiarmid
              Tuple(2019BLAC02, [UnavailableBetween(2025-07-04T09:45, 2025-07-04T12:15)]), # Sonja Black
-             Tuple(2017CAST41, [UnavailableBetween(2025-07-04T12:00, 2025-07-04T15:15)]), # Raymos Castillo
-             Tuple(2022TIND01, [UnavailableBetween(2025-07-04T14:15, 2025-07-04T16:15)]), # Anthony Tindal
+             Tuple(2017CAST41, [UnavailableBetween(2025-07-04T12:00, 2025-07-04T15:15),
+                                UnavailableBetween(2025-07-05T13:45, 2025-07-05T16:15)]), # Raymos Castillo
+             Tuple(2022TIND01, [UnavailableBetween(2025-07-04T14:15, 2025-07-04T16:15),
+                                UnavailableBetween(2025-07-05T09:00, 2025-07-05T11:15)]), # Anthony Tindal
              Tuple(2017OSUD01, [UnavailableBetween(2025-07-04T14:45, 2025-07-04T17:15)]), # Peter Osudar
-             Tuple(2017LAMB06, [UnavailableBetween(2025-07-04T15:45, 2025-07-04T18:15)]) # Andreas Lambropoulos
+             Tuple(2017LAMB06, [UnavailableBetween(2025-07-04T15:45, 2025-07-04T18:15),
+                                UnavailableBetween(2025-07-05T15:45, 2025-07-05T18:15)]), # Andreas Lambropoulos
+             Tuple(2023GRAY10, [UnavailableBetween(2025-07-05T09:00, 2025-07-05T10:15),
+                                UnavailableBetween(2025-07-05T11:45, 2025-07-05T13:00)]), # Will Gray
+             Tuple(2012KALH01, [UnavailableBetween(2025-07-05T09:45, 2025-07-05T12:15)]), # Simon Kalhofer
+             Tuple(2024BASS05, [UnavailableBetween(2025-07-05T10:45, 2025-07-05T13:00)]), # Malikai Bass
+             Tuple(2023MAKA02, [UnavailableBetween(2025-07-05T12:00, 2025-07-05T15:15)]), # Amethyst Mak
+             Tuple(2023MAKA02, [UnavailableBetween(2025-07-05T14:45, 2025-07-05T17:15)]) # Michael Angelo Zafra
            ],
            defaultValue=[]),
            If(BooleanProperty(FMC_VOLUNTEER),
