@@ -1,6 +1,7 @@
 #include "_assign.cs"
 #include "_jobs.cs"
 #include "_scorers.cs"
+#include "../../reports/_volunteer_workload.cs"
 
 # Args:
 # 1: Stage
