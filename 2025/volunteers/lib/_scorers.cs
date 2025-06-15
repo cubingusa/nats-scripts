@@ -42,5 +42,7 @@ Define("VolunteerScorers",
                            -50),
          ConditionalScorer(Or(BooleanProperty(MAIN_HALL_BACKUP_STAGE_LEAD),
                               BooleanProperty(BALLROOM_BACKUP_STAGE_LEAD)),
-                           true, true, true, -100)
+                           true, true, true, -100),
+         # Since I asked Peri to scramble 7x7 despite her not listing it as a preference.
+         ConditionalScorer((Name() == "Peri Le Dain"), (EventId(Event()) == "777"), (Arg<String>() == "scrambler"), true, -50)
        ])
