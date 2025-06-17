@@ -97,6 +97,7 @@ Define("Unavailable",
              Tuple(2013DICK01, [UnavailableBetween(2025-07-04T15:15, 2025-07-04T16:15)]), # Matthew Dickman
              Tuple(2020LONG05, [UnavailableBetween(2025-07-05T09:30, 2025-07-05T11:00)]), # Shain Longbehn
              Tuple(2016LOPE37, [UnavailableBetween(2025-07-05T14:30, 2025-07-05T15:15)]), # Ruben Lopez de Juan
+             Tuple(2019JOHN03, [UnavailableBetween(2025-07-05T16:15, 2025-07-05T17:15)]), # Roxana Johnson
              # Unofficial events
              Tuple(2017BRYA06, [UnavailableBetween(2025-07-03T09:00, 2025-07-03T10:15),
                                 UnavailableBetween(2025-07-04T12:00, 2025-07-04T14:45)]), # Aedan Bryant
