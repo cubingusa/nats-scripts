@@ -1,4 +1,4 @@
-#include "lib/_constants.cs"
+#include "../../lib/_constants.cs"
 
 CreateCompetitionGroupsAssignments(
     Persons(BooleanProperty(CORE_VOLUNTEER)), "2x2 Volunteer Assignments (to be determined)", 2025-07-04T09:50, 2025-07-04T12:15)
