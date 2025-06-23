@@ -1,2 +1,2 @@
 #include "../lib/_midcomp.cs"
-AssignFinals(_777-r2)
+AssignSemifinals(_777-r2)
