@@ -1,5 +1,6 @@
 # Volunteer teams
 #define DATAENTRY "staff-dataentry"
+#define ORGANIZER "organizer"
 #define CORE_VOLUNTEER "core-volunteer"
 #define COMMENTATOR "commentator"
 #define STAGE_LEAD "stage-lead"
