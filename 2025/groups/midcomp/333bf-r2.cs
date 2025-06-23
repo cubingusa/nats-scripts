@@ -1,6 +1,2 @@
-#include "../../lib/_group_counts.cs"
-#include "../lib/_assignment_sets.cs"
-#include "../lib/_scorers.cs"
-
-AssignGroups(_333bf-r2, SemifinalAssignmentSets(_333bf-r2), DefaultScorers(2025-07-06))
-
+#include "../lib/_midcomp.cs"
+AssignSemifinals(_333bf-r2)
