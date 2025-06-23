@@ -10,4 +10,5 @@ Define("AssignmentReportForOneStage",
          Filter(AllGroups(),
                 And((Date(StartTime(Arg<Group>())) == {2, Date}),
                     (Stage() == {1, String}))),
-         (Weekday({2, Date}) + (" - " + {1, String}))))
+         (Weekday({2, Date}) + (" - " + {1, String})),
+         ignoreStage={1, String}))
