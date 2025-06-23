@@ -19,7 +19,7 @@ Define("Unavailable",
                                 UnavailableBetween(2025-07-04T14:45, 2025-07-04T15:15),
                                 UnavailableBetween(2025-07-05T14:45, 2025-07-05T15:15)]),  # Adrian Neveu
              Tuple(2014GULA02, [UnavailableBetween(2025-07-04T12:00, 2025-07-04T15:00)]),  # Abdullah Gulab
-             Tuple(2015PADG01, [UnavailableBetween(2025-07-04T00:00, 2025-07-04T23:59)]),  # Dalton Padgett
+             Tuple(2015PADG01, [UnavailableBetween(2025-07-05T00:00, 2025-07-05T23:59)]),  # Dalton Padgett
              Tuple(2023NIEU03, [DuringTimes(CompetingTimes(2018NIEU01, true))]),  # Wendy Nieuwland
              Tuple(2015SETT01, [UnavailableBetween(2025-07-05T15:00, 2025-07-05T23:59)]),  # Fabian Settelen
              Tuple(2016MURP05, [UnavailableBetween(2025-07-06T00:00, 2025-07-06T09:30)]),  # Max Murphy
@@ -74,6 +74,9 @@ Define("Unavailable",
              Tuple(2019BURG06, [DuringTimes(CompetingTimes(2018BURG03, true))]),  # Brendan Burgess
              Tuple(p464503, [DuringTimes(CompetingTimes(2021RAPO01, true))]),  # Mat Rapoza
              Tuple(2013BURL01, [UnavailableBetween(2025-07-03T00:00, 2025-07-06T23:59)]), # Łukasz Burliga
+             Tuple(2012HAID01, [UnavailableBetween(2025-07-03T00:00, 2025-07-06T23:59)]), # Ammar Haider
+             Tuple(2018HORD01, [UnavailableBetween(2025-07-03T00:00, 2025-07-06T23:59)]), # Vlad Hordiienko
+             Tuple(2014IFRA01, [UnavailableBetween(2025-07-03T00:00, 2025-07-06T23:59)]), # Rotem Ifrach
              Tuple(2012PONC02, [UnavailableBetween(2025-07-03T12:25, 2025-07-03T12:45)]), # Patrick Ponce
              Tuple(2011MASS01, [UnavailableBetween(2025-07-05T17:50, 2025-07-05T18:35),
                                 UnavailableBetween(2025-07-03T14:45, 2025-07-03T15:15)]), # Nikolai Masson
