@@ -82,6 +82,7 @@ Define("Unavailable",
                                 UnavailableBetween(2025-07-03T14:45, 2025-07-03T15:15)]), # Nikolai Masson
              Tuple(2018HOUB01, [UnavailableBetween(2025-07-04T13:45, 2025-07-04T14:15),
                                 UnavailableBetween(2025-07-05T09:40, 2025-07-05T10:10),
+                                UnavailableBetween(2025-07-05T15:15, 2025-07-05T23:59),
                                 UnavailableForDate(2025-07-06)]), # Bailing Hou
              Tuple(2019TAMU01, [UnavailableBetween(2025-07-03T15:15, 2025-07-03T16:30),
                                 UnavailableBetween(2025-07-04T15:15, 2025-07-04T16:30),
