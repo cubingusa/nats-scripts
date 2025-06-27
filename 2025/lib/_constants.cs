@@ -34,9 +34,9 @@
 
 # Rooms
 #define LONG_ROOM "Room 607-610"
-#define MAIN_HALL "Hall 4"
+#define MAIN_HALL "Main Stages (Hall 4EF)"
 #define LOBBY "Lobby"
-#define BALLROOM "Ballroom 6"
+#define BALLROOM "Side Stages (Hall 4AB)"
 
 # Accommodations
 #define ACCOMMODATION "accommodation"
