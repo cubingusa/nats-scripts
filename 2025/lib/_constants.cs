@@ -27,10 +27,10 @@
 #define MAIN_ORANGE "Main Orange"
 #define MAIN_YELLOW "Main Yellow"
 #define MAIN_WHITE "Main White"
-#define SIDE_RED "Ballroom Red"
-#define SIDE_BLUE "Ballroom Blue"
-#define SIDE_GREEN "Ballroom Green"
-#define SIDE_ORANGE "Ballroom Orange"
+#define SIDE_RED "Side Red"
+#define SIDE_BLUE "Side Blue"
+#define SIDE_GREEN "Side Green"
+#define SIDE_ORANGE "Side Orange"
 
 # Rooms
 #define LONG_ROOM "Room 607-610"
