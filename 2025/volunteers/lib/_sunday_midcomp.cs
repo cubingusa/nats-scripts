@@ -33,7 +33,11 @@ Define("SquareOneSemiAssignments",
 
 Define("ThreeSemiAssignments",
        Map(MainStages(),
-           DoVolunteerAssignments(_333-r2, Arg<String>(), 2025-07-06,
+           DoVolunteerAssignments(_333-r3, Arg<String>(), 2025-07-06,
                                   [Judges(10, _333), Scramblers(3, _333), Runners(4),
                                    Checkers(1), Delegates(2)],
-                                  VolunteerScorers(_333, 2025-07-06))))
+                                  Concat(VolunteerScorers(_333, 2025-07-06),
+                                         [ConditionalScorer(HasProperty(FINALS_TEAM),
+                                                            In(Stage(), FinalsStages()),
+                                                            (Arg<String>() == "runner"),
+                                                            true, 20)])))
