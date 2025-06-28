@@ -2,7 +2,7 @@
 #include "../../lib/_constants.cs"
 
 Define("FinalsVolunteerAssignments",
-       Map([Tuple(1, MAIN_BLUE), Tuple(2, MAIN_RED)],
+       Map([Tuple(1, MAIN_RED), Tuple(2, MAIN_BLUE)],
             AssignStaff(
               {1, Round},
               (Stage() == Second<String>()),
