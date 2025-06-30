@@ -91,7 +91,8 @@ Define("Unavailable",
              Tuple(2012CANT02, [UnavailableBetween(2025-07-03T10:00, 2025-07-03T11:00)]), # Simone Cantarelli
              Tuple(2013DIPI01, [UnavailableBetween(2025-07-03T11:45, 2025-07-03T12:45)]), # Guido DiPietro
              Tuple(2015MACK06, [UnavailableBetween(2025-07-03T14:15, 2025-07-03T15:00)]), # Zeke Mackay
-             Tuple(2018DAIN02, [UnavailableBetween(2025-07-03T15:15, 2025-07-03T15:45)]), # Peri Le Dain
+             Tuple(2018DAIN02, [UnavailableBetween(2025-07-03T15:15, 2025-07-03T15:45),
+                                UnavailableBetween(2025-07-05T09:45, 2025-07-05T11:15)]), # Peri Le Dain
              Tuple(2019KUCA01, [UnavailableBetween(2025-07-03T15:15, 2025-07-03T15:45)]), # Lisa Kucala
              Tuple(2015KUCA01, [UnavailableBetween(2025-07-04T09:30, 2025-07-04T10:30),
                                 UnavailableBetween(2025-07-05T10:50, 2025-07-05T11:20)]), # Carter Kucala
@@ -122,7 +123,8 @@ Define("Unavailable",
              Tuple(2015MACD03, [UnavailableBetween(2025-07-03T15:45, 2025-07-03T18:15),
                                 UnavailableBetween(2025-07-04T09:00, 2025-07-04T11:15),
                                 UnavailableBetween(2025-07-05T16:45, 2025-07-05T18:15)]), # James Macdiarmid
-             Tuple(2019BLAC02, [UnavailableBetween(2025-07-04T09:45, 2025-07-04T12:15)]), # Sonja Black
+             Tuple(2019BLAC02, [UnavailableBetween(2025-07-04T09:45, 2025-07-04T12:15),
+                                UnavailableBetween(2025-07-05T10:45, 2025-07-05T12:15)]), # Sonja Black
              Tuple(2017CAST41, [UnavailableBetween(2025-07-04T12:00, 2025-07-04T15:15),
                                 UnavailableBetween(2025-07-05T13:45, 2025-07-05T16:15)]), # Raymos Castillo
              Tuple(2022TIND01, [UnavailableBetween(2025-07-04T14:15, 2025-07-04T16:15),
@@ -132,7 +134,6 @@ Define("Unavailable",
                                 UnavailableBetween(2025-07-05T15:45, 2025-07-05T18:15)]), # Andreas Lambropoulos
              Tuple(2023GRAY10, [UnavailableBetween(2025-07-05T09:00, 2025-07-05T10:15),
                                 UnavailableBetween(2025-07-05T11:45, 2025-07-05T13:00)]), # Will Gray
-             Tuple(2012KALH01, [UnavailableBetween(2025-07-05T09:45, 2025-07-05T12:15)]), # Simon Kalhofer
              Tuple(2024BASS05, [UnavailableBetween(2025-07-05T10:45, 2025-07-05T13:00)]), # Malikai Bass
              Tuple(2023MAKA02, [UnavailableBetween(2025-07-05T12:00, 2025-07-05T15:15)]), # Amethyst Mak
              Tuple(2023MAKA02, [UnavailableBetween(2025-07-05T14:45, 2025-07-05T17:15)]) # Michael Angelo Zafra

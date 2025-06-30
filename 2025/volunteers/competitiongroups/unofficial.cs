@@ -50,7 +50,9 @@ CreateCompetitionGroupsAssignments(
 CreateCompetitionGroupsAssignments(
     [2022TIND01], "Team BLD Volunteering", 2025-07-05T09:00, 2025-07-05T11:00, isVolunteering=true)
 CreateCompetitionGroupsAssignments(
-    [2012KALH01], "Team BLD Volunteering", 2025-07-05T10:00, 2025-07-05T12:00, isVolunteering=true)
+    [2018DAIN02], "Team BLD Volunteering", 2025-07-05T10:00, 2025-07-05T11:00, isVolunteering=true)
+CreateCompetitionGroupsAssignments(
+    [2019BLAC02], "Team BLD Volunteering", 2025-07-05T11:00, 2025-07-05T12:00, isVolunteering=true)
 CreateCompetitionGroupsAssignments(
     [2024BASS05], "Team BLD Volunteering", 2025-07-05T11:00, 2025-07-05T13:00, isVolunteering=true)
 CreateCompetitionGroupsAssignments(
