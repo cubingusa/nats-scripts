@@ -12,7 +12,6 @@ CreateCompetitionGroupsAssignments([2009ZEMD01], "Autograph Booth", 2025-07-03T1
 CreateCompetitionGroupsAssignments([2012PARK03], "Autograph Booth", 2025-07-03T13:30, 2025-07-03T14:30)
 CreateCompetitionGroupsAssignments([2013NAHM01], "Autograph Booth", 2025-07-03T14:00, 2025-07-03T14:30)
 CreateCompetitionGroupsAssignments([2009HAYS01], "Autograph Booth", 2025-07-04T10:00, 2025-07-04T10:30)
-CreateCompetitionGroupsAssignments([2016INAB01], "Autograph Booth", 2025-07-04T10:00, 2025-07-04T10:30)
 CreateCompetitionGroupsAssignments([2014WALK05], "Autograph Booth", 2025-07-04T10:00, 2025-07-04T11:00)
 CreateCompetitionGroupsAssignments([2014KARN02], "Autograph Booth", 2025-07-04T10:30, 2025-07-04T11:00)
 CreateCompetitionGroupsAssignments([2019TARA09], "Autograph Booth", 2025-07-04T10:30, 2025-07-04T11:00)
@@ -31,3 +30,4 @@ CreateCompetitionGroupsAssignments([2017GARR05], "Autograph Booth", 2025-07-05T1
 CreateCompetitionGroupsAssignments([2017SIAU02], "Autograph Booth", 2025-07-05T14:30, 2025-07-05T15:00)
 CreateCompetitionGroupsAssignments([2017STRU01], "Autograph Booth", 2025-07-05T14:00, 2025-07-05T15:00)
 CreateCompetitionGroupsAssignments([2018TING04], "Autograph Booth", 2025-07-04T15:00, 2025-07-04T16:00)
+CreateCompetitionGroupsAssignments([2016INAB01], "Autograph Booth", 2025-07-04T15:30, 2025-07-04T16:00)
