@@ -7,11 +7,12 @@ Define("FinalsJudges", Job("judge", 10,
 Define("FinalsScramblers", Job("scrambler", {1, Number},
                                eligibility=And(CanScramble({2, Event}),
                                                (NumberProperty("percent-scrambler") > 0),
-                                               Not(HasRole(ORGANIZER)))))
+                                               Not(HasRole(ORGANIZER)),
+                                               Not((Name() == "Katie Hull")))))
 Define("FinalsCheckers", Job("ScrambleChecker", {1, Number},
                              eligibility=Not(HasRole(ORGANIZER))))
 Define("FinalsRunners", Job("runner", {1, Number},
                             eligibility=And((NumberProperty("percent-runner") > 0),
                                             Not(HasRole(ORGANIZER)))))
 
-Define("FinalsDelegates", Job("Delegate", {1, Number}, eligibility=HasRole(ORGANIZER)))
+Define("FinalsDelegates", Job("Delegate", {1, Number}, eligibility=IsStageLead()))

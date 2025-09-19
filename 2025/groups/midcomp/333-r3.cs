@@ -2,5 +2,5 @@
 #include "../lib/_assignment_sets.cs"
 #include "../lib/_scorers.cs"
 
-AssignGroups(_333-r2, ThreeSemiFinalAssignmentSets(), DefaultScorers(2025-07-06))
+AssignGroups(_333-r3, ThreeSemiFinalAssignmentSets(), DefaultScorers(2025-07-06))
 

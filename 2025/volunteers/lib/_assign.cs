@@ -17,4 +17,4 @@ Define("DoVolunteerAssignments",
                     And(In({2, String}, SideStages()), BooleanProperty(BALLROOM_BACKUP_STAGE_LEAD)))),
          {4, Array<AssignmentJob>},
          {5, Array<AssignmentScorer>},
-         unavailable=Unavailable(Arg<Person>())))
+         unavailable=Unavailable(Arg<Person>()), overwrite=true))

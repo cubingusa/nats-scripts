@@ -10,7 +10,7 @@ Define("SaturdayMidcompAssignmentsForStage",
            VolunteerScorers(_skewb, 2025-07-05)),
          DoVolunteerAssignments(
            _777-r2, {1, String}, 2025-07-05,
-           [Judges(10, _777), Scramblers(4, _777), Runners(2), Delegates(2)],
+           [Judges(10, _777), Scramblers(4, _777), Runners(3), Delegates(2)],
            VolunteerScorers(_777, 2025-07-05)),
          DoVolunteerAssignments(
            _minx-r2, {1, String}, 2025-07-05,

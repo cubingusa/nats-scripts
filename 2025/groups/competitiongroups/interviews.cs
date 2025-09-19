@@ -25,4 +25,4 @@ CreateCompetitionGroupsAssignments([2023STOT01], "Live stream interview", 2025-0
 CreateCompetitionGroupsAssignments([2014SEBA01], "Live stream interview", 2025-07-05T09:40, 2025-07-05T10:10)
 CreateCompetitionGroupsAssignments([2015KUCA01], "Live stream interview", 2025-07-05T10:40, 2025-07-05T11:10)
 CreateCompetitionGroupsAssignments([2009ZEMD01], "Live stream interview", 2025-07-05T14:30, 2025-07-05T15:30)
-CreateCompetitionGroupsAssignments([2023GENG02], "Live stream interview", 2025-07-05T16:15, 2025-07-05T16:45)
+CreateCompetitionGroupsAssignments([2023GENG02, 2023CAOQ01], "Live stream interview", 2025-07-05T16:15, 2025-07-05T16:45)
