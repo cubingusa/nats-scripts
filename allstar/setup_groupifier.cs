@@ -1,0 +1,5 @@
+SetExtension("scorecardPaperSize", "letter", "CompetitionConfig", "groupifier")
+SetExtension("scorecardOrder", "stacked", "CompetitionConfig", "groupifier")
+SetExtension("printStations", true, "CompetitionConfig", "groupifier") 
+SetExtension("printScrambleCheckerForTopRankedCompetitors", true, "CompetitionConfig", "groupifier")
+SetExtension("printScrambleCheckerForFinalRounds", true, "CompetitionConfig", "groupifier")
