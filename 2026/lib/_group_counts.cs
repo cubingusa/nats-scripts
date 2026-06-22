@@ -1,0 +1,13 @@
+#define GROUPS_333 10
+#define GROUPS_222 10
+#define GROUPS_444 8
+#define GROUPS_555 4
+#define GROUPS_666 2
+#define GROUPS_777 2
+#define GROUPS_333OH 8
+#define GROUPS_333BF 2
+#define GROUPS_CLOCK 4
+#define GROUPS_MINX 2
+#define GROUPS_PYRAM 9
+#define GROUPS_SKEWB 9
+#define GROUPS_SQ1 2
