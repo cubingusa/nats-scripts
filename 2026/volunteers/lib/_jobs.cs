@@ -11,3 +11,4 @@ Define("Runners", Job("runner", {1, Number},
 Define("Checkers", Job("ScrambleChecker", {1, Number}))
 
 Define("Delegates", Job("Delegate", {1, Number}, eligibility=BooleanProperty(STAGE_LEAD)))
+Define("FinalsDelegates", Job("Delegate", {1, Number}, eligibility=BooleanProperty(FINALS_STAGE_LEAD)))

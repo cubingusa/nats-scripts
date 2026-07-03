@@ -83,9 +83,12 @@ Define("RoundTwoAssignmentSets",
 
 Define("SemifinalAssignmentSets",
        [AssignmentSet("Top",
-                      (RoundPosition(PreviousRound({1, Round})) <= 4),
+                      (RoundPosition(PreviousRound({1, Round})) <= 6),
                       In(Stage(), FinalsStages()),
                       featured=true),
+        AssignmentSet("NextTop",
+                      (RoundPosition(PreviousRound({1, Round})) <= 20),
+                      In(Stage(), FinalsStages())),
         AssignmentSet("Everyone", true, true)])
 
 Define("FinalsAssignmentSets",

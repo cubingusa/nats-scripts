@@ -14,7 +14,8 @@ Define("Unavailable",
            [
              Tuple(2023KRAS01, [DuringTimes(CompetingTimes(2022KRAS02, true))]), # David Krasne
              Tuple(2014GULA02, [UnavailableBetween(2026-07-03T13:00, 2026-07-03T15:00)]), # Abdullah Gulab
-             Tuple(2015WEBS01, [UnavailableBetween(2026-07-05T00:00, 2026-07-05T10:30)]), # Garrett Webster
+             Tuple(2015WEBS01, [UnavailableBetween(2026-07-05T00:00, 2026-07-05T10:30),
+                                UnavailableBetween(2026-07-02T14:30, 2026-07-02T15:00)]), # Garrett Webster
              Tuple(2015BURG02, [UnavailableBetween(2026-07-05T00:00, 2026-07-05T13:00)]), # Brock Burgi
              Tuple(2017HADE01, [UnavailableBetween(2026-07-05T00:00, 2026-07-05T11:00)]), # Rustin Haderlie
              Tuple(2022DAYJ01, [UnavailableBetween(2026-07-05T00:00, 2026-07-05T12:00)]), # Joey Day
@@ -39,7 +40,8 @@ Define("Unavailable",
                                 DuringTimes(CompetingTimes(2015CHER07, true))]),  # Nancy Hartman
              Tuple(2015LANE01, [UnavailableBetween(2026-07-02T00:00, 2026-07-02T09:45),
                                 UnavailableBetween(2026-07-04T00:00, 2026-07-04T09:45)]),  # Phillip Lane
-             Tuple(2022KUMA32, [UnavailableBetween(2026-07-02T00:00, 2026-07-02T11:00)])  # Arnav Kumar
+             Tuple(2022KUMA32, [UnavailableBetween(2026-07-02T00:00, 2026-07-02T11:00)]),  # Arnav Kumar
+             Tuple(2017ONDE01, [UnavailableBetween(2026-07-04T17:00, 2026-07-04T23:59)])  # Alexandre Ondet
            ],
            defaultValue=[]),
            If(FMC1Volunteer(),
